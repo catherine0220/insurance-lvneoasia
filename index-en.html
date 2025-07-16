@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Avia Asia Limited</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+
+    </head>
+    
+    <body>
+    
+<!-- ***** Header Area Start ***** -->
+<style>
+  nav.custom-nav {
+    background: #fff;
+    padding: 12px 30px;
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 1200px;
+    margin: 10px auto 0 auto;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+
+  .custom-nav .logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  .custom-nav .menu-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .custom-nav ul li {
+    position: relative;
+  }
+
+  .custom-nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 6px 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .custom-nav ul li a:hover,
+  .custom-nav ul li a.active {
+    color: purple;
+  }
+
+  .custom-nav ul li.language .dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    z-index: 1000;
+  }
+
+  .custom-nav ul li.language .dropdown a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  .custom-nav ul li.language .dropdown a:hover {
+    background-color: #f5f5f5;
+  }
+
+  .custom-nav ul li .btn-apply {
+    background-color: #ff589e;
+    color: white !important;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .custom-nav ul li .btn-apply:hover {
+    background-color: #e04a8c;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .custom-nav {
+      padding: 12px 20px;
+    }
+
+    .custom-nav .menu-container {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: flex-start;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+    }
+
+    .custom-nav .menu-container.open {
+      max-height: 500px;
+    }
+
+    .custom-nav ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .custom-nav ul li {
+      width: 100%;
+      border-top: 1px solid #eee;
+    }
+
+    .custom-nav ul li a,
+    .custom-nav ul li .btn-apply {
+      padding: 15px 20px;
+      width: 100%;
+      display: block;
+      text-align: left;
+    }
+
+    .custom-nav .hamburger {
+      display: flex;
+    }
+
+    .custom-nav ul li.language {
+      position: static;
+    }
+
+    .custom-nav ul li.language .dropdown {
+      position: fixed;
+      top: 65px;
+      left: 20px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      z-index: 10001;
+    }
+
+    .custom-nav ul li.language .dropdown a {
+      font-size: 1.1rem;
+      padding: 12px 16px;
+    }
+  }
+</style>
+
+<nav class="custom-nav">
+  <div class="logo">
+    <a href="#">
+      <img src="assets/images/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <!-- Hamburger menu -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu container -->
+  <div class="menu-container" id="menu">
+    <ul>
+      <li><a href="#welcome" class="active"><strong>Home</strong></a></li>
+      <li><a href="#features"><strong>About</strong></a></li>
+      <li><a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"><strong>Whitepaper</strong></a></li>
+      <li><a href="#blog"><strong>Vision</strong></a></li>
+      <li class="language">
+        <a id="langToggle"><strong>Language ▿</strong></a>
+        <div class="dropdown" id="langDropdown">
+          <a href="index-zh-CN.html">简体中文</a>
+          <a href="index-zh-TW.html">繁體中文</a>
+          <a href="index-en.html">English</a>
+        </div>
+      </li>
+      <li><a href="#features" class="btn-apply">Apply Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- JS for toggling menu and language dropdown -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+  const langToggle = document.getElementById('langToggle');
+  const langDropdown = document.getElementById('langDropdown');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    langDropdown.style.display = 'none';
+  });
+
+  langToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langDropdown.style.display =
+      langDropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!langDropdown.contains(e.target) && !langToggle.contains(e.target)) {
+      langDropdown.style.display = 'none';
+    }
+  });
+</script>
+<!-- ***** Header Area End ***** -->
+
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+
+
+<!-- ***** Header Text Start ***** -->
+<div class="header-text">
+    <div class="container">
+        <div class="row">
+
+            <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12" style="font-size: 1.5rem; line-height: 1.4;">
+                <h1 style="font-size: 3.5rem; line-height: 1.2;">
+                    <strong>AVIA ASIA LIMITED</strong><br>
+                    <strong>Make Every Policy<br>A Valuable Asset</strong>
+                </h1>
+                <p style="font-size: 1.5rem; line-height: 1.5;">
+                    We are not “selling insurance”; we are building a new insurance finance system where everyone can participate and share in the returns.
+                </p>
+                <a href="#features" class="main-button-slider" style="font-size: 1.5rem; padding: 18px 36px;"><strong>Apply Now</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Header Text End ***** -->
+
+</div>
+<!-- ***** Welcome Area End ***** -->
+
+</div>
+<!-- ***** Welcome Area End ***** -->
+
+<!-- ***** Features Small Start ***** -->
+<section class="section home-feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <!-- ***** Features Small Item Start ***** -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                        <div class="features-small-item">
+                            <div class="icon">
+                                <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                            </div>
+                            <h5 class="features-title"><strong>Digitalization of Insurance Assets</strong></h5>
+                            <p>Transform traditional savings policies, annuities, and other valuable assets into digital certificates using technology for more transparent management and flexible operations.</p>
+                        </div>
+                    </div>
+                    <!-- ***** Features Small Item End ***** -->
+
+                    <!-- ***** Features Small Item Start ***** -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                        <div class="features-small-item">
+                            <div class="icon">
+                                <i><img src="assets/images/featured-item-02.png" alt=""></i>
+                            </div>
+                            <h5 class="features-title"><strong>On-Chain Policy Value</strong></h5>
+                            <p>Each policy asset is certified on-chain, ensuring that every investment is backed by real assets—safe, reliable, and clearly valued.</p>
+                        </div>
+                    </div>
+                    <!-- ***** Features Small Item End ***** -->
+
+                    <!-- ***** Features Small Item Start ***** -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                        <div class="features-small-item">
+                            <div class="icon">
+                                <i><img src="assets/images/featured-item-03.png" alt=""></i>
+                            </div>
+                            <h5 class="features-title"><strong>Empowering Individuals & Institutions</strong></h5>
+                            <p>Whether it's personal wealth planning or low-risk income needs of institutions, we enable participation in the long-term value growth of insurance finance.</p>
+                        </div>
+                    </div>
+                    <!-- ***** Features Small Item End ***** -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Features Small End ***** -->
+<!-- ***** Features Big Item Start ***** -->
+<section class="section" id="features" style="padding-top: 10px; padding-bottom: 10px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+        <div class="left-heading">
+          <h2 class="section-title"><strong>About Us: From Insurance to Asset Freedom</strong></h2>
+        </div>
+        <div class="left-text">
+          <p><strong>We are an innovative platform integrating insurance and fintech, headquartered in Hong Kong with business across multiple Asian markets. Through partnerships with insurance companies, trust institutions, and regulatory sandboxes, we drive the digitalization of traditional policy assets and unlock long-term value.</strong><br>
+The platform is part of the renowned British insurance group <strong>Aviva plc</strong>, with a history of <strong>over 300 years</strong> and more than <strong>30 million customers</strong> globally — a symbol of financial stability and trust.</p>
+        </div>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+        <img src="assets/images/right-image.gif" class="rounded img-fluid d-block mx-auto" alt="App">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ***** Features Big Item End ***** -->
+
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;">
+
+<!-- ***** Features Big Item Start ***** -->
+<section class="section" style="padding-top: 30px; padding-bottom: 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+        <img src="assets/images/left-image.gif" class="rounded img-fluid d-block mx-auto" alt="App">
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+        <div class="left-heading">
+          <h2 class="section-title"><strong>What We Do</strong></h2>
+        </div>
+        <div class="left-text">
+          <p><strong>✅ Insurance Asset Digitalization:</strong><br>Convert savings-type policies and annuities with cash value into digital assets for more transparent management and flexible operations.</p>
+
+          <p><strong>✅ On-Chain Policy Value:</strong><br>Each policy is certified on-chain, with real, traceable assets—safe, reliable, and clearly valued.</p>
+
+          <p><strong>✅ Empowering Individuals & Institutions:</strong><br>Whether personal financial planning or institutional investment, you can participate in low-risk, long-term stable growth in insurance finance.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="hr"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ***** Features Big Item End ***** -->
+
+
+<!-- ***** Home Parallax Start ***** -->
+<section class="mini" id="work-process">
+  <div class="mini-content">
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-3 col-lg-6">
+          <div class="info">
+            <h1>Turn Your Policy into Cash Flow</h1>
+            <p>We provide a one-stop service around four key areas of policy assets: verification, value enhancement, circulation, and inheritance. From valuation and digital registration to dividend withdrawal and liquidity management, we help you turn “dormant insurance” into a wealth tool that is accessible, configurable, and transferable.</p>
+          </div>
+        </div>
+      </div>
+
+     <!-- ***** Mini Box Section Start ***** -->
+<style>
+    .row.no-gutter-fix {
+        margin-left: -10px;
+        margin-right: -10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .col-custom {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    @media (min-width: 576px) {
+        .col-custom {
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .col-custom {
+            width: 20%;
+        }
+    }
+
+    .mini-box {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .mini-box:hover {
+        background-color: #e0e0e0;
+    }
+
+    .mini-box img {
+        max-width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .mini-box strong {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .mini-box span {
+        font-size: 0.95em;
+        color: #555;
+    }
+</style>
+
+<div class="row no-gutter-fix">
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+            <strong>Asset Confirmation</strong>
+            <span>Understand the real value of your policy and clarify your asset status.</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-02.png" alt=""></i>
+            <strong>Rights Registration</strong>
+            <span>Convert policies into manageable digital assets to enhance value and liquidity.</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-03.png" alt=""></i>
+            <strong>Income Plan</strong>
+            <span>Flexible income plans with monthly or quarterly dividend withdrawals.</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-04.png" alt=""></i>
+            <strong>Liquidity Management</strong>
+            <span>Support asset withdrawal, transfer, and collateralization with flexible control.</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-05.png" alt=""></i>
+            <strong>Customized Solutions</strong>
+            <span>Offer multi-currency, cross-border, and trust plans for institutions and high-net-worth clients.</span>
+        </a>
+    </div>
+</div>
+<!-- ***** Mini Box Section End ***** -->
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+
+ <!-- ***** Pricing Plans Start ***** -->
+<section class="section colored" id="pricing-plans">
+    <style>
+        /* Issue 1: Add inner padding for text content inside boxes */
+        .pricing-item .list li {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* Issue 2: Reduce vertical spacing from above section */
+        #pricing-plans.section {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            margin-top: -30px;
+        }
+
+        .center-text, .center-heading {
+            margin-bottom: 20px !important;
+        }
+    </style>
+
+    <div class="container">
+        <!-- ***** Section Title Start ***** -->
+        <div class="row" style="margin-top: 60px;">
+            <div class="col-lg-12">
+                <div class="center-heading">
+                    <h2 class="section-title"><strong>Avia Asia — The Engine Behind Your Assets</strong></h2>
+                </div>
+            </div>
+            <div class="offset-lg-3 col-lg-6">
+                <div class="center-text">
+                    <p>Your policy is more than just a contract — it’s a potential asset. We help users confirm asset ownership, unlock returns, and manage liquidity, turning a static insurance product into a controllable, accessible, and strategic wealth engine.</p>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Section Title End ***** -->
+
+        <div class="row">
+            <!-- ***** Pricing Item 1 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                <div class="pricing-item">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">72%</span>
+                            <span class="price"></span>
+                            <span class="period">72% of Long-term Policyholders</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                Have never proactively assessed the current cash value of policies held for more than 5 years — our asset verification service helped them discover an average of 38% available liquidity.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***** Pricing Item 2 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                <div class="pricing-item active">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">22%</span>
+                            <span class="price"></span>
+                            <span class="period">22% More Monthly Cash</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                Through dividend reinvestment and allocation strategies, policy assets deliver 22% more monthly withdrawable income compared to traditional methods — stable, sustainable, and ideal for household cash flow support.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***** Pricing Item 3 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                <div class="pricing-item">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">80%</span>
+                            <span class="price"></span>
+                            <span class="period">80% of High-Net-Worth Families</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                When configuring a second policy, actively include the “Digital Registration + Asset Liquidity” modules, enabling better cross-border inheritance and financing, thus unlocking greater value from their policies.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Pricing Plans End ***** -->
+
+
+
+    <!-- ***** Blog Start ***** -->
+<section class="section" id="blog">
+    <div class="container">
+        <!-- ***** Section Title Start ***** -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="center-heading">
+                    <h2 class="section-title"><strong>Our Core Values & Future Vision</strong></h2>
+                </div>
+            </div>
+            <div class="offset-lg-3 col-lg-6">
+                <div class="center-text">
+                    <p>Together, we’re shaping a new future for insurance assets—transforming protection into sustainable, stable financial momentum for long-term value growth and secure wealth succession.</p>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Section Title End ***** -->
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="blog-post-thumb">
+                    <div class="img">
+                        <img src="assets/images/blog-item-01.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h3>
+                            <a href="#"><strong>Our Philosophy</strong></a>
+                        </h3>
+                        <div class="text">
+                            Built on integrity and driven by innovation, we are committed to providing every client with a transparent, secure, and efficient insurance asset management experience. We believe insurance is not just protection—it’s a bridge to wealth growth and legacy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="blog-post-thumb">
+                    <div class="img">
+                        <img src="assets/images/blog-item-02.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h3>
+                            <a href="#"><strong>Our Vision</strong></a>
+                        </h3>
+                        <div class="text">
+                            To become Asia’s leading platform for digital insurance asset management—pioneering the transformation of traditional insurance into smart, liquid assets that unlock greater financial value from every policy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="blog-post-thumb">
+                    <div class="img">
+                        <img src="assets/images/blog-item-03.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h3>
+                            <a href="#"><strong>Our Commitment</strong></a>
+                        </h3>
+                        <div class="text">
+                            We are dedicated to safeguarding client interests, adhering to regulatory standards, and integrating cutting-edge technology with professional service to build trusted, long-term wealth partnerships.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Blog End ***** -->
+
+
+    
+    <!-- ***** Footer Start ***** -->
+<footer style="margin-top: 0px; padding-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul class="social">
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright"><strong>Copyright &copy; 2025— AVIA ASIA LIMITED</strong><a target="_blank" href="#" title=""></a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

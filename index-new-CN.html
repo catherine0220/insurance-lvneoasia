@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AVIA ASIA Limited - 保险数字资产平台" />
+    <title>AVIA ASIA Limited</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="font-sans antialiased bg-gray-50 text-gray-800">
+    <!-- 导航栏 -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <a href="#" class="text-xl font-bold text-green-500">LVNEOASIA</a>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#home" class="hover:text-green-500">首页</a>
+          <a href="#about" class="hover:text-green-500">关于我们</a>
+          <a href="#services" class="hover:text-green-500">服务</a>
+          <a href="#process" class="hover:text-green-500">流程</a>
+          <a href="#vision" class="hover:text-green-500">愿景</a>
+          <a href="#contact" class="hover:text-green-500">联系我们</a>
+        </nav>
+        <a
+          href="#contact"
+          class="hidden md:inline-block px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600"
+          >立即投保</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero 区域 -->
+    <section
+      id="home"
+      class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white relative"
+      style="background-image: url('assets/images/banner-bg1.png')"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div class="relative z-10 max-w-3xl px-4">
+        <img
+          src="assets/images/logo1.png"
+          alt="AVIA ASIA Logo"
+          class="mx-auto h-32 mb-6"
+        />
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          让每一份保单成为有价值的资产
+        </h1>
+        <p class="text-lg mb-20">
+          我们不是销售保险，而是打造一个共享收益的新金融体系。
+        </p>
+        <a
+          href="#services"
+          class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full mr-4"
+          >了解详情</a
+        >
+        <a
+          href="#contact"
+          class="border border-white hover:bg-white hover:text-green-500 text-white px-6 py-3 rounded-full"
+          >立即投保</a
+        >
+      </div>
+    </section>
+
+    <!-- 服务 -->
+    <section id="services" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">我们的核心服务</h2>
+        <p class="mb-12 text-gray-600">
+          技术驱动，重新定义保险资产的价值与流动性
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
+            <div class="mb-4 text-green-500 text-3xl">
+              <i class="fas fa-digital-tachograph"></i>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">保险资产数字化</h4>
+            <p class="text-sm text-gray-600">
+              将保单转化为数字资产，实现透明管理与灵活操作。
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
+            <div class="mb-4 text-green-500 text-3xl">
+              <i class="fas fa-link"></i>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">保单价值上链</h4>
+            <p class="text-sm text-gray-600">
+              每张保单链上认证，资产真实可查，安全可靠。
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
+            <div class="mb-4 text-green-500 text-3xl">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">赋能个人与机构</h4>
+            <p class="text-sm text-gray-600">
+              为个人和机构提供参与长期保险资产增长的能力。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 bg-gray-100">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img
+            src="https://source.unsplash.com/600x400/?team,office"
+            alt="关于我们"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h2 class="text-3xl font-bold mb-4">关于我们</h2>
+          <p class="mb-4">
+            我们是融合保险与金融科技的创新平台，总部位于香港，与Aviva
+            plc集团合作，致力于释放传统保单的数字价值。
+          </p>
+          <a
+            href="#"
+            class="inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600"
+            >了解更多</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 运作流程 -->
+    <section id="process" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">保单变现流程</h2>
+        <div class="grid md:grid-cols-4 gap-8 mt-10">
+          <div>
+            <div class="text-green-500 text-4xl mb-2">1</div>
+            <h4 class="font-semibold mb-2">确权评估</h4>
+            <p class="text-sm text-gray-600">了解保单价值</p>
+          </div>
+          <div>
+            <div class="text-green-500 text-4xl mb-2">2</div>
+            <h4 class="font-semibold mb-2">数字登记</h4>
+            <p class="text-sm text-gray-600">转为数字资产</p>
+          </div>
+          <div>
+            <div class="text-green-500 text-4xl mb-2">3</div>
+            <h4 class="font-semibold mb-2">收益提取</h4>
+            <p class="text-sm text-gray-600">灵活分红管理</p>
+          </div>
+          <div>
+            <div class="text-green-500 text-4xl mb-2">4</div>
+            <h4 class="font-semibold mb-2">资产流通</h4>
+            <p class="text-sm text-gray-600">可转让与抵押</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 愿景 -->
+    <section id="vision" class="py-20 bg-green-50">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">我们的愿景</h2>
+        <p class="max-w-2xl mx-auto text-gray-700">
+          推动保险资产迈向智能化、流通化的未来，让每一份保障都释放出更大的金融价值。
+        </p>
+      </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">联系我们</h2>
+          <p class="mb-2">📍 香港中环金融街8号 国际金融中心二期</p>
+          <p class="mb-2">📞 +852 1234 5678</p>
+          <p class="mb-2">📧 info@aviaasia.com</p>
+          <div class="mt-4 space-x-4">
+            <a href="#" class="text-gray-500 hover:text-green-500"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-gray-500 hover:text-green-500"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-500 hover:text-green-500"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <form class="bg-gray-50 p-6 rounded-lg shadow">
+            <input
+              type="text"
+              placeholder="姓名"
+              class="w-full mb-4 px-4 py-2 border rounded"
+            />
+            <input
+              type="email"
+              placeholder="邮箱"
+              class="w-full mb-4 px-4 py-2 border rounded"
+            />
+            <textarea
+              placeholder="留言内容"
+              rows="5"
+              class="w-full mb-4 px-4 py-2 border rounded"
+            ></textarea>
+            <button
+              class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+            >
+              提交
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="text-center text-sm">
+        © 2025 AVIA ASIA Limited. 保留所有权利。
+      </div>
+    </footer>
+  </body>
+</html>

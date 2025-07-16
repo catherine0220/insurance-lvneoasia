@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Avia Asia Limited</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+
+    </head>
+    
+    <body>
+    
+<!-- ***** Header Area Start ***** -->
+<style>
+  nav.custom-nav {
+    background: #fff;
+    padding: 12px 30px;
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 1200px;
+    margin: 10px auto 0 auto;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+
+  .custom-nav .logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  .custom-nav .menu-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .custom-nav ul li {
+    position: relative;
+  }
+
+  .custom-nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 6px 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .custom-nav ul li a:hover,
+  .custom-nav ul li a.active {
+    color: purple;
+  }
+
+  .custom-nav ul li.language .dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    z-index: 1000;
+  }
+
+  .custom-nav ul li.language .dropdown a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  .custom-nav ul li.language .dropdown a:hover {
+    background-color: #f5f5f5;
+  }
+
+  .custom-nav ul li .btn-apply {
+    background-color: #ff589e;
+    color: white !important;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .custom-nav ul li .btn-apply:hover {
+    background-color: #e04a8c;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+  }
+
+  /* ========== 移動端樣式 ========== */
+  @media (max-width: 768px) {
+    .custom-nav {
+      padding: 12px 20px;
+    }
+
+    .custom-nav .menu-container {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: flex-start;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+    }
+
+    .custom-nav .menu-container.open {
+      max-height: 500px;
+    }
+
+    .custom-nav ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .custom-nav ul li {
+      width: 100%;
+      border-top: 1px solid #eee;
+    }
+
+    .custom-nav ul li a,
+    .custom-nav ul li .btn-apply {
+      padding: 15px 20px;
+      width: 100%;
+      display: block;
+      text-align: left;
+    }
+
+    .custom-nav .hamburger {
+      display: flex;
+    }
+
+    .custom-nav ul li.language {
+      position: static;
+    }
+
+    .custom-nav ul li.language .dropdown {
+      position: fixed;
+      top: 65px;
+      left: 20px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      z-index: 10001;
+    }
+
+    .custom-nav ul li.language .dropdown a {
+      font-size: 1.1rem;
+      padding: 12px 16px;
+    }
+  }
+</style>
+
+<nav class="custom-nav">
+  <div class="logo">
+    <a href="#">
+      <img src="assets/images/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <!-- 漢堡選單按鈕 -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- 菜單容器 -->
+  <div class="menu-container" id="menu">
+    <ul>
+      <li><a href="#welcome" class="active"><strong>主頁</strong></a></li>
+      <li><a href="#features"><strong>關於</strong></a></li>
+      <li><a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"><strong>白皮書</strong></a></li>
+      <li><a href="#blog"><strong>願景</strong></a></li>
+      <li class="language">
+        <a id="langToggle"><strong>語言▿</strong></a>
+        <div class="dropdown" id="langDropdown">
+          <a href="index-zh-CN.html">简体</a>
+          <a href="index-zh-TW.html">繁體</a>
+          <a href="index-en.html">English</a>
+        </div>
+      </li>
+      <li><a href="#features" class="btn-apply">立即投保</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+  const langToggle = document.getElementById('langToggle');
+  const langDropdown = document.getElementById('langDropdown');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    langDropdown.style.display = 'none';
+  });
+
+  langToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langDropdown.style.display =
+      langDropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!langDropdown.contains(e.target) && !langToggle.contains(e.target)) {
+      langDropdown.style.display = 'none';
+    }
+  });
+</script>
+<!-- ***** Header Area End ***** -->
+
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+
+
+<!-- ***** Header Text Start ***** -->
+<div class="header-text">
+    <div class="container">
+        <div class="row">
+
+            <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12" style="font-size: 1.5rem; line-height: 1.4;">
+                <h1 style="font-size: 3.5rem; line-height: 1.2;">
+                    <strong>AVIA ASIA LIMITED</strong><br>
+                    <strong>讓每一份保單<br>成為有價值的資產</strong>
+                </h1>
+                <p style="font-size: 1.5rem; line-height: 1.5;">
+                    我們不是在“銷售保險”，我們在構建一個人人可參與、人人可共用收益的保險金融新體系。
+                </p>
+                <a href="#features" class="main-button-slider" style="font-size: 1.5rem; padding: 18px 36px;"><strong>立即投保</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Header Text End ***** -->
+
+</div>
+<!-- ***** Welcome Area End ***** -->
+
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title"><strong>保險資產數位化</strong></h5>
+                                <p>將傳統的儲蓄保單、年金類保險等價值的資產，通過技術轉化為數字化憑證，實現更透明的管理和更靈活的操作。</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-02.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title"><strong>保單價值上鏈</strong></h5>
+                                <p>每一張保單資產都經由鏈上認證，確保投資背後有真實的資產支撐，安全可靠，價值清晰可見。</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-03.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title"><strong>賦能個人與機構</strong></h5>
+                                <p>無論是個人家庭資產配置，還是大型機構的低風險收益需求，都能通過我們參與到保險金融領域的長期價值增長中。</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section"  id="features" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title"><strong>關於我們：從保險走向資產自由</strong></h2>
+                    </div>
+                    <div class="left-text">
+                        <p><strong>我們是一家融合保險與金融科技的創新平臺，總部設於香港，業務覆蓋亞洲多個市場。通過與保險公司、信託機構及監管沙盒合作，我們推動傳統保單資產數位化，釋放長期價值。</strong><br>
+平臺隸屬於英國知名保險集團 <strong>Aviva plc </strong>，擁有<strong>300多年歷史</strong>，全球客戶超過<strong>3,000萬人</strong>，是金融穩健與信任的象徵。</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/right-image.gif" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;">
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" style="padding-top: 30px; padding-bottom: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/left-image.gif" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title"><strong>我們做什麼</strong></h2>
+                    </div>
+                    <div class="left-text">
+                        <p><strong>✅ 保險資產數位化：</strong><br>將儲蓄型保單、年金等具備現金價值的保險轉為數字資產，管理更透明，操作更靈活。</p>
+
+<strong>✅ 保單價值上鏈：</strong><br>每份保單都上鏈認證，資產真實可查，安全可靠，價值一目了然。</p>
+
+<strong>✅ 賦能個人與機構：</strong><br>個人理財或機構投資，均可參與低風險、長期穩健的保險金融增長。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>讓保單變成你的現金流</h1>
+                            <p>我們圍繞保單資產的確權、增值、流通與傳承四大環節，提供從價值評估、數位化登記到分紅提取與流動管理的一站式服務，幫助你把“沉睡的保險”變成可提取、可配置、可傳承的財富工具。</p>
+                        </div>
+                    </div>
+                </div>
+
+<!-- ***** Mini Box Section Start ***** -->
+<style>
+    .row.no-gutter-fix {
+        margin-left: -10px;
+        margin-right: -10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .col-custom {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    @media (min-width: 576px) {
+        .col-custom {
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .col-custom {
+            width: 20%;
+        }
+    }
+
+    .mini-box {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .mini-box:hover {
+        background-color: #e0e0e0;
+    }
+
+    .mini-box img {
+        max-width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .mini-box strong {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .mini-box span {
+        font-size: 0.95em;
+        color: #555;
+    }
+</style>
+
+<div class="row no-gutter-fix">
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+            <strong>資產確權</strong>
+            <span>幫您瞭解保單真實價值，明確資產狀況。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-02.png" alt=""></i>
+            <strong>權益登記</strong>
+            <span>將保單轉為可管理的數位資產，促進資產增值與流通。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-03.png" alt=""></i>
+            <strong>收益計劃</strong>
+            <span>設計靈活收益方案，分紅按月或季度提取。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-04.png" alt=""></i>
+            <strong>流動性管理</strong>
+            <span>支援資產提取、轉讓與抵押，靈活操作資產。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-05.png" alt=""></i>
+            <strong>客製化方案</strong>
+            <span>為機構與高資產客戶提供多幣別、跨境與信託方案。</span>
+        </a>
+    </div>
+</div>
+<!-- ***** Mini Box Section End ***** -->
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+
+ <!-- ***** Pricing Plans Start ***** -->
+<section class="section colored" id="pricing-plans">
+    <style>
+        /* 問題1：增加小字內容與框邊的內邊距 */
+        .pricing-item .list li {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* 問題2：減少該 section 與上方內容的距離 */
+        #pricing-plans.section {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            margin-top: -30px;
+        }
+
+        .center-text, .center-heading {
+            margin-bottom: 20px !important;
+        }
+    </style>
+
+    <div class="container">
+<!-- ***** Section Title Start ***** -->
+<div class="row" style="margin-top: 60px;">
+    <div class="col-lg-12">
+        <div class="center-heading">
+            <h2 class="section-title"><strong>Avia Asia—你手中的資產發動機</strong></h2>
+        </div>
+    </div>
+    <div class="offset-lg-3 col-lg-6">
+        <div class="center-text">
+            <p>你的保單遠不止是一張合同，它是一份潛在的資產。我們幫助用戶將保單進行資產確權、收益釋放與靈活流通管理，讓原本靜態的保障工具，轉化為可控、可提、可規劃的財富引擎。</p>
+        </div>
+    </div>
+</div>
+<!-- ***** Section Title End ***** -->
+
+
+        <div class="row">
+            <!-- ***** Pricing Item 1 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                <div class="pricing-item">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">72%</span>
+                            <span class="price"></span>
+                            <span class="period">72% 的長期保單持有人</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                在購買5年以上的保單後，從未主動評估其當前的現金價值 —— 我們的確權服務幫助他們平均發現 38%的可動用資金空間。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***** Pricing Item 2 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                <div class="pricing-item active">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">22%</span>
+                            <span class="price"></span>
+                            <span class="period">月均可提收益提升 22%</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                通過分紅收益再配置機制，保單資產的月均可領取收益比傳統方式提升 22%，穩定且可持續，適用於家庭日常現金流補充。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***** Pricing Item 3 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                <div class="pricing-item">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">80%</span>
+                            <span class="price"></span>
+                            <span class="period">80% 的高淨值家庭客戶</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                在配置第二份保單時，會主動加入“數字登記 + 資產流通”模組，使保單具備更高的跨境傳承與融資能力，保障價值更好釋放。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Pricing Plans End ***** -->
+
+
+    <!-- ***** Blog Start ***** -->
+    <section class="section" id="blog">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title"><strong>我們的核心價值與未來願景</strong></h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>攜手共創保險資產的新未來，共同推動保險保障轉化為持續穩定、可持續發展的財富動力，實現資產的長期增值與安全傳承。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-01.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#"><strong>我們的理念</strong></a>
+                            </h3>
+                            <div class="text">
+                              以誠信為基石，以創新為驅動，致力於為每一位客戶創造透明、安全且高效的保險資產管理體驗。我們堅信，保險不僅是保障，更是財富增值與傳承的橋樑。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-02.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#"><strong>我們的願景</strong></a>
+                            </h3>
+                            <div class="text">
+                               成為亞洲領先的保險資產數位化管理平臺，推動傳統保險資產邁向智能化、流通化的未來，讓每一份保障都釋放出更大的金融價值。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-03.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#"><strong>我們的承諾</strong></a>
+                            </h3>
+                            <div class="text">
+                                持續守護客戶利益，嚴格遵守監管要求，結合前沿科技與專業服務，為客戶打造值得信賴的長期財富夥伴關係。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Blog End ***** -->
+
+    
+    <!-- ***** Footer Start ***** -->
+<footer style="margin-top: 0px; padding-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul class="social">
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright"><strong>Copyright &copy; 2025— AVIA ASIA LIMITED</strong><a target="_blank" href="#" title=""></a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
