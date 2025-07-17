@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -21,7 +22,10 @@
       <div
         class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
       >
+        <!-- Logo -->
         <a href="#" class="text-xl font-bold text-green-500">LVNEOASIA</a>
+
+        <!-- 主导航 -->
         <nav class="hidden md:flex space-x-6">
           <a href="#home" class="hover:text-green-500">首页</a>
           <a href="#about" class="hover:text-green-500">关于我们</a>
@@ -30,11 +34,58 @@
           <a href="#vision" class="hover:text-green-500">愿景</a>
           <a href="#contact" class="hover:text-green-500">联系我们</a>
         </nav>
-        <a
-          href="#contact"
-          class="hidden md:inline-block px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600"
-          >立即投保</a
-        >
+
+        <!-- 右侧按钮组：语言切换 + 投保按钮 -->
+        <div class="flex items-center space-x-4">
+          <!-- 语言切换 dropdown -->
+          <div class="relative group">
+            <button
+              class="flex items-center space-x-1 text-gray-700 hover:text-green-500 focus:outline-none"
+            >
+              <span>语言</span>
+              <svg
+                class="w-4 h-4 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600"
+                >简体中文</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600"
+                >English</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600"
+                >Tiếng Việt</a
+              >
+            </div>
+          </div>
+
+          <!-- CTA 按钮 -->
+          <a
+            href="#contact"
+            class="hidden md:inline-block px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600"
+          >
+            立即投保
+          </a>
+        </div>
       </div>
     </header>
 
@@ -71,38 +122,44 @@
     </section>
 
     <!-- 服务 -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-32 bg-white">
       <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-6">我们的核心服务</h2>
-        <p class="mb-12 text-gray-600">
+        <p class="mb-12 text-gray-600 leading-relaxed tracking-wide">
           技术驱动，重新定义保险资产的价值与流动性
         </p>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
-            <div class="mb-4 text-green-500 text-3xl">
-              <i class="fas fa-digital-tachograph"></i>
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg min-h-[22rem]"
+          >
+            <div class="mb-6 text-green-500 text-4xl">
+              <i class="fa fa-list-ol"></i>
             </div>
-            <h4 class="font-semibold text-lg mb-2">保险资产数字化</h4>
-            <p class="text-sm text-gray-600">
-              将保单转化为数字资产，实现透明管理与灵活操作。
+            <h4 class="font-semibold text-lg mb-4">保险资产数字化</h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              将传统的储蓄保单、年金类保险等价值的资产，通过技术转化为数字化凭证，实现更透明的管理和更灵活的操作。
             </p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
-            <div class="mb-4 text-green-500 text-3xl">
-              <i class="fas fa-link"></i>
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg min-h-[22rem]"
+          >
+            <div class="mb-6 text-green-500 text-4xl">
+              <i class="fa fa-line-chart"></i>
             </div>
-            <h4 class="font-semibold text-lg mb-2">保单价值上链</h4>
-            <p class="text-sm text-gray-600">
-              每张保单链上认证，资产真实可查，安全可靠。
+            <h4 class="font-semibold text-lg mb-4">保单价值上链</h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              每一张保单资产都经由链上认证，确保投资背后有真实的资产支撑，安全可靠，价值清晰可见。
             </p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
-            <div class="mb-4 text-green-500 text-3xl">
-              <i class="fas fa-user-shield"></i>
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg min-h-[22rem]"
+          >
+            <div class="mb-6 text-green-500 text-4xl">
+              <i class="fa fa-university"></i>
             </div>
-            <h4 class="font-semibold text-lg mb-2">赋能个人与机构</h4>
-            <p class="text-sm text-gray-600">
-              为个人和机构提供参与长期保险资产增长的能力。
+            <h4 class="font-semibold text-lg mb-4">赋能个人与机构</h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              无论是个人家庭资产配置，还是大型机构的低风险收益需求，都能通过我们参与到保险金融领域的长期价值增长中。
             </p>
           </div>
         </div>
@@ -110,117 +167,523 @@
     </section>
 
     <!-- 关于我们 -->
-    <section id="about" class="py-20 bg-gray-100">
+    <section id="about" class="bg-white py-32 pb-52">
       <div
-        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center"
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center"
       >
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <img
-            src="https://source.unsplash.com/600x400/?team,office"
-            alt="关于我们"
-            class="rounded-lg shadow-lg"
-          />
+        <!-- 视频区域 -->
+        <div class="md:w-5/12 mb-12 md:mb-0">
+          <video
+            src="assets/images/family6.mp4"
+            controls
+            class="rounded-2xl h-96 w-full object-cover shadow-lg"
+            autoplay
+            muted
+            loop
+          ></video>
         </div>
-        <div class="md:w-1/2 md:pl-12">
-          <h2 class="text-3xl font-bold mb-4">关于我们</h2>
-          <p class="mb-4">
-            我们是融合保险与金融科技的创新平台，总部位于香港，与Aviva
-            plc集团合作，致力于释放传统保单的数字价值。
+
+        <!-- 文本区域 -->
+        <div class="md:w-7/12 md:pl-16">
+          <h2 class="text-3xl font-bold mb-16">关于我们</h2>
+          <p class="mb-10 leading-relaxed text-gray-700">
+            我们是一家融合保险与金融科技的创新平台，总部设于香港，业务覆盖亚洲多个市场。通过与保险公司、信托机构及监管沙盒合作，我们推动传统保单资产数字化，释放长期价值。
+            <br /><br />平台隶属于英国知名保险集团 Aviva
+            plc，拥有300多年历史，全球客户超过3,000万人，是金融稳健与信任的象征。
           </p>
           <a
             href="#"
-            class="inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600"
-            >了解更多</a
+            class="inline-block mt-2 bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition"
           >
+            了解更多
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- 运作流程 -->
-    <section id="process" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">保单变现流程</h2>
-        <div class="grid md:grid-cols-4 gap-8 mt-10">
-          <div>
-            <div class="text-green-500 text-4xl mb-2">1</div>
-            <h4 class="font-semibold mb-2">确权评估</h4>
-            <p class="text-sm text-gray-600">了解保单价值</p>
-          </div>
-          <div>
-            <div class="text-green-500 text-4xl mb-2">2</div>
-            <h4 class="font-semibold mb-2">数字登记</h4>
-            <p class="text-sm text-gray-600">转为数字资产</p>
-          </div>
-          <div>
-            <div class="text-green-500 text-4xl mb-2">3</div>
-            <h4 class="font-semibold mb-2">收益提取</h4>
-            <p class="text-sm text-gray-600">灵活分红管理</p>
-          </div>
-          <div>
-            <div class="text-green-500 text-4xl mb-2">4</div>
-            <h4 class="font-semibold mb-2">资产流通</h4>
-            <p class="text-sm text-gray-600">可转让与抵押</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section
+      id="what-we-do"
+      class="py-36 relative bg-gradient-to-br from-green-50 via-white to-green-50"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-4xl font-extrabold text-center text-gray-800 mb-20 tracking-tight"
+        >
+          我们做什么
+        </h2>
 
-    <!-- 愿景 -->
-    <section id="vision" class="py-20 bg-green-50">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">我们的愿景</h2>
-        <p class="max-w-2xl mx-auto text-gray-700">
-          推动保险资产迈向智能化、流通化的未来，让每一份保障都释放出更大的金融价值。
-        </p>
-      </div>
-    </section>
-
-    <!-- 联系我们 -->
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
-        <div>
-          <h2 class="text-3xl font-bold mb-6">联系我们</h2>
-          <p class="mb-2">📍 香港中环金融街8号 国际金融中心二期</p>
-          <p class="mb-2">📞 +852 1234 5678</p>
-          <p class="mb-2">📧 info@aviaasia.com</p>
-          <div class="mt-4 space-x-4">
-            <a href="#" class="text-gray-500 hover:text-green-500"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="text-gray-500 hover:text-green-500"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="#" class="text-gray-500 hover:text-green-500"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-        </div>
-        <div>
-          <form class="bg-gray-50 p-6 rounded-lg shadow">
-            <input
-              type="text"
-              placeholder="姓名"
-              class="w-full mb-4 px-4 py-2 border rounded"
-            />
-            <input
-              type="email"
-              placeholder="邮箱"
-              class="w-full mb-4 px-4 py-2 border rounded"
-            />
-            <textarea
-              placeholder="留言内容"
-              rows="5"
-              class="w-full mb-4 px-4 py-2 border rounded"
-            ></textarea>
-            <button
-              class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- 项目 1 -->
+          <div
+            class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+          >
+            <div
+              class="flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-green-400 to-green-600 rounded-full mb-6 shadow-md group-hover:scale-105 transition-transform"
             >
-              提交
-            </button>
-          </form>
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              保险资产数字化
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              将储蓄型保单、年金等具备现金价值的保险转为数字资产，管理更透明，操作更灵活。
+            </p>
+          </div>
+
+          <!-- 项目 2 -->
+          <div
+            class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+          >
+            <div
+              class="flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-green-400 to-green-600 rounded-full mb-6 shadow-md group-hover:scale-105 transition-transform"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m1 6V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              保单价值上链
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              每份保单都上链认证，资产真实可查，安全可靠，价值一目了然。
+            </p>
+          </div>
+
+          <!-- 项目 3 -->
+          <div
+            class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+          >
+            <div
+              class="flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-green-400 to-green-600 rounded-full mb-6 shadow-md group-hover:scale-105 transition-transform"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              赋能个人与机构
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              个人理财或机构投资，均可参与低风险、长期稳健的保险金融增长。
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
+    <section id="process" class="py-32 bg-white relative">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6 text-gray-800">保单变现流程</h2>
+        <p class="mb-16 text-gray-600 text-lg leading-relaxed">
+          全流程线上操作，确保透明与高效
+        </p>
+
+        <div class="grid md:grid-cols-5 gap-8">
+          <!-- Step 1 -->
+          <div
+            class="p-6 border rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition duration-300 min-h-[240px]"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full text-white text-3xl bg-gradient-to-br from-green-300 to-blue-300 mx-auto mb-6"
+            >
+              <i class="fa fa-bar-chart"></i>
+            </div>
+            <h4 class="font-semibold text-lg text-gray-800 mb-2">确权评估</h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              帮您了解保单真实价值，明确资产状况。
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="p-6 border rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition duration-300 min-h-[240px]"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full text-white text-3xl bg-gradient-to-br from-green-300 to-blue-300 mx-auto mb-6"
+            >
+              <i class="fa fa-star-o"></i>
+            </div>
+            <h4 class="font-semibold text-lg text-gray-800 mb-2">
+              数字收益登记
+            </h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              将保单转为可管理的数字资产，促进资产增值与流通。
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="p-6 border rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition duration-300 min-h-[240px]"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full text-white text-3xl bg-gradient-to-br from-green-300 to-blue-300 mx-auto mb-6"
+            >
+              <i class="fa fa-usd"></i>
+            </div>
+            <h4 class="font-semibold text-lg text-gray-800 mb-2">权益登记</h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              将保单转为可管理的数字资产，促进资产增值与流通。
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="p-6 border rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition duration-300 min-h-[240px]"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full text-white text-3xl bg-gradient-to-br from-green-300 to-blue-300 mx-auto mb-6"
+            >
+              <i class="fa fa-user-plus"></i>
+            </div>
+            <h4 class="font-semibold text-lg text-gray-800 mb-2">流动性管理</h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              支持资产提取、转让和抵押，灵活操作资产。
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div
+            class="p-6 border rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition duration-300 min-h-[240px]"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full text-white text-3xl bg-gradient-to-br from-green-300 to-blue-300 mx-auto mb-6"
+            >
+              <i class="fa fa-list-alt"></i>
+            </div>
+            <h4 class="font-semibold text-lg text-gray-800 mb-2">定制方案</h4>
+            <p class="text-base text-gray-600 leading-relaxed">
+              为机构和高净值客户提供多币种、跨境及信托方案。
+            </p>
+          </div>
+        </div>
+
+        <!-- Full-width video -->
+        <div class="mt-16">
+          <video
+            src="assets/images/family4.mp4"
+            class="w-full h-80 rounded-lg object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- 我们的价值 -->
+    <section id="vision" class="py-20 bg-gradient-to-b from-green-50 to-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <!-- 标题 -->
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">
+          LVNEOASIA-你手中的资产发动机
+        </h2>
+        <p class="max-w-2xl mx-auto text-gray-700 text-base mb-12">
+          你的保单远不止是一张合同，它是一份潜在的资产。我们帮助用户将保单进行资产确权、收益释放与灵活流通管理，
+          让原本静态的保障工具，转化为可控、可提、可规划的财富引擎。
+        </p>
+
+        <!-- Box 列表 -->
+        <div class="space-y-8">
+          <!-- Box 1 -->
+          <div
+            class="flex bg-white border border-green-200 rounded-2xl shadow-md p-8 hover:shadow-lg transition duration-300 text-left"
+          >
+            <div class="w-1/4">
+              <div class="text-4xl font-bold text-green-600 mb-1">72%</div>
+              <div
+                class="inline-block text-sm font-semibold text-green-700 border-b-2 border-green-300"
+              >
+                长期保单持有人
+              </div>
+            </div>
+            <div class="w-w-3/4 pl-4">
+              <p class="text-sm text-gray-600 leading-relaxed">
+                在购买 5 年以上的保单后，从未主动评估其当前的现金价值 ——
+                我们的确权服务帮助他们平均发现 38% 的可动用资金空间。
+              </p>
+            </div>
+          </div>
+
+          <!-- Box 2 -->
+          <div
+            class="flex bg-white border border-green-200 rounded-2xl shadow-md p-8 hover:shadow-lg transition duration-300 text-left"
+          >
+            <div class="w-1/4">
+              <div class="text-4xl font-bold text-green-600 mb-1">22%</div>
+              <div
+                class="inline-block text-sm font-semibold text-green-700 border-b-2 border-green-300"
+              >
+                月均收益提升
+              </div>
+            </div>
+            <div class="w-w-3/4">
+              <p class="text-sm text-gray-600 leading-relaxed">
+                通过分红收益再配置机制，保单资产的月均可领取收益比传统方式提升
+                22%，适用于家庭日常现金流补充。
+              </p>
+            </div>
+          </div>
+
+          <!-- Box 3 -->
+          <div
+            class="flex bg-white border border-green-200 rounded-2xl shadow-md p-8 hover:shadow-lg transition duration-300 text-left"
+          >
+            <div class="w-1/4">
+              <div class="text-4xl font-bold text-green-600 mb-1">80%</div>
+              <div
+                class="inline-block text-sm font-semibold text-green-700 border-b-2 border-green-300"
+              >
+                高净值家庭客户
+              </div>
+            </div>
+            <div class="w-w-3/4">
+              <p class="text-sm text-gray-600 leading-relaxed">
+                在配置第二份保单时，会主动加入“数字登记 +
+                资产流通”模块，使保单具备更高的跨境传承与融资能力。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系我们（美化版 - 无背景色） -->
+    <section id="contact" class="relative py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-4">联系我们</h2>
+          <p class="text-lg text-gray-600">
+            我们坚信，每一份保险都是一份有温度的资产
+          </p>
+          <div class="mt-4 w-24 h-1 mx-auto bg-green-400 rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- 核心价值与未来愿景 -->
+          <div
+            class="bg-white p-8 shadow-xl rounded-2xl border border-gray-100 hover:shadow-2xl transition"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                class="w-8 h-8 text-green-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 8c-1.657 0-3 1.343-3 3v5h6v-5c0-1.657-1.343-3-3-3z"
+                />
+                <path d="M6 10c0-3.314 2.686-6 6-6s6 2.686 6 6v7H6v-7z" />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-800">
+                我们的核心价值与未来愿景
+              </h3>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              携手共创保险资产的新未来，共同推动保险保障转化为持续稳定、可持续发展的财富动力，实现资产的长期增值与安全传承。
+            </p>
+          </div>
+
+          <!-- 理念 -->
+          <div
+            class="bg-white p-8 shadow-xl rounded-2xl border border-gray-100 hover:shadow-2xl transition"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                class="w-8 h-8 text-green-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M13 16h-1v-4H9v-1h3V7h1v4h3v1h-3v4z" />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-800">我们的理念</h3>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              以诚信为基石，以创新为驱动，致力于为每一位客户创造透明、安全且高效的保险资产管理体验。
+            </p>
+          </div>
+
+          <!-- 愿景 -->
+          <div
+            class="bg-white p-8 shadow-xl rounded-2xl border border-gray-100 hover:shadow-2xl transition"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                class="w-8 h-8 text-green-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 8c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z" />
+                <path d="M6 20h12M4 4h16v16H4z" />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-800">我们的愿景</h3>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              成为亚洲领先的保险资产数字化管理平台，推动传统保险资产迈向智能化、流通化的未来。
+            </p>
+          </div>
+
+          <!-- 承诺 -->
+          <div
+            class="bg-white p-8 shadow-xl rounded-2xl border border-gray-100 hover:shadow-2xl transition"
+          >
+            <div class="flex items-center mb-4">
+              <svg
+                class="w-8 h-8 text-green-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-800">我们的承诺</h3>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              持续守护客户利益，结合前沿科技与专业服务，为客户打造值得信赖的长期财富伙伴关系。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 合作品牌 Carousel -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">我们的合作品牌</h2>
+
+        <div class="overflow-hidden relative">
+          <div
+            class="flex items-center animate-slide gap-16"
+            style="animation: slide 10s linear infinite"
+          >
+            <!-- 每个 Logo -->
+            <img
+              src="assets/images/brand1.png"
+              alt="品牌1"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand2.png"
+              alt="品牌2"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand3.png"
+              alt="品牌3"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand4.png"
+              alt="品牌4"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand5.png"
+              alt="品牌5"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand6.png"
+              alt="品牌6"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand7.png"
+              alt="品牌6"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+
+            <!-- 复制一轮，实现无限滚动 -->
+            <img
+              src="assets/images/brand1.png"
+              alt="品牌1"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand2.png"
+              alt="品牌2"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand3.png"
+              alt="品牌3"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand4.png"
+              alt="品牌4"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand5.png"
+              alt="品牌5"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/logos/brand6.png"
+              alt="品牌6"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+            <img
+              src="assets/images/brand7.png"
+              alt="品牌6"
+              class="h-12 grayscale hover:grayscale-0 transition duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 加在 <style> 或 Tailwind CSS 扩展中 -->
+    <style>
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
 
     <!-- 页脚 -->
     <footer class="bg-gray-800 text-white py-8">
