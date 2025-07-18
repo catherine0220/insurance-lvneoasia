@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+
+    <title>LVNEOASIA</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/indexnew.css" />
+
+    <!-- Element Plus CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+
+    <style>
+      .box {
+        background-color: #f7f7f7;
+        padding: 24px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- ***** Header Navigation ***** -->
+      <nav class="custom-nav">
+        <div class="logo">
+          <a href="#">
+            <img src="assets/images/logo1.png" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-container" id="menu">
+          <ul>
+            <li>
+              <a href="#welcome" class="active"><strong>主页</strong></a>
+            </li>
+            <li>
+              <a href="#features"><strong>关于</strong></a>
+            </li>
+            <li>
+              <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"
+                ><strong>白皮书</strong></a
+              >
+            </li>
+            <li>
+              <a href="#blog"><strong>愿景</strong></a>
+            </li>
+            <li class="language">
+              <a id="langToggle" class="text-white"><strong>语言▿</strong></a>
+              <div class="dropdown" id="langDropdown">
+                <a href="index-zh-CN.html">简体</a>
+                <a href="index-zh-TW.html">繁體</a>
+                <a href="index-en.html">English</a>
+              </div>
+            </li>
+            <li><a href="#features" class="btn-apply">立即投保</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- ***** Welcome Area ***** -->
+      <div class="welcome-area" id="welcome">
+        <div class="header-text">
+          <div class="container">
+            <h1>
+              <strong>LVNEOASIA</strong><br />
+              <strong>让每一份保单<br />成为有价值的资产</strong>
+            </h1>
+            <p>
+              我们不是在“销售保险”，我们在构建一个人人可参与、人人可共享收益的保险金融新体系。
+            </p>
+            <a href="#features" class="main-button-slider"
+              ><strong>立即投保</strong></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ***** About Us Section ***** -->
+      <div class="about-us" id="about-us">
+        <div class="header-text">
+          <div class="container">
+            <div>
+              <h3>About Us</h3>
+              <h1>
+                <strong>LVNEOASIA</strong><br />
+                <strong>让每一份保单<br />成为有价值的资产</strong>
+              </h1>
+              <p>
+                我们不是在“销售保险”，我们在构建一个人人可参与、人人可共享收益的保险金融新体系。
+              </p>
+            </div>
+
+            <!-- Element Plus Grid Start -->
+            <el-row :gutter="32" class="mt-4">
+              <el-col :span="8">
+                <div class="service-card">
+                  <h3>Digitalization of Insurance Assets</h3>
+                  <p>
+                    Transform traditional savings policies, annuities, and other
+                    valuable assets into digital certificates using technology
+                    for more transparent management and flexible operations.
+                  </p>
+                  <el-button type="primary" class="enquire-btn"
+                    >ENQUIRE NOW</el-button
+                  >
+                </div>
+              </el-col>
+
+              <el-col :span="8">
+                <div class="service-card">
+                  <h3>On-Chain Policy Value</h3>
+                  <p>
+                    Each policy asset is certified on-chain, ensuring that every
+                    investment is backed by real assets—safe, reliable, and
+                    clearly valued.
+                  </p>
+                  <el-button type="primary" class="enquire-btn"
+                    >ENQUIRE NOW</el-button
+                  >
+                </div>
+              </el-col>
+
+              <el-col :span="8">
+                <div class="service-card">
+                  <h3>Empowering Individuals & Institutions</h3>
+                  <p>
+                    Whether it's personal wealth planning or low-risk income
+                    needs of institutions, we enable participation in the
+                    long-term value growth of insurance finance.
+                  </p>
+                  <el-button type="primary" class="enquire-btn"
+                    >ENQUIRE NOW</el-button
+                  >
+                </div>
+              </el-col>
+            </el-row>
+            <!-- Element Plus Grid End -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS 控制菜单 -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+      const langToggle = document.getElementById("langToggle");
+      const langDropdown = document.getElementById("langDropdown");
+
+      hamburger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        langDropdown.style.display = "none";
+      });
+
+      langToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        langDropdown.style.display =
+          langDropdown.style.display === "block" ? "none" : "block";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (
+          !langDropdown.contains(e.target) &&
+          !langToggle.contains(e.target)
+        ) {
+          langDropdown.style.display = "none";
+        }
+      });
+    </script>
+
+    <!-- Vue + Element Plus -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/element-plus"></script>
+    <script>
+      const { createApp } = Vue;
+      const app = createApp({});
+      app.use(ElementPlus);
+      app.mount("#app");
+    </script>
+  </body>
+</html>
