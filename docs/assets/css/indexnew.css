@@ -2011,3 +2011,431 @@ footer {
     font-size: 10px;
   }
 }
+
+/* 小屏手机 (450px 以下) */
+@media (max-width: 450px) {
+  .scroll {
+    max-width: 768px;
+  }
+
+  .custom-nav {
+    width: 90%;
+    margin: 0 auto !important;
+    padding: 8px 20px;
+    top: 5px;
+    height: 50px;
+  }
+
+  .custom-nav .logo img {
+    height: 40px;
+  }
+  .hamburger {
+    display: flex;
+    width: 20px;
+    height: 15px;
+  }
+
+  .hamburger span {
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  /* 汉堡菜单动画效果 */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* 菜单容器 */
+  .menu-container {
+    position: fixed;
+    top: 70px;
+    left: 5%;
+    width: 90%;
+    background: #f48c06;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .menu-container.open {
+    max-height: 500px;
+    padding: 20px 0;
+  }
+
+  .custom-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .custom-nav ul li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .custom-nav ul li a {
+    padding: 15px 20px;
+    display: block;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  /* 动画关键帧 */
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .custom-nav ul li .btn-apply {
+    display: inline-block;
+    margin: 15px auto;
+    width: 80%;
+    background: white;
+    color: #333 !important;
+  }
+
+  /* 语言下拉菜单调整 */
+  .el-dropdown {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .el-dropdown-link {
+    padding: 15px 20px;
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .el-dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .el-dropdown-menu__item {
+    padding: 12px 20px !important;
+    text-align: center !important;
+  }
+
+  .about-us .el-button.el-button--primary.enquire-btn {
+    padding: 25px 20px;
+    font-size: 15px !important;
+  }
+
+  .welcome-area .main-button-slider {
+    padding: 10px 20px;
+    font-size: 15px !important;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .welcome-area {
+    background-color: #fff2e1;
+    background-image: none;
+
+    min-height: auto; /* 移除固定最小高度 */
+    height: auto; /* 确保高度由内容决定 */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-area .header-text {
+    max-height: 400px !important;
+  }
+
+  .welcome-area .header-text .one,
+  .welcome-area .header-text .two {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+
+  .welcome-area p {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 350px;
+  }
+
+  .about-us {
+    margin-bottom: 100px;
+  }
+
+  .about-us .container {
+    padding: 0px;
+  }
+
+  .about-us h3 {
+    font-size: 18px;
+  }
+
+  .about-us .one,
+  .about-us .two,
+  .about-us .three {
+    font-size: 23px;
+  }
+
+  .about-us p {
+    font-size: 15px;
+    line-height: 1.8 !important;
+    margin-bottom: 0px;
+  }
+
+  .about-us .service-card {
+    width: 100%;
+    margin-top: 100px;
+    padding: 80px 30px 30px;
+  }
+
+  .about-us .service-card h3 {
+    font-size: 20px !important;
+    height: 30px;
+    line-height: 1.8;
+    margin: 0px;
+  }
+
+  .about-us .service-card p {
+    font-size: 15px !important;
+    line-height: 1.8;
+  }
+
+  .about-us .card-media video,
+  .about-us .card-media img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .what-we-do {
+    padding-top: 0px;
+  }
+
+  .what-we-do .title {
+    margin-bottom: 50px !important;
+  }
+
+  .what-we-do h1,
+  .what-we-do h2 {
+    font-size: 23px;
+  }
+
+  .what-we-do .grid-item {
+    padding: 15px 20px;
+    min-height: 280px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .what-we-do .grid-item h1 {
+    font-size: 20px;
+    min-height: 72px;
+    margin-bottom: 20px;
+  }
+
+  .what-we-do .grid-item p {
+    font-size: 15px;
+    min-height: 72px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  /* 解释部分改为垂直布局 */
+  .explaination-container {
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding: 0px;
+  }
+
+  .explaination-container:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .explaination-text {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .explaination-text .one,
+  .explaination-text .two {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .explaination-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0px;
+  }
+
+  .explaination-text .one a::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -35px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f4b767;
+    z-index: -1;
+  }
+
+  .explaination img,
+  .explaination video {
+    max-width: 50%;
+    order: -1;
+  }
+
+  /* 数据部分改为垂直布局 */
+  .data .data-container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .data img {
+    width: 100px;
+    margin: 0 0 30px 0;
+  }
+
+  .data .one,
+  .data .two {
+    font-size: 23px;
+    line-height: 1.8;
+  }
+
+  .data p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0px;
+  }
+
+  .data {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .data .data-container-text h3 {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .data .data-container-text p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .values .values-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-height: none;
+    margin-bottom: 25px;
+  }
+
+  .values p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+
+  .values h1 {
+    font-size: 23px !important;
+  }
+
+  .values .values-container .h3one,
+  .values .values-container .h3two {
+    font-size: 15px !important;
+  }
+
+  .values .values-container p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .values .values-container img {
+    margin: 0 0 30px 0 !important;
+    max-width: 50%;
+    height: auto;
+  }
+
+  .values .values-container-small {
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .values .values-container-text {
+    padding: 0 !important;
+  }
+
+  .values .short-line {
+    margin: 0 0 20px 0 !important;
+  }
+
+  .values {
+    margin-bottom: 50px;
+  }
+
+  .brand-carousel h2 {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .scroll-track {
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 100%;
+  }
+
+  footer {
+    height: 40px;
+    font-size: 10px;
+  }
+}
