@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+
+    <title>LVNEOASIA</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/indexnew.css" />
+
+    <!-- Element Plus CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+
+    <style>
+      .box {
+        background-color: #f7f7f7;
+        padding: 24px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- ***** 主导航 ***** -->
+      <nav class="custom-nav">
+        <div class="logo">
+          <a href="#">
+            <img src="assets/images/logo1.png" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-container" id="menu">
+          <ul>
+            <li>
+              <a href="#welcome" class="active"><strong>होमपेज</strong></a>
+            </li>
+            <li>
+              <a href="#about-us"><strong>हमारे बारे में</strong></a>
+            </li>
+            <li>
+              <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"
+                ><strong>व्हाइटपेपर</strong></a
+              >
+            </li>
+            <li>
+              <a href="#what-we-do"><strong>विजन</strong></a>
+            </li>
+
+            <el-dropdown @command="handleLanguageChange">
+              <span
+                class="el-dropdown-link"
+                style="color: white; cursor: pointer; font-weight: bold"
+              >
+                भाषा▿
+              </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item command="en">
+                    <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="zh">
+                    <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="vi">
+                    <a href="index.html">English</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="in">
+                    <a href="indexnew-HIN.html">हिंदी</a></el-dropdown-item
+                  >
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+
+            <li><a href="#welcome" class="btn-apply">अभी आवेदन करें</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- ***** 欢迎区域 ***** -->
+      <div class="welcome-area" id="welcome">
+        <div class="header-text">
+          <div class="container">
+            <div class="title">
+              <div class="one">LVNEOASIA&nbsp;</div>
+              <div class="two">LIMITED प्रत्येक पॉलिसी को</div>
+            </div>
+            <div class="two mt-0">मूल्यवान संपत्ति बनाता है</div>
+            <p>
+              हम "बीमा बेच" नहीं रहे हैं, बल्कि एक नई बीमा वित्तीय प्रणाली का
+              निर्माण कर रहे हैं जहां हर कोई भाग ले सकता है और लाभ साझा कर सकता
+              है।
+            </p>
+            <a href="#features" class="main-button-slider"
+              ><strong>अभी आवेदन करें</strong></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ***** 关于我们 ***** -->
+      <div class="about-us" id="about-us">
+        <div class="header-text">
+          <div class="container">
+            <div class="text">
+              <h3>हमारे बारे में</h3>
+              <div class="title">
+                <div class="one">बीमा से&nbsp;</div>
+                <div class="two">संपत्ति की&nbsp;</div>
+                <div class="one">आजादी&nbsp;</div>
+                <div class="three">तक</div>
+              </div>
+              <p>
+                हम हांगकांग स्थित एक इनोवेटिव प्लेटफॉर्म हैं जो बीमा और फिनटेक
+                को एक साथ लाता है, जिसका कार्यक्षेत्र कई एशियाई बाजारों तक फैला
+                है। बीमा कंपनियों, ट्रस्ट संस्थानों और रेगुलेटरी सैंडबॉक्स के
+                साथ सहयोग करके, हम पारंपरिक पॉलिसी संपत्तियों को डिजिटल बनाते
+                हैं और उनके दीर्घकालिक मूल्य को उजागर करते हैं। हमारा प्लेटफॉर्म
+                ब्रिटेन की प्रसिद्ध बीमा समूह Aviva plc का हिस्सा है, जिसका 300
+                साल से अधिक का इतिहास और दुनिया भर में 30 मिलियन से अधिक ग्राहक
+                हैं, जो वित्तीय स्थिरता और विश्वास का प्रतीक है।
+              </p>
+            </div>
+
+            <!-- Element Plus 网格布局 -->
+            <el-row :gutter="32" class="mt-4">
+              <el-col :span="8">
+                <div class="service-card">
+                  <div class="card-media">
+                    <video
+                      src="assets/images/video1.mp4"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                    ></video>
+                  </div>
+                  <h3>बीमा संपत्ति का डिजिटलीकरण</h3>
+                  <p>
+                    तकनीक के माध्यम से पारंपरिक बचत पॉलिसी, वार्षिकी जैसी
+                    मूल्यवान संपत्तियों को डिजिटल प्रमाणपत्रों में बदलना, जिससे
+                    अधिक पारदर्शी प्रबंधन और लचीला संचालन संभव हो।
+                  </p>
+                  <div class="btn">
+                    <el-button type="primary" class="enquire-btn"
+                      >अभी पूछताछ करें</el-button
+                    >
+                  </div>
+                </div>
+              </el-col>
+
+              <el-col :span="8">
+                <div class="service-card">
+                  <div class="card-media">
+                    <video
+                      src="assets/images/video2.mp4"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                    ></video>
+                  </div>
+                  <h3>ब्लॉकचेन पर पॉलिसी मूल्य</h3>
+                  <p>
+                    प्रत्येक पॉलिसी संपत्ति ब्लॉकचेन पर प्रमाणित होती है, यह
+                    सुनिश्चित करते हुए कि प्रत्येक निवेश वास्तविक संपत्ति द्वारा
+                    समर्थित है - सुरक्षित, विश्वसनीय और मूल्य स्पष्ट।
+                  </p>
+                  <div class="btn">
+                    <el-button type="primary" class="enquire-btn"
+                      >अभी पूछताछ करें</el-button
+                    >
+                  </div>
+                </div>
+              </el-col>
+
+              <el-col :span="8">
+                <div class="service-card">
+                  <div class="card-media">
+                    <video
+                      src="assets/images/video3.mp4"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                    ></video>
+                  </div>
+                  <h3>व्यक्तियों और संस्थानों को सशक्त बनाना</h3>
+                  <p>
+                    चाहे व्यक्तिगत धन योजना हो या संस्थानों की कम जोखिम वाली आय
+                    की आवश्यकता, हम आपको बीमा वित्त के दीर्घकालिक मूल्य वृद्धि
+                    में भाग लेने में सक्षम बनाते हैं।
+                  </p>
+                  <div class="btn">
+                    <el-button type="primary" class="enquire-btn"
+                      >अभी पूछताछ करें</el-button
+                    >
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
+      </div>
+      <!-- ***** 关于我们结束 ***** -->
+
+      <!-- ***** 我们的业务 ***** -->
+      <div class="what-we-do" id="what-we-do">
+        <div class="container">
+          <div class="title">
+            <h1>हमारे&nbsp;</h1>
+            <h2>व्यवसाय</h2>
+          </div>
+
+          <el-row :gutter="20">
+            <el-col :xs="24" :sm="12" :md="8">
+              <div class="grid-item bg-img-1">
+                <h1>बीमा संपत्ति का डिजिटलीकरण</h1>
+                <p>
+                  नकदी मूल्य वाली बचत पॉलिसी और वार्षिकी को डिजिटल संपत्तियों
+                  में बदलना, जिससे अधिक पारदर्शी प्रबंधन और लचीला संचालन संभव
+                  हो।
+                </p>
+              </div>
+            </el-col>
+            <el-col :xs="24" :sm="12" :md="8">
+              <div class="grid-item bg-img-2">
+                <h1>व्यक्तियों और संस्थानों को सशक्त बनाना</h1>
+                <p>
+                  चाहे व्यक्तिगत वित्तीय योजना हो या संस्थागत निवेश, आप बीमा
+                  वित्त की कम जोखिम वाली, दीर्घकालिक स्थिर वृद्धि में भाग ले
+                  सकते हैं।
+                </p>
+              </div>
+            </el-col>
+            <el-col :xs="24" :sm="12" :md="8">
+              <div class="grid-item bg-img-3">
+                <h1>ब्लॉकचेन पर पॉलिसी मूल्य</h1>
+                <p>
+                  प्रत्येक पॉलिसी ब्लॉकचेन पर प्रमाणित होती है, संपत्ति वास्तविक
+                  और ट्रेस करने योग्य - सुरक्षित, विश्वसनीय और मूल्य स्पष्ट।
+                </p>
+              </div>
+            </el-col>
+          </el-row>
+        </div>
+      </div>
+      <!-- ***** 我们的业务结束 ***** -->
+
+      <!-- ***** 说明部分 ***** -->
+      <div class="explaination" id="explaination">
+        <div class="container">
+          <!-- 1 -->
+          <div class="explaination-container">
+            <div class="explaination-text">
+              <div style="display: flex; align-items: center">
+                <h1 class="one"><a>अपनी पॉलिसी को&nbsp;</a></h1>
+                <h1 class="two">नकदी प्रवाह में बदलें</h1>
+              </div>
+              <p>
+                हम पॉलिसी संपत्ति के चार मुख्य क्षेत्रों - सत्यापन, मूल्य
+                वृद्धि, प्रसार और विरासत के आसपास एक स्टॉप समाधान प्रदान करते
+                हैं। मूल्यांकन, डिजिटल पंजीकरण से लेकर लाभांश निकासी और तरलता
+                प्रबंधन तक, हम आपकी "सोई हुई बीमा" को सुलभ, विन्यास योग्य और
+                हस्तांतरणीय धन उपकरण में बदलने में मदद करते हैं।
+              </p>
+            </div>
+            <img src="assets/images/expl1.gif" />
+          </div>
+
+          <!-- 2 -->
+          <div class="explaination-container">
+            <video autoplay loop muted playsinline>
+              <source src="assets/images/expl2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="explaination-text">
+              <div style="display: flex; align-items: center">
+                <h1 class="two">संपत्ति&nbsp;</h1>
+                <h1 class="one">पुष्टि</h1>
+              </div>
+              <p>
+                अपनी पॉलिसी का वास्तविक मूल्य जानें, अपनी संपत्ति की स्थिति
+                स्पष्ट करें।
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="explaination-container">
+            <div class="explaination-text">
+              <div style="display: flex; align-items: center">
+                <h1 class="two">अधिकार&nbsp;</h1>
+                <h1 class="one">पंजीकरण</h1>
+              </div>
+              <p>
+                पॉलिसी को प्रबंधनीय डिजिटल संपत्ति में बदलें, मूल्य और तरलता
+                बढ़ाएं।
+              </p>
+            </div>
+            <video autoplay loop muted playsinline>
+              <source src="assets/images/expl3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- 4 -->
+          <div class="explaination-container">
+            <video autoplay loop muted playsinline>
+              <source src="assets/images/expl4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="explaination-text">
+              <div style="display: flex; align-items: center">
+                <h1 class="one">आय&nbsp;</h1>
+                <h1 class="two">योजना</h1>
+              </div>
+              <p>
+                लचीली आय योजना, मासिक या त्रैमासिक लाभांश निकासी का समर्थन करती
+                है।
+              </p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="explaination-container">
+            <div class="explaination-text">
+              <div style="display: flex; align-items: center">
+                <h1 class="two">तरलता&nbsp;</h1>
+                <h1 class="one">प्रबंधन</h1>
+              </div>
+              <p>
+                संपत्ति निकासी, हस्तांतरण और गिरवी रखने का समर्थन, लचीला
+                नियंत्रण।
+              </p>
+            </div>
+            <video autoplay loop muted playsinline>
+              <source src="assets/images/expl5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- 6 -->
+          <div class="explaination-container">
+            <video autoplay loop muted playsinline>
+              <source src="assets/images/expl6.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="explaination-text">
+              <div style="display: flex; align-items: center">
+                <h1 class="two">कस्टमाइज्ड&nbsp;</h1>
+                <h1 class="one">समाधान</h1>
+              </div>
+              <p>
+                संस्थानों और उच्च नेट वर्थ वाले ग्राहकों के लिए बहु-मुद्रा,
+                क्रॉस-बॉर्डर और ट्रस्ट योजनाएं प्रदान करें।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ***** 说明部分结束 ***** -->
+
+      <!-- ***** 资产引擎数据 ***** -->
+      <div class="data" id="data">
+        <div class="container">
+          <div class="header">
+            <h1 class="one">Avia Asia</h1>
+            <h1 class="two">आपकी संपत्ति का इंजन</h1>
+            <p>
+              आपकी पॉलिसी सिर्फ एक अनुबंध नहीं है - यह एक संभावित संपत्ति है। हम
+              उपयोगकर्ताओं को संपत्ति के स्वामित्व की पुष्टि करने, आय जारी करने
+              और तरलता का प्रबंधन करने में मदद करते हैं, स्थिर बीमा उत्पादों को
+              नियंत्रित, सुलभ और रणनीतिक धन इंजन में बदलते हैं।
+            </p>
+          </div>
+          <div class="data-container">
+            <img src="assets/images/22.jpg" />
+            <div class="data-container-text">
+              <h3>मासिक नकदी प्रवाह में 22% की वृद्धि</h3>
+              <p>
+                लाभांश पुनर्निवेश और वितरण रणनीति के माध्यम से, पारंपरिक तरीकों
+                की तुलना में पॉलिसी संपत्ति से निकाली जाने वाली मासिक आय में 22%
+                की वृद्धि - स्थिर, टिकाऊ, परिवार के नकदी प्रवाह के लिए आदर्श
+                समर्थन।
+              </p>
+            </div>
+          </div>
+          <div class="data-container">
+            <img src="assets/images/72.jpg" />
+            <div class="data-container-text">
+              <h3>72% दीर्घकालिक पॉलिसी धारक</h3>
+              <p>
+                5 साल से अधिक समय तक रखी गई अपनी पॉलिसी के वर्तमान नकद मूल्य का
+                सक्रिय रूप से मूल्यांकन नहीं किया - हमारी संपत्ति सत्यापन सेवा
+                ने उन्हें औसतन 38% उपलब्ध तरलता खोजने में मदद की।
+              </p>
+            </div>
+          </div>
+          <div class="data-container">
+            <img src="assets/images/80.jpg" />
+            <div class="data-container-text">
+              <h3>80% उच्च नेट वर्थ वाले परिवार</h3>
+              <p>
+                दूसरी पॉलिसी कॉन्फ़िगर करते समय, सक्रिय रूप से "डिजिटल पंजीकरण +
+                संपत्ति तरलता" मॉड्यूल शामिल करते हैं, बेहतर क्रॉस-बॉर्डर विरासत
+                और वित्तपोषण को सक्षम करते हैं, जिससे पॉलिसी का अधिक मूल्य जारी
+                होता है।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ***** 资产引擎数据结束 ***** -->
+
+      <!-- ***** 核心价值与未来愿景 ***** -->
+      <div class="core values" id="core values">
+        <div class="container">
+          <div class="header">
+            <div class="title">
+              <h1 class="one">हमारे मूल्य&nbsp;</h1>
+              <h1 class="two">और भविष्य की दृष्टि</h1>
+            </div>
+            <p>
+              ईमानदारी को आधार बनाकर, नवाचार को प्रेरित करते हुए, हम प्रत्येक
+              ग्राहक को पारदर्शी, सुरक्षित और कुशल बीमा संपत्ति प्रबंधन अनुभव
+              प्रदान करने के लिए प्रतिबद्ध हैं। हम मानते हैं कि बीमा सिर्फ
+              सुरक्षा नहीं है - यह धन वृद्धि और विरासत का पुल है।
+            </p>
+          </div>
+          <!-- 1 -->
+          <div class="values-container">
+            <img
+              src="assets/images/values1.png"
+              style="margin-right: 70px; padding-right: 40px"
+            />
+            <div class="values-container-small">
+              <div class="short-line"></div>
+              <div class="values-container-text">
+                <div class="title">
+                  <h3 class="h3one">हमारा&nbsp;</h3>
+                  <h3 class="h3two">दर्शन</h3>
+                </div>
+                <p>
+                  लाभांश पुनर्निवेश और वितरण रणनीति के माध्यम से, पारंपरिक
+                  तरीकों की तुलना में पॉलिसी संपत्ति से निकाली जाने वाली मासिक
+                  आय में 22% की वृद्धि - स्थिर, टिकाऊ, परिवार के नकदी प्रवाह के
+                  लिए आदर्श समर्थन।
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="values-container">
+            <div class="values-container-small">
+              <div class="short-line" style="margin-left: auto"></div>
+              <div
+                class="values-container-text"
+                style="padding-right: 70px; padding-left: 0px"
+              >
+                <div class="title">
+                  <h3 class="h3one">हमारी&nbsp;</h3>
+                  <h3 class="h3two">दृष्टि</h3>
+                </div>
+                <p>
+                  एशिया के अग्रणी डिजिटल बीमा संपत्ति प्रबंधन प्लेटफॉर्म बनने के
+                  लिए - पारंपरिक बीमा को स्मार्ट, तरल संपत्तियों में परिवर्तित
+                  करने का नेतृत्व करना, प्रत्येक पॉलिसी के अधिक वित्तीय मूल्य को
+                  जारी करना।
+                </p>
+              </div>
+            </div>
+            <img
+              src="assets/images/values2.png"
+              style="margin-left: 70px; padding-left: 40px"
+            />
+          </div>
+          <!-- 3 -->
+          <div class="values-container">
+            <img
+              src="assets/images/values3.png"
+              style="margin-right: 70px; padding-right: 40px"
+            />
+            <div class="values-container-small">
+              <div class="short-line"></div>
+              <div class="values-container-text">
+                <div class="title">
+                  <h3 class="h3one">हमारा&nbsp;</h3>
+                  <h3 class="h3two">वादा</h3>
+                </div>
+                <p>
+                  हम ग्राहक हितों की रक्षा करने, नियामक मानकों का पालन करने और
+                  अत्याधुनिक तकनीक को पेशेवर सेवाओं के साथ जोड़कर विश्वसनीय
+                  दीर्घकालिक धन साझेदारी स्थापित करने के लिए प्रतिबद्ध हैं।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ***** 核心价值与未来愿景结束 ***** -->
+
+      <!-- ***** 品牌轮播 ***** -->
+      <div class="brand-carousel">
+        <h2>निजी स्वास्थ्य बीमा प्रदाताओं में शामिल हैं</h2>
+        <div class="scroll">
+          <div class="scroll-track">
+            <img src="assets/images/brand1.png" class="logo" />
+            <img src="assets/images/brand2.png" class="logo" />
+            <img src="assets/images/brand3.png" class="logo" />
+            <img src="assets/images/brand4.png" class="logo" />
+            <img src="assets/images/brand5.png" class="logo" />
+            <img src="assets/images/brand6.png" class="logo" />
+            <img src="assets/images/brand7.png" class="logo" />
+            <!-- 复制一轮以确保滚动平滑 -->
+            <img src="assets/images/brand1.png" class="logo" />
+            <img src="assets/images/brand2.png" class="logo" />
+            <img src="assets/images/brand3.png" class="logo" />
+            <img src="assets/images/brand4.png" class="logo" />
+            <img src="assets/images/brand5.png" class="logo" />
+            <img src="assets/images/brand6.png" class="logo" />
+            <img src="assets/images/brand7.png" class="logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+      <div>कॉपीराइट © 2025— AVIA ASIA LIMITED</div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", function (e) {
+      e.stopPropagation(); // 阻止事件冒泡
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("open");
+      console.log("Menu open state:", menu.classList.contains("open"));
+    });
+
+    // 点击菜单外区域关闭菜单
+    document.addEventListener("click", function (e) {
+      if (!menu.contains(e.target)) {
+        menu.classList.remove("open");
+        hamburger.classList.remove("active");
+      }
+    });
+
+    // 阻止菜单内的点击事件冒泡
+    menu.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<!-- Vue + Element Plus -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script src="https://unpkg.com/element-plus"></script>
+<script>
+  const { createApp } = Vue;
+  const app = createApp({});
+  app.use(ElementPlus);
+  app.mount("#app");
+</script>

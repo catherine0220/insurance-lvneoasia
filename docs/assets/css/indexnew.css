@@ -2,6 +2,27 @@
 .container {
   max-width: 1780px;
   padding: 0 90px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0px;
+  }
 }
 
 /* 
@@ -31,17 +52,19 @@
 }
 
 .scroll {
-  max-width: 1200px;
   overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .scroll-track {
   display: flex;
   gap: 90px;
+  width: max-content;
   animation: scroll-left 15s linear infinite;
   align-items: center;
-  width: max-content;
+  box-sizing: content-box;
   margin-bottom: 90px;
 }
 
@@ -556,10 +579,6 @@ footer {
 
 .about-us .service-card {
   position: relative;
-  width: 450px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
   background: white;
   padding: 140px 30px 40px;
   text-align: center;
@@ -567,10 +586,6 @@ footer {
   margin-top: 80px;
   border-radius: 20px;
   box-shadow: 0px 10px 60px 0px rgba(38, 45, 118, 0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-us .service-card h3 {
@@ -581,7 +596,7 @@ footer {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  max-width: 400px;
+  width: 100%;
   min-height: 100px;
   margin-bottom: 20px;
 }
@@ -595,6 +610,7 @@ footer {
   font-weight: 400;
   line-height: 1.5;
   min-height: 150px;
+  margin-bottom: 40px;
 }
 
 .about-us .card-media {
@@ -614,11 +630,11 @@ footer {
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .about-us .el-button.el-button--primary.enquire-btn {
-  width: 220px;
-  height: 80px;
+  padding: 35px 25px;
   border: 0px;
   flex-shrink: 0;
   border-radius: 80px;
@@ -732,7 +748,7 @@ footer {
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 20;
 }
 
 .custom-nav .logo img {
@@ -743,6 +759,14 @@ footer {
 .custom-nav .menu-container {
   display: flex;
   align-items: center;
+}
+
+.menu-container {
+  display: none;
+}
+
+.menu-container.open {
+  display: block;
 }
 
 .custom-nav ul {
@@ -786,6 +810,7 @@ footer {
 }
 
 .el-dropdown-menu {
+  color: #232323 !important;
   z-index: 3000 !important;
 }
 
@@ -847,7 +872,7 @@ footer {
 @media (max-width: 1600px) {
   .about-us .el-button.el-button--primary.enquire-btn,
   .welcome-area .main-button-slider {
-    font-size: 22px !important;
+    font-size: 20px !important;
   }
 
   .welcome-area {
@@ -872,12 +897,13 @@ footer {
   }
 
   .what-we-do {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .what-we-do .grid-item {
     padding: 60px 40px;
     min-height: 350px;
+    margin-bottom: 20px;
   }
 
   .brand-carousel h2 {
@@ -893,33 +919,64 @@ footer {
 
 /* 中等屏幕调整 (1200px-1440px) */
 @media (max-width: 1440px) {
-  .about-us .el-button.el-button--primary.enquire-btn {
-    width: 200px !important;
-    height: 70px !important;
+  .custom-nav ul {
+    gap: 50px;
+  }
+
+  .custom-nav li {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+  }
+
+  .custom-nav .logo img {
+    height: 50px;
+  }
+
+  .custom-nav ul li .btn-apply {
+    padding: 8px 25px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .el-dropdown-link {
+    font-weight: bold;
+  }
+
+  .about-us .el-button.el-button--primary.enquire-btn,
+  .welcome-area .main-button-slider {
+    padding: 30px 20px;
     font-size: 20px !important;
   }
 
   .welcome-area .main-button-slider {
     padding: 20px 40px;
-    font-size: 20px;
+    font-size: 18px !important;
   }
 
   .custom-nav ul {
     gap: 50px;
   }
 
+  .about-us .container {
+    padding: 20px;
+  }
+
   .about-us .service-card {
-    width: 380px;
+    max-width: 1200px;
     padding: 120px 25px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .about-us .service-card h3 {
-    font-size: 28px;
+    font-size: 36px !important;
     min-height: 90px;
   }
 
   .about-us .service-card p {
-    font-size: 18px;
+    font-size: 25px !important;
     min-height: 130px;
   }
 
@@ -949,6 +1006,7 @@ footer {
   .what-we-do .grid-item {
     padding: 50px 30px;
     min-height: 320px;
+    margin-bottom: 20px;
   }
 
   .welcome-area .header-text .one,
@@ -965,14 +1023,13 @@ footer {
 /* 小屏幕桌面/平板横向 (992px-1200px) */
 @media (max-width: 1200px) {
   .about-us .el-button.el-button--primary.enquire-btn {
-    width: 180px !important;
-    height: 65px !important;
-    font-size: 18px !important;
+    padding: 35px 30px;
+    font-size: 1rem !important;
   }
 
   .welcome-area .main-button-slider {
     padding: 18px 35px;
-    font-size: 18px;
+    font-size: 1rem !important;
     margin-top: 40px;
   }
 
@@ -986,23 +1043,48 @@ footer {
     margin-top: 120px;
   }
 
+  .welcome-area p {
+    font-size: 20px;
+    max-width: 500px;
+  }
+
+  .about-us p {
+    font-size: 20px;
+  }
+
   .about-us .service-card {
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding: 110px 20px 30px;
   }
 
   .about-us .service-card h3 {
-    font-size: 26px;
-    min-height: 80px;
+    font-size: 30px !important;
+    max-height: 60px !important;
   }
 
   .about-us .service-card p {
-    font-size: 17px;
-    min-height: 120px;
+    font-size: 20px !important;
+    min-height: 80px;
   }
 
   .explaination-text {
     width: 500px;
+  }
+
+  .explaination-text p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .explaination-text .one,
+  .explaination-text .two {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
 
   .explaination img,
@@ -1010,13 +1092,9 @@ footer {
     max-width: 400px;
   }
 
-  .values-container img {
-    max-width: 500px;
-  }
-
   .what-we-do h1,
   .what-we-do h2 {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .what-we-do .grid-item h1 {
@@ -1027,6 +1105,37 @@ footer {
   .what-we-do .grid-item {
     padding: 40px 25px;
     min-height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .data p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .data-container-text p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .values-container img {
+    max-width: 500px;
+  }
+
+  .values p,
+  .values-container-text p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .values-container-text {
+    padding: 0px !important;
+  }
+
+  .values-container-text .h3one,
+  .values-container-text .h3two {
+    font-size: 30px !important;
   }
 
   .brand-carousel h2 {
@@ -1047,16 +1156,210 @@ footer {
 
 /* 平板竖向 (768px-992px) */
 @media (max-width: 992px) {
+  .scroll {
+    max-width: 992px;
+  }
+
+  .custom-nav {
+    width: 90%;
+    margin: 0 auto !important;
+    padding: 8px 20px;
+    top: 5px;
+  }
+
+  .custom-nav .logo img {
+    height: 45px;
+  }
+
+  .hamburger {
+    display: flex;
+    width: 20px;
+    height: 15px;
+  }
+
+  .hamburger span {
+    height: 2px;
+    background: white;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  /* 汉堡菜单样式 */
+  .menu-container {
+    position: fixed;
+    top: 70px;
+    left: 5%;
+    width: 90%;
+    color: white;
+    background: rgba(244, 140, 6, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .menu-container.open {
+    max-height: 400px;
+    padding: 30px 0;
+    color: white;
+    animation: slideInFromTop 0.4s ease-out;
+  }
+
+  .menu-container ul {
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-container ul li {
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: fadeInUp 0.3s ease-out forwards;
+  }
+
+  .menu-container ul li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .menu-container ul li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .menu-container ul li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .menu-container ul li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .menu-container ul li a {
+    padding: 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .menu-container ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+  }
+
+  .menu-container ul li a::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+
+  .menu-container ul li a:hover::before {
+    left: 100%;
+  }
+
+  .custom-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .custom-nav ul li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .custom-nav ul li a {
+    padding: 15px 20px;
+    display: block;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  /* 动画关键帧 */
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .custom-nav ul li .btn-apply {
+    display: inline-block;
+    margin: 15px auto;
+    width: 80%;
+    background: white;
+    color: #333 !important;
+  }
+
+  /* 语言下拉菜单调整 */
+  .el-dropdown {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .el-dropdown-link {
+    padding: 15px 20px;
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .el-dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .el-dropdown-menu__item {
+    padding: 12px 20px !important;
+    text-align: center !important;
+  }
+
   .about-us .el-button.el-button--primary.enquire-btn {
-    width: 160px !important;
-    height: 60px !important;
-    font-size: 16px !important;
+    padding: 25px 20px;
+    font-size: 15px !important;
   }
 
   .welcome-area .main-button-slider {
     padding: 16px 30px;
-    font-size: 16px;
+    font-size: 15px !important;
     margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .container {
@@ -1064,42 +1367,96 @@ footer {
   }
 
   .welcome-area {
-    min-height: 700px;
-    background-position: 80% center;
+    background-color: #fff2e1;
+    background-image: none;
+
+    min-height: auto; /* 移除固定最小高度 */
+    height: auto; /* 确保高度由内容决定 */
+    display: flex;
+    flex-direction: column;
   }
 
   .welcome-area .header-text .one,
   .welcome-area .header-text .two {
-    font-size: 32px;
+    font-size: 30px;
     margin-top: 100px;
   }
 
   .welcome-area p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
+    max-width: 500px;
+  }
+
+  .about-us {
+    margin-bottom: 100px;
+  }
+
+  .about-us h3 {
+    font-size: 20px;
+  }
+
+  .about-us .one,
+  .about-us .two,
+  .about-us .three {
+    font-size: 30px;
+  }
+
+  .about-us p {
+    font-size: 18px;
+    line-height: 32px !important;
   }
 
   .about-us .service-card {
     width: 100%;
-    max-width: 400px;
-    margin: 60px auto 0;
-    padding: 100px 20px 30px;
+    padding: 100px 40px 40px;
   }
 
   .about-us .service-card h3 {
-    font-size: 24px;
-    min-height: 70px;
+    font-size: 25px !important;
+    margin: 0px;
   }
 
   .about-us .service-card p {
-    font-size: 16px;
-    min-height: 100px;
+    font-size: 18px !important;
+    max-height: 100px !important;
+  }
+
+  .what-we-do .title {
+    margin-bottom: 80px !important;
+  }
+
+  .what-we-do h1,
+  .what-we-do h2 {
+    font-size: 36px;
+  }
+
+  .what-we-do .grid-item {
+    padding: 40px 60px;
+    min-height: 280px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .what-we-do .grid-item h1 {
+    font-size: 25px;
+    min-height: 72px;
+    margin-bottom: 20px;
+  }
+
+  .what-we-do .grid-item p {
+    font-size: 18px;
+    min-height: 72px;
+    margin-bottom: 20px;
   }
 
   /* 解释部分改为垂直布局 */
   .explaination-container {
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .explaination-container:nth-child(even) {
@@ -1109,66 +1466,105 @@ footer {
   .explaination-text {
     width: 100%;
     margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .explaination-text .one,
+  .explaination-text .two {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .explaination-text p {
+    font-size: 18px;
+    line-height: 1.8;
   }
 
   .explaination img,
   .explaination video {
-    max-width: 100%;
+    max-width: 50%;
     order: -1;
   }
 
   /* 数据部分改为垂直布局 */
   .data .data-container {
+    margin-top: 40px;
+    margin-bottom: 30px;
     flex-direction: column;
     text-align: center;
   }
 
   .data img {
+    width: 150px;
     margin: 0 0 30px 0;
   }
 
-  /* 价值观部分改为垂直布局 */
-  .values-container {
-    flex-direction: column;
+  .data p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0px;
+  }
+
+  .data .data-container-text p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .data {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .values p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+
+  .values .values-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
     max-height: none;
+    margin-bottom: 30px;
   }
 
-  .values-container:nth-child(even) {
-    flex-direction: column;
+  .values .values-container .h3one,
+  .values .values-container .h3two {
+    font-size: 25px !important;
   }
 
-  .values-container img {
-    margin: 0 0 40px 0;
-    max-width: 100%;
+  .values .values-container p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .values .values-container img {
+    margin: 0 0 30px 0 !important;
+    max-width: 50%;
+    height: auto;
+  }
+
+  .values .values-container-small {
+    padding: 0 !important;
+    width: 100%;
   }
 
   .values .values-container-text {
-    padding-left: 0;
-    text-align: center;
+    padding: 0 !important;
   }
 
   .values .short-line {
-    margin: 0 auto 30px;
+    margin: 0 0 20px 0 !important;
   }
 
-  .what-we-do h1,
-  .what-we-do h2 {
-    font-size: 30px;
-  }
-
-  .what-we-do .grid-item h1 {
-    font-size: 24px;
-    min-height: 72px;
-    margin-bottom: 20px;
-  }
-
-  .what-we-do .grid-item {
-    padding: 35px 20px;
-    min-height: 280px;
+  .values {
+    margin-bottom: 100px;
   }
 
   .brand-carousel h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 50px;
   }
 
@@ -1190,349 +1586,25 @@ footer {
 
 /* 大屏手机 (576px-768px) */
 @media (max-width: 768px) {
-  .about-us .el-button.el-button--primary.enquire-btn {
-    width: 150px !important;
-    height: 55px !important;
-    font-size: 15px !important;
+  .scroll {
+    max-width: 768px;
   }
 
-  .welcome-area .main-button-slider {
-    padding: 14px 28px;
-    font-size: 15px !important;
-    margin-top: 25px;
-  }
-
-  .welcome-area {
-    min-height: 600px;
-  }
-
-  .welcome-area .header-text .title {
-    flex-direction: column;
-  }
-
-  .welcome-area .header-text .one,
-  .welcome-area .header-text .two {
-    font-size: 28px;
-    margin-top: 80px;
-    line-height: 1.2;
-  }
-
-  .welcome-area .header-text .two.mt-0 {
-    margin-top: 0;
-  }
-
-  .welcome-area p {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  .about-us .one,
-  .about-us .two,
-  .about-us .three {
-    font-size: 28px;
-  }
-
-  .about-us .service-card {
-    padding: 80px 20px 30px;
-  }
-
-  .about-us .service-card h3 {
-    font-size: 22px;
-    min-height: 60px;
-  }
-
-  .about-us .service-card p {
-    font-size: 15px;
-    min-height: 90px;
-  }
-
-  .about-us .card-media {
-    width: 80px;
-    height: 80px;
-  }
-
-  .explaination-text .one,
-  .explaination-text .two {
-    font-size: 28px;
-  }
-
-  .explaination-text .one a::after {
-    width: 50px;
-    height: 50px;
-    top: -8px;
-    left: -20px;
-  }
-
-  .what-we-do h1,
-  .what-we-do h2 {
-    font-size: 28px;
-  }
-
-  .what-we-do .grid-item h1 {
-    font-size: 22px;
-    min-height: 66px;
-    margin-bottom: 18px;
-  }
-
-  .what-we-do .grid-item {
-    padding: 30px 15px;
-    min-height: 250px;
-  }
-
-  .brand-carousel h2 {
-    font-size: 20px;
-    margin-bottom: 40px;
-  }
-
-  .scroll-track {
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-
-  .logo {
-    width: 80px;
-    height: 32px;
-  }
-
-  footer {
-    height: 60px;
-    font-size: 13px;
-  }
-}
-
-/* 小屏手机 (<576px) */
-@media (max-width: 576px) {
-  .about-us .el-button.el-button--primary.enquire-btn {
-    width: 140px !important;
-    height: 50px !important;
-    font-size: 14px !important;
-  }
-
-  .welcome-area .main-button-slider {
-    padding: 12px 24px;
-    font-size: 14px !important;
-    margin-top: 20px;
-  }
-
-  .container {
-    padding: 0 15px;
-  }
-
-  .welcome-area {
-    min-height: 500px;
-    background-position: 70% center;
-  }
-
-  .welcome-area .header-text .one,
-  .welcome-area .header-text .two {
-    font-size: 24px;
-    margin-top: 70px;
-  }
-
-  .welcome-area p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .welcome-area .main-button-slider {
-    padding: 15px 30px;
-    font-size: 18px;
-  }
-
-  .about-us .one,
-  .about-us .two,
-  .about-us .three {
-    font-size: 24px;
-  }
-
-  .about-us .service-card {
-    padding: 70px 15px 25px;
-    margin-top: 60px;
-  }
-
-  .about-us .service-card h3 {
-    font-size: 20px;
-    min-height: 50px;
-  }
-
-  .about-us .service-card p {
-    font-size: 14px;
-    min-height: 80px;
-  }
-
-  .about-us .card-media {
-    width: 70px;
-    height: 70px;
-  }
-
-  .about-us .el-button.el-button--primary.enquire-btn {
-    width: 180px !important;
-    height: 60px !important;
-    font-size: 20px !important;
-  }
-
-  .about-us p,
-  .explaination-container p,
-  .data p,
-  .values p {
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  .explaination-text .one,
-  .explaination-text .two {
-    font-size: 24px;
-  }
-
-  .what-we-do h1,
-  .what-we-do h2 {
-    font-size: 26px;
-  }
-
-  .what-we-do .grid-item h1 {
-    font-size: 20px;
-    min-height: 60px;
-    margin-bottom: 15px;
-  }
-
-  .what-we-do .grid-item {
-    padding: 25px 12px;
-    min-height: 220px;
-  }
-
-  .brand-carousel h2 {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-
-  .scroll-track {
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-
-  .logo {
-    width: 70px;
-    height: 28px;
-  }
-
-  footer {
-    height: 50px;
-    font-size: 12px;
-  }
-}
-
-/* 超小屏手机 (<400px) */
-@media (max-width: 400px) {
-  .about-us .el-button.el-button--primary.enquire-btn {
-    width: 100px !important;
-    height: 45px !important;
-    font-size: 10px !important;
-  }
-
-  .welcome-area .main-button-slider {
-    padding: 10px 20px;
-    font-size: 13px;
-    margin-top: 15px;
-  }
-
-  .welcome-area .header-text .one,
-  .welcome-area .header-text .two {
-    font-size: 20px;
-  }
-
-  .about-us .one,
-  .about-us .two,
-  .about-us .three,
-  .explaination-text .one,
-  .explaination-text .two {
-    font-size: 20px;
-  }
-
-  .about-us .service-card h3 {
-    font-size: 18px;
-  }
-
-  .about-us .service-card p {
-    font-size: 13px;
-  }
-
-  .about-us .card-media {
-    width: 60px;
-    height: 60px;
-  }
-
-  .what-we-do h1,
-  .what-we-do h2 {
-    font-size: 24px;
-  }
-
-  .what-we-do .grid-item h1 {
-    font-size: 18px;
-    min-height: 54px;
-  }
-
-  .brand-carousel h2 {
-    font-size: 16px;
-  }
-
-  .scroll-track {
-    gap: 20px;
-  }
-
-  .logo {
-    width: 60px;
-    height: 24px;
-  }
-
-  footer {
-    height: 45px;
-    font-size: 11px;
-  }
-}
-
-/* 导航栏专属响应式调整 */
-@media (max-width: 1440px) {
-  .custom-nav ul {
-    gap: 50px;
-  }
-
-  .custom-nav .logo img {
-    height: 50px;
-  }
-
-  .custom-nav ul li .btn-apply {
-    padding: 8px 25px;
-    height: 40px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 1200px) {
-  .custom-nav ul {
-    gap: 30px;
-  }
-
-  .el-dropdown-link {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 992px) {
   .custom-nav {
     width: 90%;
+    margin: 0 auto !important;
     padding: 8px 20px;
     top: 5px;
+    height: 50px;
   }
 
   .custom-nav .logo img {
-    height: 45px;
+    height: 40px;
   }
-
-  /* 汉堡菜单样式 */
   .hamburger {
     display: flex;
-    width: 22px;
-    height: 18px;
+    width: 20px;
+    height: 15px;
   }
 
   .hamburger span {
@@ -1587,7 +1659,27 @@ footer {
   .custom-nav ul li a {
     padding: 15px 20px;
     display: block;
+    color: white;
     font-size: 1.1rem;
+  }
+
+  /* 动画关键帧 */
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .custom-nav ul li .btn-apply {
@@ -1601,6 +1693,9 @@ footer {
   /* 语言下拉菜单调整 */
   .el-dropdown {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
 
@@ -1623,55 +1718,296 @@ footer {
     padding: 12px 20px !important;
     text-align: center !important;
   }
-}
 
-@media (max-width: 576px) {
-  .custom-nav {
-    padding: 6px 15px;
-    top: 3px;
+  .about-us .el-button.el-button--primary.enquire-btn {
+    padding: 25px 20px;
+    font-size: 15px !important;
   }
 
-  .custom-nav .logo img {
+  .welcome-area .main-button-slider {
+    padding: 10px 20px;
+    font-size: 15px !important;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .welcome-area {
+    background-color: #fff2e1;
+    background-image: none;
+
+    min-height: auto; /* 移除固定最小高度 */
+    height: auto; /* 确保高度由内容决定 */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-area .header-text {
+    max-height: 400px !important;
+  }
+
+  .welcome-area .header-text .one,
+  .welcome-area .header-text .two {
+    font-size: 25px;
+    margin-top: 100px;
+  }
+
+  .welcome-area p {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 350px;
+  }
+
+  .about-us {
+    margin-bottom: 100px;
+  }
+
+  .about-us .container {
+    padding: 0px;
+  }
+
+  .about-us h3 {
+    font-size: 18px;
+  }
+
+  .about-us .one,
+  .about-us .two,
+  .about-us .three {
+    font-size: 23px;
+  }
+
+  .about-us p {
+    font-size: 15px;
+    line-height: 1.8 !important;
+    margin-bottom: 0px;
+  }
+
+  .about-us .service-card {
+    width: 100%;
+    margin-top: 100px;
+    padding: 80px 30px 30px;
+  }
+
+  .about-us .service-card h3 {
+    font-size: 20px !important;
+    height: 30px;
+    line-height: 1.8;
+    margin: 0px;
+  }
+
+  .about-us .service-card p {
+    font-size: 15px !important;
+    line-height: 1.8;
+  }
+
+  .about-us .card-media video,
+  .about-us .card-media img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .what-we-do {
+    padding-top: 0px;
+  }
+
+  .what-we-do .title {
+    margin-bottom: 50px !important;
+  }
+
+  .what-we-do h1,
+  .what-we-do h2 {
+    font-size: 23px;
+  }
+
+  .what-we-do .grid-item {
+    padding: 15px 20px;
+    min-height: 280px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .what-we-do .grid-item h1 {
+    font-size: 20px;
+    min-height: 72px;
+    margin-bottom: 20px;
+  }
+
+  .what-we-do .grid-item p {
+    font-size: 15px;
+    min-height: 72px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  /* 解释部分改为垂直布局 */
+  .explaination-container {
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding: 0px;
+  }
+
+  .explaination-container:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .explaination-text {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .explaination-text .one,
+  .explaination-text .two {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .explaination-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0px;
+  }
+
+  .explaination-text .one a::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -35px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f4b767;
+    z-index: -1;
+  }
+
+  .explaination img,
+  .explaination video {
+    max-width: 50%;
+    order: -1;
+  }
+
+  /* 数据部分改为垂直布局 */
+  .data .data-container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .data img {
+    width: 100px;
+    margin: 0 0 30px 0;
+  }
+
+  .data .one,
+  .data .two {
+    font-size: 23px;
+    line-height: 1.8;
+  }
+
+  .data p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0px;
+  }
+
+  .data {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .data .data-container-text h3 {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .data .data-container-text p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .values .values-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-height: none;
+    margin-bottom: 25px;
+  }
+
+  .values p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+
+  .values h1 {
+    font-size: 23px !important;
+  }
+
+  .values .values-container .h3one,
+  .values .values-container .h3two {
+    font-size: 15px !important;
+  }
+
+  .values .values-container p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .values .values-container img {
+    margin: 0 0 30px 0 !important;
+    max-width: 50%;
+    height: auto;
+  }
+
+  .values .values-container-small {
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .values .values-container-text {
+    padding: 0 !important;
+  }
+
+  .values .short-line {
+    margin: 0 0 20px 0 !important;
+  }
+
+  .values {
+    margin-bottom: 50px;
+  }
+
+  .brand-carousel h2 {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .scroll-track {
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 100%;
+  }
+
+  footer {
     height: 40px;
-  }
-
-  .menu-container {
-    top: 60px;
-  }
-
-  .custom-nav ul li a {
-    padding: 12px 15px;
-    font-size: 1rem;
-  }
-
-  .custom-nav ul li .btn-apply {
-    padding: 10px 15px;
-    font-size: 0.9rem;
-  }
-}
-
-/* 超小屏幕调整 */
-@media (max-width: 400px) {
-  .custom-nav {
-    width: 94%;
-    padding: 5px 10px;
-  }
-
-  .custom-nav .logo img {
-    height: 36px;
-  }
-
-  .hamburger {
-    width: 20px;
-  }
-
-  .menu-container {
-    left: 3%;
-    width: 94%;
-  }
-
-  .custom-nav ul li a {
-    padding: 10px 12px;
-    font-size: 0.9rem;
+    font-size: 10px;
   }
 }

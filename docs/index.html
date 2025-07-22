@@ -72,17 +72,24 @@
             <el-dropdown @command="handleLanguageChange">
               <span
                 class="el-dropdown-link"
-                style="color: white; cursor: pointer"
+                style="color: white; cursor: pointer; font-weight: bold"
               >
                 Language▿
               </span>
               <template #dropdown>
                 <el-dropdown-menu>
                   <el-dropdown-item command="en">
-                    <a href="index-zh-CN.html">简体</a></el-dropdown-item
+                    <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
                   >
-                  <el-dropdown-item command="zh">繁體</el-dropdown-item>
-                  <el-dropdown-item command="vi">English</el-dropdown-item>
+                  <el-dropdown-item command="zh">
+                    <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="vi">
+                    <a href="index.html">English</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="in">
+                    <a href="indexnew-HIN.html">हिंदी</a></el-dropdown-item
+                  >
                 </el-dropdown-menu>
               </template>
             </el-dropdown>
@@ -140,7 +147,7 @@
 
             <!-- Element Plus Grid Start -->
             <el-row :gutter="32" class="mt-4">
-              <el-col :span="8">
+              <el-col :xs="24" :sm="24" :md="24" :lg="24">
                 <div class="service-card">
                   <div class="card-media">
                     <video
@@ -165,7 +172,7 @@
                 </div>
               </el-col>
 
-              <el-col :span="8">
+              <el-col :xs="24" :sm="24" :md="24" :lg="24">
                 <div class="service-card">
                   <div class="card-media">
                     <video
@@ -190,7 +197,7 @@
                 </div>
               </el-col>
 
-              <el-col :span="8">
+              <el-col :xs="24" :sm="24" :md="24" :lg="24">
                 <div class="service-card">
                   <div class="card-media">
                     <video
@@ -231,7 +238,7 @@
 
           <!-- Element Plus 栅格布局 -->
           <el-row :gutter="20">
-            <el-col :xs="24" :sm="12" :md="8">
+            <el-col :xs="24" :sm="12" :md="24">
               <div class="grid-item bg-img-1">
                 <h1>Insurance Asset Digitalization</h1>
                 <p>
@@ -241,7 +248,7 @@
                 </p>
               </div>
             </el-col>
-            <el-col :xs="24" :sm="12" :md="8">
+            <el-col :xs="24" :sm="12" :md="24">
               <div class="grid-item bg-img-2">
                 <h1>Empowering Individuals & Institutions</h1>
                 <p>
@@ -251,7 +258,7 @@
                 </p>
               </div>
             </el-col>
-            <el-col :xs="24" :sm="12" :md="8">
+            <el-col :xs="24" :sm="12" :md="24">
               <div class="grid-item bg-img-3">
                 <h1>On-Chain Policy Value</h1>
                 <p>
@@ -435,7 +442,7 @@
       <!-- ***** The Engine Behind Your Assets Data End ***** -->
 
       <!-- ***** Our Core Values & Future Vision ***** -->
-      <div class="core values" id="core values">
+      <div class="values" id="values">
         <div class="container">
           <div class="header">
             <div class="title">
@@ -555,26 +562,29 @@
 </html>
 
 <script>
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu");
-  const langToggle = document.getElementById("langToggle");
-  const langDropdown = document.getElementById("langDropdown");
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
 
-  hamburger.addEventListener("click", () => {
-    menu.classList.toggle("open");
-    langDropdown.style.display = "none";
-  });
+    hamburger.addEventListener("click", function (e) {
+      e.stopPropagation(); // 阻止事件冒泡
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("open");
+      console.log("Menu open state:", menu.classList.contains("open"));
+    });
 
-  langToggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    langDropdown.style.display =
-      langDropdown.style.display === "block" ? "none" : "block";
-  });
+    // 点击菜单外区域关闭菜单
+    document.addEventListener("click", function (e) {
+      if (!menu.contains(e.target)) {
+        menu.classList.remove("open");
+        hamburger.classList.remove("active");
+      }
+    });
 
-  document.addEventListener("click", (e) => {
-    if (!langDropdown.contains(e.target) && !langToggle.contains(e.target)) {
-      langDropdown.style.display = "none";
-    }
+    // 阻止菜单内的点击事件冒泡
+    menu.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
   });
 </script>
 
