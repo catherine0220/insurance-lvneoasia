@@ -2177,6 +2177,10 @@ footer {
     max-height: 400px !important;
   }
 
+  .welcome-area .container {
+    padding: 0px;
+  }
+
   .welcome-area .header-text .one,
   .welcome-area .header-text .two {
     font-size: 20px;
