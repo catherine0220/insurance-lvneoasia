@@ -1,4 +1,8 @@
 /* 基础容器样式 */
+.el-row {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1780px;
   padding: 0 90px;
@@ -1368,7 +1372,10 @@ footer {
 
   .welcome-area {
     background-color: #fff2e1;
-    background-image: none;
+    background-image: url("../images/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* 或 contain，根据需求 */
+    background-position: center;
 
     min-height: auto; /* 移除固定最小高度 */
     height: auto; /* 确保高度由内容决定 */
@@ -1737,7 +1744,10 @@ footer {
 
   .welcome-area {
     background-color: #fff2e1;
-    background-image: none;
+    background-image: url("../images/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* 或 contain，根据需求 */
+    background-position: center;
 
     min-height: auto; /* 移除固定最小高度 */
     height: auto; /* 确保高度由内容决定 */
@@ -1751,14 +1761,14 @@ footer {
 
   .welcome-area .header-text .one,
   .welcome-area .header-text .two {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 100px;
   }
 
   .welcome-area p {
     font-size: 15px;
     line-height: 1.8;
-    max-width: 350px;
+    max-width: 300px;
   }
 
   .about-us {
@@ -2165,7 +2175,10 @@ footer {
 
   .welcome-area {
     background-color: #fff2e1;
-    background-image: none;
+    background-image: url("../images/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* 或 contain，根据需求 */
+    background-position: center;
 
     min-height: auto; /* 移除固定最小高度 */
     height: auto; /* 确保高度由内容决定 */
@@ -2183,14 +2196,14 @@ footer {
 
   .welcome-area .header-text .one,
   .welcome-area .header-text .two {
-    font-size: 20px;
+    font-size: 20px !important;
     margin-top: 100px;
   }
 
   .welcome-area p {
-    font-size: 15px;
+    font-size: 10px;
     line-height: 1.8;
-    max-width: 350px;
+    max-width: 200px;
   }
 
   .about-us {
