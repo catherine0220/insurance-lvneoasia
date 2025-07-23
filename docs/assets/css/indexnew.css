@@ -967,8 +967,13 @@ footer {
 
   .what-we-do .grid-item {
     padding: 60px 40px;
-    min-height: 500px;
+    min-height: 400px;
     margin-bottom: 20px;
+  }
+
+  .what-we-do .grid-item p {
+    min-height: 150px;
+    text-align: top;
   }
 
   .data .one {
