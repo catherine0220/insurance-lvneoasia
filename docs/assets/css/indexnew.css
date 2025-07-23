@@ -86,6 +86,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -510,9 +511,11 @@ footer {
 .bg-img-1 {
   background-image: url("../images/wwdbg1.jpg");
 }
+
 .bg-img-2 {
   background-image: url("../images/wwdbg2.jpg");
 }
+
 .bg-img-3 {
   background-image: url("../images/wwdbg3.jpg");
 }
@@ -552,9 +555,11 @@ footer {
 .about-us .one {
   color: #464646;
 }
+
 .about-us .two {
   color: #f48c06;
 }
+
 .about-us .three {
   color: #2f327d;
 }
@@ -604,7 +609,7 @@ footer {
   font-weight: 500;
   line-height: normal;
   width: 100%;
-  min-height: 100px;
+  min-height: 60px !important;
   margin-bottom: 20px;
 }
 
@@ -616,7 +621,7 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  min-height: 150px;
+  min-height: 160px !important;
   margin-bottom: 40px;
 }
 
@@ -744,7 +749,6 @@ footer {
   box-sizing: border-box;
   width: 95%;
   max-width: 1780px;
-  margin: 12px auto 0 auto;
   box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 40px;
@@ -752,7 +756,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   position: fixed !important;
-  top: 10px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
@@ -869,6 +873,7 @@ footer {
 
 /* 大屏幕调整 (1440px-1600px) */
 @media (max-width: 1600px) {
+
   .about-us .el-button.el-button--primary.enquire-btn,
   .welcome-area .main-button-slider {
     font-size: 20px !important;
@@ -1379,7 +1384,7 @@ footer {
     width: 90%;
     margin: 0 auto !important;
     padding: 8px 20px;
-    top: 5px;
+    top: 15px;
   }
 
   .custom-nav .logo img {
@@ -1445,12 +1450,15 @@ footer {
   .menu-container ul li:nth-child(1) {
     animation-delay: 0.1s;
   }
+
   .menu-container ul li:nth-child(2) {
     animation-delay: 0.2s;
   }
+
   .menu-container ul li:nth-child(3) {
     animation-delay: 0.3s;
   }
+
   .menu-container ul li:nth-child(4) {
     animation-delay: 0.4s;
   }
@@ -1478,12 +1486,10 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
     transition: left 0.5s;
   }
 
@@ -1515,6 +1521,7 @@ footer {
       transform: translateY(-20px);
       opacity: 0;
     }
+
     100% {
       transform: translateY(0);
       opacity: 1;
@@ -1585,11 +1592,13 @@ footer {
     background-color: white;
     background-image: url("../images/bg2.png");
     background-repeat: no-repeat;
-    background-size: cover; /* 或 contain，根据需求 */
+    background-size: cover;
+    /* 或 contain，根据需求 */
     background-position: center bottom;
 
     min-height: 600px !important;
-    height: auto; /* 确保高度由内容决定 */
+    height: auto;
+    /* 确保高度由内容决定 */
     display: flex;
     flex-direction: column;
   }
@@ -1812,6 +1821,7 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
   .what-we-do .container {
     padding: 0px;
     margin: 0px;
@@ -1842,7 +1852,7 @@ footer {
     width: 90%;
     margin: 0 auto !important;
     padding: 3px 20px;
-    top: 5px;
+    top: 15px;
     height: 50px;
   }
 
@@ -1886,12 +1896,13 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: none;
   }
 
   .menu-container.open {
     max-height: 300px;
     padding: 10px 0;
+    transition: max-height 0.5s ease-out;
   }
 
   .custom-nav ul {
@@ -1918,6 +1929,7 @@ footer {
       transform: translateY(-20px);
       opacity: 0;
     }
+
     100% {
       transform: translateY(0);
       opacity: 1;
@@ -2172,6 +2184,10 @@ footer {
     margin-bottom: 25px;
   }
 
+  .values .container {
+    padding: 0px 20px !important;
+  }
+
   .values p {
     margin-bottom: 70px;
   }
@@ -2311,12 +2327,12 @@ footer {
     width: 90%;
     margin: 0 auto !important;
     padding: 3px 20px;
-    top: 5px;
-    height: 40px;
+    top: 15px;
+    height: 50px;
   }
 
   .custom-nav .logo img {
-    height: 40px;
+    height: 50px;
   }
 
   .hamburger {
@@ -2347,7 +2363,7 @@ footer {
   /* 菜单容器 */
   .menu-container {
     position: fixed !important;
-    top: 40px;
+    top: 60px;
     left: 5%;
     width: 90%;
     background: #f48c06;
@@ -2355,13 +2371,14 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: none;
   }
 
   .menu-container.open {
     max-height: 300px;
     padding: 10px 0;
     font-size: 18px !important;
+    transition: max-height 0.5s ease-out;
   }
 
   .custom-nav ul {
@@ -2379,7 +2396,7 @@ footer {
     padding: 10px;
     display: block;
     color: white;
-    font-size: 18px !important;
+    font-size: 15px !important;
   }
 
   /* 动画关键帧 */
@@ -2388,6 +2405,7 @@ footer {
       transform: translateY(-20px);
       opacity: 0;
     }
+
     100% {
       transform: translateY(0);
       opacity: 1;
@@ -2428,7 +2446,7 @@ footer {
   .el-dropdown-link {
     padding: 10px;
     display: block;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .el-dropdown-menu {
@@ -2444,6 +2462,10 @@ footer {
     padding: 5px 20px !important;
     text-align: center !important;
     font-size: 18px !important;
+  }
+
+  .el-dropdown-menu__item a {
+    font-size: 12px;
   }
 
   .about-us .el-button.el-button--primary.enquire-btn {
@@ -2644,6 +2666,7 @@ footer {
 
   .values .values-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: left;
@@ -2653,9 +2676,11 @@ footer {
   .values .values-container img,
   .values .values-container video {
     margin: 0px !important;
-    max-width: 50%;
+    margin-bottom: 20px !important;
+    max-width: 60%;
     height: auto;
     padding-top: 10px !important;
+    padding: 0px !important;
   }
 
   .values .values-container-text p {
@@ -2780,24 +2805,25 @@ footer {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
   .scroll {
-    max-width: 380px;
+    max-width: 400px;
   }
 
   .custom-nav {
     width: 90%;
+    position: fixed;
     margin: 0 auto !important;
     padding: 3px 20px;
-    top: 5px;
-    height: 40px;
+    top: 15px !important;
+    height: 50px;
   }
 
   .custom-nav .logo img {
-    height: 40px;
+    height: 50px;
   }
+
   .hamburger {
-    display: flex;
     width: 20px;
     height: 15px;
   }
@@ -2824,7 +2850,7 @@ footer {
   /* 菜单容器 */
   .menu-container {
     position: fixed !important;
-    top: 40px;
+    top: 60px;
     left: 5%;
     width: 90%;
     background: #f48c06;
@@ -2832,14 +2858,16 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: none;
+    font-size: 15px !important;
   }
 
   .menu-container.open {
     max-height: 300px;
     padding: 10px 0;
-    font-size: 15px !important;
+    transition: max-height 0.5s ease-out;
   }
+
 
   .custom-nav ul {
     flex-direction: column;
@@ -2865,6 +2893,7 @@ footer {
       transform: translateY(-20px);
       opacity: 0;
     }
+
     100% {
       transform: translateY(0);
       opacity: 1;
@@ -2921,6 +2950,10 @@ footer {
     padding: 5px 20px !important;
     text-align: center !important;
     font-size: 15px !important;
+  }
+
+  .el-dropdown-menu__item a {
+    font-size: 12px;
   }
 
   .about-us .el-button.el-button--primary.enquire-btn {
@@ -3130,9 +3163,10 @@ footer {
   .values .values-container img,
   .values .values-container video {
     margin: 0px !important;
-    max-width: 50%;
+    max-width: 55%;
     height: auto;
     padding-top: 10px !important;
+    margin-bottom: 20px !important;
   }
 
   .values .values-container-text p {
