@@ -751,7 +751,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: fixed !important;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -1383,7 +1383,7 @@ footer {
   }
 
   .custom-nav .logo img {
-    height: 50px;
+    height: 45px;
   }
 
   .hamburger {
@@ -1401,7 +1401,7 @@ footer {
 
   /* 汉堡菜单样式 */
   .menu-container {
-    position: fixed;
+    position: fixed !important;
     top: 70px;
     left: 5%;
     width: 90%;
@@ -1877,7 +1877,7 @@ footer {
 
   /* 菜单容器 */
   .menu-container {
-    position: fixed;
+    position: fixed !important;
     top: 50px;
     left: 5%;
     width: 90%;
@@ -2318,6 +2318,7 @@ footer {
   .custom-nav .logo img {
     height: 40px;
   }
+
   .hamburger {
     display: flex;
     width: 20px;
@@ -2345,7 +2346,7 @@ footer {
 
   /* 菜单容器 */
   .menu-container {
-    position: fixed;
+    position: fixed !important;
     top: 40px;
     left: 5%;
     width: 90%;
@@ -2360,7 +2361,7 @@ footer {
   .menu-container.open {
     max-height: 300px;
     padding: 10px 0;
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 
   .custom-nav ul {
@@ -2378,7 +2379,7 @@ footer {
     padding: 10px;
     display: block;
     color: white;
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 
   /* 动画关键帧 */
@@ -2403,7 +2404,7 @@ footer {
   .custom-nav ul li .btn-apply {
     display: inline-block;
     margin: 10px auto;
-    font-size: 15px;
+    font-size: 18px;
     width: 50%;
     height: 30px;
     background: white;
@@ -2427,7 +2428,7 @@ footer {
   .el-dropdown-link {
     padding: 10px;
     display: block;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .el-dropdown-menu {
@@ -2442,17 +2443,17 @@ footer {
   .el-dropdown-menu__item {
     padding: 5px 20px !important;
     text-align: center !important;
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 
   .about-us .el-button.el-button--primary.enquire-btn {
     padding: 20px 15px;
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 
   .welcome-area .main-button-slider {
     padding: 8px 15px;
-    font-size: 15px !important;
+    font-size: 18px !important;
     margin-top: 30px;
     margin-bottom: 100px;
   }
@@ -2701,7 +2702,7 @@ footer {
   .about-us .one,
   .about-us .two,
   .about-us .three {
-    font-size: 20px !important;
+    font-size: 22px !important;
     line-height: 1.8;
   }
 
@@ -2726,7 +2727,7 @@ footer {
   .about-us p,
   .brand-carousel h2,
   .welcome-area .header-text p {
-    font-size: 15px !important;
+    font-size: 14px !important;
     line-height: 1.8;
   }
 
@@ -2822,7 +2823,7 @@ footer {
 
   /* 菜单容器 */
   .menu-container {
-    position: fixed;
+    position: fixed !important;
     top: 40px;
     left: 5%;
     width: 90%;
