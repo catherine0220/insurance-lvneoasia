@@ -2677,12 +2677,17 @@ footer {
 
   .values .values-container img,
   .values .values-container video {
+    order: 1;
     margin: 0px !important;
-    margin-bottom: 20px !important;
-    max-width: 60%;
+    margin-bottom: 30px !important;
+    max-width: 60% !important;
     height: auto;
     padding-top: 10px !important;
     padding: 0px !important;
+  }
+
+  .values .values-container-small{
+    order: 2;
   }
 
   .values .values-container-text p {
@@ -3164,11 +3169,16 @@ footer {
 
   .values .values-container img,
   .values .values-container video {
+    order: 1;
     margin: 0px !important;
-    max-width: 55%;
+    max-width: 60% !important;
     height: auto;
     padding-top: 10px !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .values .values-container-small{
+    order: 2;
   }
 
   .values .values-container-text p {
