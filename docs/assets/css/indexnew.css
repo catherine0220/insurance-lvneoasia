@@ -356,7 +356,7 @@ footer {
 */
 .explaination-container {
   max-width: 1920px;
-  max-height: 11494px;
+  max-height: 1149px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -478,17 +478,19 @@ footer {
   font-weight: 700;
   line-height: normal;
   margin-bottom: 24px;
-  min-height: auto;
+  min-height: 50px !important;
 }
 
 .what-we-do p {
   color: #fff;
-  text-align: center;
+  text-align: top;
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  min-height: 150px !important;
+  margin: 0px;
 }
 
 .what-we-do .grid-item {
@@ -497,7 +499,7 @@ footer {
   color: #fff;
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 430px !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -966,13 +968,22 @@ footer {
   }
 
   .what-we-do .grid-item {
-    padding: 60px 40px;
-    min-height: 400px;
+    padding: 40px 40px;
+    min-height: 400px !important;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .what-we-do .grid-item h3 {
+    min-height: 100px !important;
+    text-align: top;
   }
 
   .what-we-do .grid-item p {
-    min-height: 150px;
+    min-height: 190px !important;
     text-align: top;
   }
 
@@ -1043,7 +1054,7 @@ footer {
   }
 
   .about-us .service-card h3 {
-    min-height: 90px;
+    min-height: 60px;
   }
 
   .about-us .service-card p {
@@ -1065,13 +1076,18 @@ footer {
   }
 
   .what-we-do .grid-item h1 {
-    min-height: 84px;
+    min-height: 60px;
   }
 
   .what-we-do .grid-item {
-    padding: 50px 30px;
-    min-height: 320px;
+    padding: 30px 20px !important;
+    min-height: 300px !important;
     margin-bottom: 20px;
+  }
+
+  .what-we-do .grid-item p {
+    min-height: 100px !important;
+    margin: 0px;
   }
 
   .explaination img,
@@ -1595,15 +1611,17 @@ footer {
 
   .about-us .service-card {
     width: 100%;
-    padding: 100px 40px 40px;
+    padding: 110px 40px 40px;
   }
 
   .about-us .service-card h3 {
+    min-height: 60px !important;
     margin: 0px;
   }
 
   .about-us .service-card p {
-    max-height: 100px !important;
+    min-height: 80px !important;
+    margin-bottom: 30px;
   }
 
   .what-we-do .title {
@@ -1611,12 +1629,12 @@ footer {
   }
 
   .what-we-do .grid-item h1 {
-    min-height: 72px;
+    min-height: 30px !important;
     margin-bottom: 20px;
   }
 
   .what-we-do .grid-item p {
-    min-height: 72px;
+    min-height: 50px !important;
     margin-bottom: 20px;
   }
 
@@ -1806,10 +1824,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 230px !important;
   }
 
   .el-col-md-24.is-guttered {
-    padding: 0px 120px !important;
+    padding: 0px 140px !important;
   }
 }
 
@@ -1822,14 +1841,15 @@ footer {
   .custom-nav {
     width: 90%;
     margin: 0 auto !important;
-    padding: 8px 20px;
+    padding: 3px 20px;
     top: 5px;
-    height: 50px;
+    height: 40px;
   }
 
   .custom-nav .logo img {
     height: 40px;
   }
+
   .hamburger {
     display: flex;
     width: 20px;
@@ -1858,7 +1878,7 @@ footer {
   /* 菜单容器 */
   .menu-container {
     position: fixed;
-    top: 70px;
+    top: 50px;
     left: 5%;
     width: 90%;
     background: #f48c06;
@@ -1870,8 +1890,8 @@ footer {
   }
 
   .menu-container.open {
-    max-height: 500px;
-    padding: 20px 0;
+    max-height: 300px;
+    padding: 10px 0;
   }
 
   .custom-nav ul {
@@ -1886,10 +1906,10 @@ footer {
   }
 
   .custom-nav ul li a {
-    padding: 15px 20px;
+    padding: 10px;
     display: block;
     color: white;
-    font-size: 1.1rem;
+    font-size: 15px;
   }
 
   /* 动画关键帧 */
@@ -1914,9 +1934,14 @@ footer {
   .custom-nav ul li .btn-apply {
     display: inline-block;
     margin: 15px auto;
-    width: 80%;
+    width: 50%;
+    font-size: 15px;
     background: white;
     color: #333 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   /* 语言下拉菜单调整 */
@@ -1929,9 +1954,9 @@ footer {
   }
 
   .el-dropdown-link {
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: block;
-    font-size: 1.1rem;
+    font-size: 15px;
   }
 
   .el-dropdown-menu {
@@ -1946,6 +1971,7 @@ footer {
   .el-dropdown-menu__item {
     padding: 12px 20px !important;
     text-align: center !important;
+    font-size: 12px !important;
   }
 
   .about-us .el-button.el-button--primary.enquire-btn {
@@ -2025,9 +2051,8 @@ footer {
   }
 
   .about-us .service-card h3 {
-    height: 30px;
+    min-height: 60px !important;
     margin: 0px;
-    padding-top: 20px;
   }
 
   .about-us .service-card p {
@@ -2264,7 +2289,7 @@ footer {
   .what-we-do .grid-item {
     padding: 20px;
     margin-bottom: 20px;
-    min-height: 280px !important;
+    min-height: 250px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2321,7 +2346,7 @@ footer {
   /* 菜单容器 */
   .menu-container {
     position: fixed;
-    top: 70px;
+    top: 40px;
     left: 5%;
     width: 90%;
     background: #f48c06;
@@ -2333,8 +2358,8 @@ footer {
   }
 
   .menu-container.open {
-    max-height: 500px;
-    padding: 20px 0;
+    max-height: 300px;
+    padding: 10px 0;
   }
 
   .custom-nav ul {
@@ -2349,10 +2374,10 @@ footer {
   }
 
   .custom-nav ul li a {
-    padding: 15px 20px;
+    padding: 10px;
     display: block;
     color: white;
-    font-size: 1.1rem;
+    font-size: 12px;
   }
 
   /* 动画关键帧 */
@@ -2376,10 +2401,17 @@ footer {
 
   .custom-nav ul li .btn-apply {
     display: inline-block;
-    margin: 15px auto;
-    width: 80%;
+    margin: 10px auto;
+    font-size: 12px;
+    width: 50%;
+    height: 30px;
     background: white;
     color: #333 !important;
+    padding: 5px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   /* 语言下拉菜单调整 */
@@ -2392,9 +2424,9 @@ footer {
   }
 
   .el-dropdown-link {
-    padding: 15px 20px;
+    padding: 10px;
     display: block;
-    font-size: 1.1rem;
+    font-size: 12px;
   }
 
   .el-dropdown-menu {
@@ -2407,13 +2439,14 @@ footer {
   }
 
   .el-dropdown-menu__item {
-    padding: 12px 20px !important;
+    padding: 5px 20px !important;
     text-align: center !important;
+    font-size: 10px !important;
   }
 
   .about-us .el-button.el-button--primary.enquire-btn {
     padding: 20px 15px;
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
 
   .welcome-area .main-button-slider {
@@ -2492,14 +2525,15 @@ footer {
   }
 
   .about-us .service-card h3 {
-    max-height: 30px !important;
-    padding-top: 60px;
+    min-height: 30px !important;
+    margin-top: 60px !important;
     margin: 0;
     margin-bottom: 20px;
   }
 
   .about-us .service-card p {
-    line-height: 1.8;
+    min-height: 50px !important;
+    margin-bottom: 30px !important;
   }
 
   .about-us .card-media video,
@@ -2548,9 +2582,16 @@ footer {
     margin-top: 20px;
   }
 
+  .explaination-text .one a::after {
+    top: -10px !important;
+    left: -20px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
   .explaination-text .one,
   .explaination-text .two {
-    margin-bottom: 20px;
+    margin-bottom: 5px !important;
   }
 
   .explaination-text p {
@@ -2592,7 +2633,7 @@ footer {
   }
 
   .data .header {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .data p {
@@ -2609,10 +2650,10 @@ footer {
 
   .values .values-container img,
   .values .values-container video {
-    margin: 0 0 30px 0 !important;
+    margin: 0px !important;
     max-width: 50%;
     height: auto;
-    padding: 15px !important;
+    padding-top: 10px !important;
   }
 
   .values .values-container-text p {
@@ -2620,6 +2661,7 @@ footer {
   }
 
   .values p {
+    padding: 0px;
     margin-bottom: 30px;
   }
 
@@ -2637,7 +2679,7 @@ footer {
   }
 
   .values .container {
-    padding: 0px 10px !important;
+    padding: 0px 15px !important;
   }
 
   .brand-carousel h2 {

@@ -1,573 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
-      rel="stylesheet"
-    />
 
-    <title>LVNEOASIA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Avia Asia Limited</title>
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/font-awesome.css" />
-    <link rel="stylesheet" href="assets/css/indexnew.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-    <!-- Element Plus CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-plus/dist/index.css"
-    />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-    <style>
-      .box {
-        background-color: #f7f7f7;
-        padding: 24px;
-        border-radius: 8px;
-        text-align: center;
-        font-weight: bold;
-      }
-    </style>
-  </head>
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
 
-  <body>
-    <div id="app">
-      <!-- ***** Header Navigation ***** -->
-      <nav class="custom-nav">
-        <div class="logo">
-          <a href="#">
-            <img src="assets/images/logo1.png" alt="Logo" />
-          </a>
+    </head>
+    
+    <body>
+    
+<!-- ***** Header Area Start ***** -->
+<style>
+  nav.custom-nav {
+    background: #fff;
+    padding: 12px 30px;
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 1200px;
+    margin: 10px auto 0 auto;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+
+  .custom-nav .logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  .custom-nav .menu-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .custom-nav ul li {
+    position: relative;
+  }
+
+  .custom-nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 6px 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .custom-nav ul li a:hover,
+  .custom-nav ul li a.active {
+    color: purple;
+  }
+
+  .custom-nav ul li.language .dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    z-index: 1000;
+  }
+
+  .custom-nav ul li.language .dropdown a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  .custom-nav ul li.language .dropdown a:hover {
+    background-color: #f5f5f5;
+  }
+
+  .custom-nav ul li .btn-apply {
+    background-color: #ff589e;
+    color: white !important;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .custom-nav ul li .btn-apply:hover {
+    background-color: #e04a8c;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+  }
+
+  /* ========== 移动端样式 ========== */
+  @media (max-width: 768px) {
+    .custom-nav {
+      padding: 12px 20px;
+    }
+
+    .custom-nav .menu-container {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: flex-start;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+    }
+
+    .custom-nav .menu-container.open {
+      max-height: 500px;
+    }
+
+    .custom-nav ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .custom-nav ul li {
+      width: 100%;
+      border-top: 1px solid #eee;
+    }
+
+    .custom-nav ul li a,
+    .custom-nav ul li .btn-apply {
+      padding: 15px 20px;
+      width: 100%;
+      display: block;
+      text-align: left;
+    }
+
+    .custom-nav .hamburger {
+      display: flex;
+    }
+
+    /* 语言下拉适配移动端：固定浮动，不被遮挡 */
+    .custom-nav ul li.language {
+      position: static;
+    }
+
+    .custom-nav ul li.language .dropdown {
+      position: fixed;
+      top: 65px;
+      left: 20px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      z-index: 10001;
+    }
+
+    .custom-nav ul li.language .dropdown a {
+      font-size: 1.1rem;
+      padding: 12px 16px;
+    }
+  }
+</style>
+
+<nav class="custom-nav">
+  <div class="logo">
+    <a href="#">
+      <img src="assets/images/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <!-- 汉堡菜单按钮 -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- 菜单容器 -->
+  <div class="menu-container" id="menu">
+    <ul>
+      <li><a href="#welcome" class="active"><strong>主页</strong></a></li>
+      <li><a href="#features"><strong>关于</strong></a></li>
+      <li><a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"><strong>白皮书</strong></a></li>
+      <li><a href="#blog"><strong>愿景</strong></a></li>
+      <li class="language">
+        <a id="langToggle"><strong>语言▿</strong></a>
+        <div class="dropdown" id="langDropdown">
+          <a href="index-zh-CN.html">简体</a>
+          <a href="index-zh-TW.html">繁體</a>
+          <a href="index-en.html">English</a>
         </div>
+      </li>
+      <li><a href="#features" class="btn-apply">立即投保</a></li>
+    </ul>
+  </div>
+</nav>
 
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="menu-container" id="menu">
-          <ul>
-            <li>
-              <a href="#welcome" class="active"><strong>首页</strong></a>
-            </li>
-            <li>
-              <a href="#about-us"><strong>关于我们</strong></a>
-            </li>
-            <li>
-              <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"
-                ><strong>白皮书</strong></a
-              >
-            </li>
-            <li>
-              <a href="#what-we-do"><strong>愿景</strong></a>
-            </li>
-
-            <el-dropdown @command="handleLanguageChange">
-              <span
-                class="el-dropdown-link"
-                style="color: white; cursor: pointer; font-weight: bold"
-              >
-                语言▿
-              </span>
-              <template #dropdown>
-                <el-dropdown-menu>
-                  <el-dropdown-item command="en">
-                    <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
-                  >
-                  <el-dropdown-item command="zh">
-                    <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
-                  >
-                  <el-dropdown-item command="vi">
-                    <a href="index.html">English</a></el-dropdown-item
-                  >
-                  <el-dropdown-item command="in">
-                    <a href="indexnew-HIN.html">马来语</a></el-dropdown-item
-                  >
-                  <el-dropdown-item command="in">
-                    <a href="indexnew-HIN.html">印地语</a></el-dropdown-item
-                  >
-                </el-dropdown-menu>
-              </template>
-            </el-dropdown>
-
-            <li><a href="#welcome" class="btn-apply">立即申请</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- ***** 欢迎区 ***** -->
-      <div class="welcome-area" id="welcome">
-        <div class="header-text">
-          <div class="container">
-            <div class="title">
-              <div class="one">LVNEOASIA&nbsp;</div>
-              <div class="two">LIMITED 创造</div>
-            </div>
-            <div class="two mt-0">让每一份保单都成为有价值的资产</div>
-            <p>
-              我们不是在“销售保险”；我们正在打造一个全新的保险金融系统，让每个人都能参与并共享回报。
-            </p>
-            <a href="#features" class="main-button-slider"
-              ><strong>立即申请</strong></a
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="about-us" id="about-us">
-        <div class="header-text">
-          <div class="container">
-            <div class="text">
-              <h3>关于我们</h3>
-              <div class="title">
-                <div class="one">从&nbsp;</div>
-                <div class="two">保险&nbsp;</div>
-                <div class="one">走向&nbsp;</div>
-                <div class="three">资产自由</div>
-              </div>
-              <p>
-                我们是一家融合保险与金融科技的创新平台，总部位于香港，业务覆盖多个亚洲市场。
-                通过与保险公司、信托机构及监管沙盒合作，推动传统保单资产的数位化，释放长期价值。
-                本平台隶属于享誉全球的英国保险集团 Aviva
-                plc，拥有超过300年的历史和超过3000万名客户，
-                是金融稳定与信任的象征。
-              </p>
-            </div>
-
-            <!-- Element Plus 栅格系统开始 -->
-            <el-row :gutter="32" class="mt-4">
-              <el-col :xs="24" :sm="24" :md="24" :lg="8">
-                <div class="service-card">
-                  <div class="card-media">
-                    <video
-                      src="assets/images/video1.mp4"
-                      autoplay
-                      loop
-                      muted
-                      playsinline
-                    ></video>
-                  </div>
-                  <h3>保险资产数位化</h3>
-                  <p>
-                    运用科技将传统储蓄保单、年金及其他有价值的资产转化为数位凭证，实现更透明的管理与更灵活的操作。
-                  </p>
-                  <div class="btn">
-                    <el-button type="primary" class="enquire-btn"
-                      >立即咨询</el-button
-                    >
-                  </div>
-                </div>
-              </el-col>
-
-              <el-col :xs="24" :sm="24" :md="24" :lg="8">
-                <div class="service-card">
-                  <div class="card-media">
-                    <video
-                      src="assets/images/video2.mp4"
-                      autoplay
-                      loop
-                      muted
-                      playsinline
-                    ></video>
-                  </div>
-                  <h3>链上保单价值</h3>
-                  <p>
-                    每一份保单资产都在区块链上认证，确保每项投资都有真实资产支撑——安全、可靠、价值清晰。
-                  </p>
-                  <div class="btn">
-                    <el-button type="primary" class="enquire-btn"
-                      >立即咨询</el-button
-                    >
-                  </div>
-                </div>
-              </el-col>
-
-              <el-col :xs="24" :sm="24" :md="24" :lg="8">
-                <div class="service-card">
-                  <div class="card-media">
-                    <video
-                      src="assets/images/video3.mp4"
-                      autoplay
-                      loop
-                      muted
-                      playsinline
-                    ></video>
-                  </div>
-                  <h3>赋能个人与机构</h3>
-                  <p>
-                    无论是个人财富规划，还是机构的低风险收益需求，我们都助力您参与保险金融的长期价值成长。
-                  </p>
-                  <div class="btn">
-                    <el-button type="primary" class="enquire-btn"
-                      >立即咨询</el-button
-                    >
-                  </div>
-                </div>
-              </el-col>
-            </el-row>
-            <!-- Element Plus 栅格系统结束 -->
-          </div>
-        </div>
-      </div>
-
-      <!-- ***** 我们的服务内容 ***** -->
-      <div class="what-we-do" id="what-we-do">
-        <div class="container">
-          <div class="title">
-            <h1>我们的</h1>
-            <h2>服务</h2>
-          </div>
-
-          <!-- Element Plus 栅格布局 -->
-          <el-row :gutter="20">
-            <el-col :xs="24" :sm="24" :md="24" :lg="8">
-              <div class="grid-item bg-img-1">
-                <h1>保险资产数位化</h1>
-                <p>
-                  将具有现金价值的储蓄型保单与年金转化为数位资产，实现更透明的管理与更灵活的运作。
-                </p>
-              </div>
-            </el-col>
-            <el-col :xs="24" :sm="24" :md="24" :lg="8">
-              <div class="grid-item bg-img-2">
-                <h1>赋能个人与机构</h1>
-                <p>
-                  无论是个人财务规划或机构投资，都可参与保险金融中的低风险、长期稳定成长。
-                </p>
-              </div>
-            </el-col>
-            <el-col :xs="24" :sm="24" :md="24" :lg="8">
-              <div class="grid-item bg-img-3">
-                <h1>链上保单价值</h1>
-                <p>
-                  每一份保单都在链上认证，真实可追溯——安全、可靠、价值明确。
-                </p>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
-      </div>
-      <!-- ***** 我们的服务内容结束 ***** -->
-
-      <!-- ***** 功能说明区块 ***** -->
-      <div class="explaination" id="explaination">
-        <div class="container">
-          <!-- 1 -->
-          <div class="explaination-container">
-            <div class="explaination-text">
-              <div style="display: flex; align-items: center">
-                <h1 class="one"><a>将保单转化为&nbsp;</a></h1>
-                <h1 class="two">现金流</h1>
-              </div>
-              <p>
-                我们围绕保单资产的四大关键领域：验证、价值提升、流通与传承，提供一站式服务。
-                从估值与数位登记，到分红提取与流动性管理，帮助您将“沉睡的保险”转变为可使用、可配置、可传承的财富工具。
-              </p>
-            </div>
-            <img src="assets/images/expl1.gif" />
-          </div>
-
-          <!-- 2 -->
-          <div class="explaination-container">
-            <video autoplay loop muted playsinline>
-              <source src="assets/images/expl2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <div class="explaination-text">
-              <div style="display: flex; align-items: center">
-                <h1 class="two">资产&nbsp;</h1>
-                <h1 class="one">确认</h1>
-              </div>
-              <p>了解您保单的真实价值，厘清资产状况。</p>
-            </div>
-          </div>
-
-          <!-- 3 -->
-          <div class="explaination-container">
-            <div class="explaination-text">
-              <div style="display: flex; align-items: center">
-                <h1 class="two">权益&nbsp;</h1>
-                <h1 class="one">登记</h1>
-              </div>
-              <p>将保单转化为可管理的数位资产，以提升价值与流动性。</p>
-            </div>
-            <video autoplay loop muted playsinline>
-              <source src="assets/images/expl3.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          <!-- 4 -->
-          <div class="explaination-container">
-            <video autoplay loop muted playsinline>
-              <source src="assets/images/expl4.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div class="explaination-text">
-              <div style="display: flex; align-items: center">
-                <h1 class="one">收益&nbsp;</h1>
-                <h1 class="two">规划</h1>
-              </div>
-              <p>灵活的收益方案，可选择按月或按季提取分红。</p>
-            </div>
-          </div>
-
-          <!-- 5 -->
-          <div class="explaination-container">
-            <div class="explaination-text">
-              <div style="display: flex; align-items: center">
-                <h1 class="two">流动性&nbsp;</h1>
-                <h1 class="one">管理</h1>
-              </div>
-              <p>支持资产提取、转让与质押，自由掌控资产流动。</p>
-            </div>
-            <video autoplay loop muted playsinline>
-              <source src="assets/images/expl5.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          <!-- 6 -->
-          <div class="explaination-container">
-            <video autoplay loop muted playsinline>
-              <source src="assets/images/expl6.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div class="explaination-text">
-              <div style="display: flex; align-items: center">
-                <h1 class="two">量身定制&nbsp;</h1>
-                <h1 class="one">解决方案</h1>
-              </div>
-              <p>为机构与高净值客户提供多币种、跨境与信托的综合方案。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ***** 功能说明区块结束 ***** -->
-
-      <!-- ***** 您资产背后的引擎 ***** -->
-      <div class="data" id="data">
-        <div class="container">
-          <div class="header">
-            <h1 class="one">Avia Asia</h1>
-            <h1 class="two">您资产背后的动力引擎</h1>
-            <p>
-              您的保单不仅是一份合约，更是一项潜在资产。
-              我们帮助用户确认资产归属、释放收益、管理流动性，
-              将静态的保险产品转化为可控、可用、可配置的战略性财富引擎。
-            </p>
-          </div>
-
-          <div class="data-container">
-            <img src="assets/images/22.jpg" />
-            <div class="data-container-text">
-              <h3>每月现金流提升 22%</h3>
-              <p>
-                通过分红再投资与资产配置策略，保单资产可带来比传统方式多出 22%
-                的每月可提取收入——稳定、可持续，非常适合家庭现金流支持。
-              </p>
-            </div>
-          </div>
-
-          <div class="data-container">
-            <img src="assets/images/72.jpg" />
-            <div class="data-container-text">
-              <h3>72% 的长期保单持有人</h3>
-              <p>
-                在持有保单超过 5 年后从未主动评估其现金价值，
-                我们的资产验证服务帮助他们平均发现了高达 38% 的可动用流动性。
-              </p>
-            </div>
-          </div>
-
-          <div class="data-container">
-            <img src="assets/images/80.jpg" />
-            <div class="data-container-text">
-              <h3>80% 的高净值家庭</h3>
-              <p>
-                在配置第二份保单时，主动加入“数位登记 + 资产流动性”模块，
-                实现更优的跨境传承与融资，从而释放保单的更高价值。
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ***** 您资产背后的引擎结束 ***** -->
-
-      <!-- ***** Our Core Values & Future Vision ***** -->
-      <div class="values" id="values">
-        <div class="container">
-          <div class="header">
-            <div class="title">
-              <h1 class="one">Our Core Values&nbsp;</h1>
-              <h1 class="two">& Future Vision</h1>
-            </div>
-            <p>
-              Built on integrity and driven by innovation, we are committed to
-              providing every client with a transparent, secure, and efficient
-              insurance asset management experience. We believe insurance is not
-              just protection—it’s a bridge to wealth growth and legacy.
-            </p>
-          </div>
-          <!-- 1 -->
-          <div class="values-container">
-            <video
-              src="assets/images/values1.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              style="margin-right: 70px; padding-right: 40px"
-            ></video>
-
-            <div class="values-container-small">
-              <div class="short-line"></div>
-              <div class="values-container-text">
-                <div class="title">
-                  <h3 class="h3one">Our&nbsp;</h3>
-                  <h3 class="h3two">Philosophy</h3>
-                </div>
-                <p>
-                  Through dividend reinvestment and allocation strategies,
-                  policy assets deliver 22% more monthly withdrawable income
-                  compared to traditional methods — stable, sustainable, and
-                  ideal for household cash flow support.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div class="values-container">
-            <div class="values-container-small">
-              <div class="short-line" style="margin-left: auto"></div>
-              <div
-                class="values-container-text"
-                style="padding-right: 70px; padding-left: 0px"
-              >
-                <div class="title">
-                  <h3 class="h3one">Our&nbsp;</h3>
-                  <h3 class="h3two">Vision</h3>
-                </div>
-                <p>
-                  To become Asia’s leading platform for digital insurance asset
-                  management—pioneering the transformation of traditional
-                  insurance into smart, liquid assets that unlock greater
-                  financial value from every policy.
-                </p>
-              </div>
-            </div>
-            <video
-              src="assets/images/values2.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              style="margin-left: 70px; padding-left: 40px"
-            ></video>
-          </div>
-          <!-- 3 -->
-          <div class="values-container">
-            <video
-              src="assets/images/values3.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              style="margin-right: 70px; padding-right: 40px"
-            ></video>
-            <div class="values-container-small">
-              <div class="short-line"></div>
-              <div class="values-container-text">
-                <div class="title">
-                  <h3 class="h3one">Our&nbsp;</h3>
-                  <h3 class="h3two">Commitment</h3>
-                </div>
-                <p>
-                  We are dedicated to safeguarding client interests, adhering to
-                  regulatory standards, and integrating cutting-edge technology
-                  with professional service to build trusted, long-term wealth
-                  partnerships.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ***** Our Core Values & Future Vision End ***** -->
-
-      <!-- ***** Brand Carousel ***** -->
-      <div class="brand-carousel">
-        <h2>Private health insurance providers include</h2>
-        <div class="scroll">
-          <div class="scroll-track">
-            <img src="assets/images/brand1.png" class="logo" />
-            <img src="assets/images/brand2.png" class="logo" />
-            <img src="assets/images/brand3.png" class="logo" />
-            <img src="assets/images/brand4.png" class="logo" />
-            <img src="assets/images/brand5.png" class="logo" />
-            <img src="assets/images/brand6.png" class="logo" />
-            <img src="assets/images/brand7.png" class="logo" />
-            <!-- 再复制一轮，确保滚动平滑 -->
-            <img src="assets/images/brand1.png" class="logo" />
-            <img src="assets/images/brand2.png" class="logo" />
-            <img src="assets/images/brand3.png" class="logo" />
-            <img src="assets/images/brand4.png" class="logo" />
-            <img src="assets/images/brand5.png" class="logo" />
-            <img src="assets/images/brand6.png" class="logo" />
-            <img src="assets/images/brand7.png" class="logo" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 页脚 -->
-    <footer>
-      <div class="footer">Copyright © 2025— AVIA ASIA LIMITED</div>
-    </footer>
-  </body>
-</html>
-
+<!-- JS 控制菜单和语言切换 -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const menu = document.getElementById("menu");
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+  const langToggle = document.getElementById('langToggle');
+  const langDropdown = document.getElementById('langDropdown');
 
-    hamburger.addEventListener("click", function (e) {
-      e.stopPropagation(); // 阻止事件冒泡
-      hamburger.classList.toggle("active");
-      menu.classList.toggle("open");
-      console.log("Menu open state:", menu.classList.contains("open"));
-    });
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    langDropdown.style.display = 'none'; // 折叠菜单时隐藏语言菜单
+  });
 
-    // 点击菜单外区域关闭菜单
-    document.addEventListener("click", function (e) {
-      if (!menu.contains(e.target)) {
-        menu.classList.remove("open");
-        hamburger.classList.remove("active");
-      }
-    });
+  langToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // 阻止冒泡到 document
+    langDropdown.style.display =
+      langDropdown.style.display === 'block' ? 'none' : 'block';
+  });
 
-    // 阻止菜单内的点击事件冒泡
-    menu.addEventListener("click", function (e) {
-      e.stopPropagation();
-    });
+  // 点击页面其他地方时关闭语言菜单
+  document.addEventListener('click', (e) => {
+    if (!langDropdown.contains(e.target) && !langToggle.contains(e.target)) {
+      langDropdown.style.display = 'none';
+    }
   });
 </script>
 
-<!-- Vue + Element Plus -->
-<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-<script src="https://unpkg.com/element-plus"></script>
-<script>
-  const { createApp } = Vue;
-  const app = createApp({});
-  app.use(ElementPlus);
-  app.mount("#app");
-</script>
+<!-- ***** Header Area End ***** -->
+
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+
+
+<!-- ***** Header Text Start ***** -->
+<div class="header-text">
+    <div class="container">
+        <div class="row">
+
+            <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12" style="font-size: 1.5rem; line-height: 1.4;">
+                <h1 style="font-size: 3.5rem; line-height: 1.2;">
+                    <strong>AVIA ASIA LIMITED</strong><br>
+                    <strong>让每一份保单<br>成为有价值的资产</strong>
+                </h1>
+                <p style="font-size: 1.5rem; line-height: 1.5;">
+                    我们不是在“销售保险”，我们在构建一个人人可参与、人人可共享收益的保险金融新体系。
+                </p>
+                <a href="#features" class="main-button-slider" style="font-size: 1.5rem; padding: 18px 36px;"><strong>立即投保</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Header Text End ***** -->
+
+</div>
+<!-- ***** Welcome Area End ***** -->
+
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title"><strong>保险资产数字化</strong></h5>
+                                <p>将传统的储蓄保单、年金类保险等价值的资产，通过技术转化为数字化凭证，实现更透明的管理和更灵活的操作。</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-02.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title"><strong>保单价值上链</strong></h5>
+                                <p>每一张保单资产都经由链上认证，确保投资背后有真实的资产支撑，安全可靠，价值清晰可见。</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-03.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title"><strong>赋能个人与机构</strong></h5>
+                                <p>无论是个人家庭资产配置，还是大型机构的低风险收益需求，都能通过我们参与到保险金融领域的长期价值增长中。</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section"  id="features" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title"><strong>关于我们：从保险走向资产自由</strong></h2>
+                    </div>
+                    <div class="left-text">
+                        <p><strong>我们是一家融合保险与金融科技的创新平台，总部设于香港，业务覆盖亚洲多个市场。通过与保险公司、信托机构及监管沙盒合作，我们推动传统保单资产数字化，释放长期价值。</strong><br>
+平台隶属于英国知名保险集团 <strong>Aviva plc </strong>，拥有<strong>300多年历史</strong>，全球客户超过<strong>3,000万人</strong>，是金融稳健与信任的象征。</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/right-image.gif" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;">
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" style="padding-top: 30px; padding-bottom: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/left-image.gif" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title"><strong>我们做什么</strong></h2>
+                    </div>
+                    <div class="left-text">
+                        <p><strong>✅ 保险资产数字化：</strong><br>将储蓄型保单、年金等具备现金价值的保险转为数字资产，管理更透明，操作更灵活。</p>
+
+<strong>✅ 保单价值上链：</strong><br>每份保单都上链认证，资产真实可查，安全可靠，价值一目了然。</p>
+
+<strong>✅ 赋能个人与机构：</strong><br>个人理财或机构投资，均可参与低风险、长期稳健的保险金融增长。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>让保单变成你的现金流</h1>
+                            <p>我们围绕保单资产的确权、增值、流通与传承四大环节，提供从价值评估、数字化登记到分红提取与流动管理的一站式服务，帮助你把“沉睡的保险”变成可提取、可配置、可传承的财富工具。</p>
+                        </div>
+                    </div>
+                </div>
+
+<!-- ***** Mini Box Section Start ***** -->
+<style>
+    /* 主容器模拟 Bootstrap 的 gutter（左右间距） */
+    .row.no-gutter-fix {
+        margin-left: -10px;
+        margin-right: -10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 自定义列：宽度+左右 padding 实现间隔 */
+    .col-custom {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* 平板 ≥576px 显示两个 */
+    @media (min-width: 576px) {
+        .col-custom {
+            width: 50%;
+        }
+    }
+
+    /* 电脑 ≥992px 显示五个 */
+    @media (min-width: 992px) {
+        .col-custom {
+            width: 20%;
+        }
+    }
+
+    /* Mini Box 样式 */
+    .mini-box {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .mini-box:hover {
+        background-color: #e0e0e0;
+    }
+
+    .mini-box img {
+        max-width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .mini-box strong {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .mini-box span {
+        font-size: 0.95em;
+        color: #555;
+    }
+</style>
+
+<div class="row no-gutter-fix">
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+            <strong>资产确权</strong>
+            <span>帮您了解保单真实价值，明确资产状况。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-02.png" alt=""></i>
+            <strong>权益登记</strong>
+            <span>将保单转为可管理的数字资产，促进资产增值与流通。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-03.png" alt=""></i>
+            <strong>收益计划</strong>
+            <span>设计灵活收益方案，分红按月或季度提取。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-04.png" alt=""></i>
+            <strong>流动性管理</strong>
+            <span>支持资产提取、转让和抵押，灵活操作资产。</span>
+        </a>
+    </div>
+    <div class="col-custom">
+        <a href="#" class="mini-box">
+            <i><img src="assets/images/work-process-item-05.png" alt=""></i>
+            <strong>定制方案</strong>
+            <span>为机构和高净值客户提供多币种、跨境及信托方案。</span>
+        </a>
+    </div>
+</div>
+<!-- ***** Mini Box Section End ***** -->
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+
+ <!-- ***** Pricing Plans Start ***** -->
+<section class="section colored" id="pricing-plans">
+    <style>
+        /* 问题1：增加小字内容与框边的内边距 */
+        .pricing-item .list li {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* 问题2：减少该 section 与上方内容的距离 */
+        #pricing-plans.section {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            margin-top: -30px;
+        }
+
+        .center-text, .center-heading {
+            margin-bottom: 20px !important;
+        }
+    </style>
+
+    <div class="container">
+<!-- ***** Section Title Start ***** -->
+<div class="row" style="margin-top: 60px;">
+    <div class="col-lg-12">
+        <div class="center-heading">
+            <h2 class="section-title"><strong>Avia Asia—你手中的资产发动机</strong></h2>
+        </div>
+    </div>
+    <div class="offset-lg-3 col-lg-6">
+        <div class="center-text">
+            <p>你的保单远不止是一张合同，它是一份潜在的资产。我们帮助用户将保单进行资产确权、收益释放与灵活流通管理，让原本静态的保障工具，转化为可控、可提、可规划的财富引擎。</p>
+        </div>
+    </div>
+</div>
+<!-- ***** Section Title End ***** -->
+
+
+        <div class="row">
+            <!-- ***** Pricing Item 1 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                <div class="pricing-item">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">72%</span>
+                            <span class="price"></span>
+                            <span class="period">72% 的长期保单持有人</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                在购买5年以上的保单后，从未主动评估其当前的现金价值 —— 我们的确权服务帮助他们平均发现 38%的可动用资金空间。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***** Pricing Item 2 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                <div class="pricing-item active">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">22%</span>
+                            <span class="price"></span>
+                            <span class="period">月均可提收益提升 22%</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                通过分红收益再配置机制，保单资产的月均可领取收益比传统方式提升 22%，稳定且可持续，适用于家庭日常现金流补充。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***** Pricing Item 3 ***** -->
+            <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                <div class="pricing-item">
+                    <div class="pricing-header"></div>
+                    <div class="pricing-body">
+                        <div class="price-wrapper">
+                            <span class="currency">80%</span>
+                            <span class="price"></span>
+                            <span class="period">80% 的高净值家庭客户</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">
+                                在配置第二份保单时，会主动加入“数字登记 + 资产流通”模块，使保单具备更高的跨境传承与融资能力，保障价值更好释放。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Pricing Plans End ***** -->
+
+
+    <!-- ***** Blog Start ***** -->
+    <section class="section" id="blog">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title"><strong>我们的核心价值与未来愿景</strong></h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>携手共创保险资产的新未来，共同推动保险保障转化为持续稳定、可持续发展的财富动力，实现资产的长期增值与安全传承。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-01.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#"><strong>我们的理念</strong></a>
+                            </h3>
+                            <div class="text">
+                              以诚信为基石，以创新为驱动，致力于为每一位客户创造透明、安全且高效的保险资产管理体验。我们坚信，保险不仅是保障，更是财富增值与传承的桥梁。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-02.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#"><strong>我们的愿景</strong></a>
+                            </h3>
+                            <div class="text">
+                               成为亚洲领先的保险资产数字化管理平台，推动传统保险资产迈向智能化、流通化的未来，让每一份保障都释放出更大的金融价值。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-03.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#"><strong>我们的承诺</strong></a>
+                            </h3>
+                            <div class="text">
+                                持续守护客户利益，严格遵守监管要求，结合前沿科技与专业服务，为客户打造值得信赖的长期财富伙伴关系。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Blog End ***** -->
+
+    
+    <!-- ***** Footer Start ***** -->
+<footer style="margin-top: 0px; padding-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul class="social">
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright"><strong>Copyright &copy; 2025— AVIA ASIA LIMITED</strong><a target="_blank" href="#" title=""></a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

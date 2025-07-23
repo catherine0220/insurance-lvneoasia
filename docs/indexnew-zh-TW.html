@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -38,7 +38,7 @@
 
   <body>
     <div id="app">
-      <!-- ***** 主導航 ***** -->
+      <!-- ***** Header Navigation ***** -->
       <nav class="custom-nav">
         <div class="logo">
           <a href="#">
@@ -79,13 +79,18 @@
               <template #dropdown>
                 <el-dropdown-menu>
                   <el-dropdown-item command="en">
-                    <a href="indexnew-zh-CN.html">簡體</a></el-dropdown-item
+                    <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
                   >
                   <el-dropdown-item command="zh">
                     <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
                   >
                   <el-dropdown-item command="vi">
                     <a href="index.html">English</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="in">
+                    <a href="indexnew-BM.html"
+                      >Bahasa Melayu</a
+                    ></el-dropdown-item
                   >
                   <el-dropdown-item command="in">
                     <a href="indexnew-HIN.html">हिंदी</a></el-dropdown-item
@@ -99,26 +104,26 @@
         </div>
       </nav>
 
-      <!-- ***** 歡迎區域 ***** -->
+      <!-- ***** 歡迎區 ***** -->
       <div class="welcome-area" id="welcome">
         <div class="header-text">
           <div class="container">
             <div class="title">
               <div class="one">LVNEOASIA&nbsp;</div>
-              <div class="two">LIMITED 讓</div>
+              <div class="two">LIMITED Make</div>
             </div>
-            <div class="two mt-0">每份保單成為有價值的資產</div>
+            <div class="two mt-0">讓每一張保單成為資產</div>
             <p>
-              我們不是在“銷售保險”，而是在構建一個全新的保險金融體系，讓每個人都能參與並分享收益。
+              我們不是「賣保險」，而是在構建一個人人可參與並共享收益的新型保險金融系統。
             </p>
-            <a href="#features" class="main-button-slider"
-              ><strong>立即申請</strong></a
+            <a href="#features" class="main-button-slider">
+              <strong>立即申請</strong></a
             >
           </div>
         </div>
       </div>
 
-      <!-- ***** 關於我們 ***** -->
+      <!-- ***** 關於我們區塊 ***** -->
       <div class="about-us" id="about-us">
         <div class="header-text">
           <div class="container">
@@ -131,14 +136,16 @@
                 <div class="three">資產自由</div>
               </div>
               <p>
-                我們是一家融合保險與金融科技的創新平台，總部位於香港，業務覆蓋多個亞洲市場。通過與保險公司、信托機構和監管沙盒的合作，我們推動傳統保單資產的數字化，釋放長期價值。平台隸屬於英國知名保險集團Aviva
-                plc，擁有超過300年的歷史和全球3000多萬客戶，是財務穩定與信任的象徵。
+                我們是一個融合保險與金融科技的創新平台，總部位於香港，業務遍及多個亞洲市場。
+                通過與保險公司、信託機構及監管沙盒的合作，我們推動傳統保單資產的數位化，釋放長期價值。
+                平台隸屬於擁有逾 300 年歷史、全球超過 3,000
+                萬客戶的英國知名保險集團 Aviva plc —— 財務穩健、值得信賴。
               </p>
             </div>
 
-            <!-- Element Plus 網格佈局 -->
+            <!-- Element Plus Grid Start -->
             <el-row :gutter="32" class="mt-4">
-              <el-col :xs="24" :sm="8" :md="8" :lg="8">
+              <el-col :xs="24" :sm="24" :md="24" :lg="8">
                 <div class="service-card">
                   <div class="card-media">
                     <video
@@ -149,19 +156,19 @@
                       playsinline
                     ></video>
                   </div>
-                  <h3>保險資產數字化</h3>
+                  <h3>保險資產數位化</h3>
                   <p>
-                    通過技術將傳統儲蓄保單、年金等有價值的資產轉化為數字憑證，實現更透明的管理和更靈活的操作。
+                    透過技術將傳統儲蓄保單、年金計劃以及其他具潛在價值的金融資產，全面轉化為可驗證的數位憑證。
                   </p>
                   <div class="btn">
-                    <el-button type="primary" class="enquire-btn"
-                      >立即咨詢</el-button
-                    >
+                    <el-button type="primary" class="enquire-btn">
+                      立即諮詢
+                    </el-button>
                   </div>
                 </div>
               </el-col>
 
-              <el-col :xs="24" :sm="8" :md="8" :lg="8">
+              <el-col :xs="24" :sm="24" :md="24" :lg="8">
                 <div class="service-card">
                   <div class="card-media">
                     <video
@@ -174,17 +181,17 @@
                   </div>
                   <h3>鏈上保單價值</h3>
                   <p>
-                    每份保單資產均在鏈上認證，確保每筆投資都有真實資產支持——安全、可靠、價值清晰。
+                    每一項保單資產皆鏈上確權，確保每一筆投資均有真實可追溯的資產支持——安全、可靠、價值清晰透明。
                   </p>
                   <div class="btn">
-                    <el-button type="primary" class="enquire-btn"
-                      >立即咨詢</el-button
-                    >
+                    <el-button type="primary" class="enquire-btn">
+                      立即諮詢
+                    </el-button>
                   </div>
                 </div>
               </el-col>
 
-              <el-col :xs="24" :sm="8" :md="8" :lg="8">
+              <el-col :xs="24" :sm="24" :md="24" :lg="8">
                 <div class="service-card">
                   <div class="card-media">
                     <video
@@ -197,71 +204,76 @@
                   </div>
                   <h3>賦能個人與機構</h3>
                   <p>
-                    無論是個人財富規劃還是機構的低風險收益需求，我們都能讓您參與到保險金融的長期價值增長中。
+                    無論是個人財富規劃，或是機構的低風險收益需求，我們皆助力其穩健參與保險金融的長期價值增長之路。
                   </p>
                   <div class="btn">
-                    <el-button type="primary" class="enquire-btn"
-                      >立即咨詢</el-button
-                    >
+                    <el-button type="primary" class="enquire-btn">
+                      立即諮詢
+                    </el-button>
                   </div>
                 </div>
               </el-col>
             </el-row>
+            <!-- Element Plus Grid End -->
           </div>
         </div>
       </div>
-      <!-- ***** 關於我們結束 ***** -->
+      <!-- ***** 關於我們區塊結束 ***** -->
 
-      <!-- ***** 我們的業務 ***** -->
+      <!-- ***** 我們的服務 區塊 ***** -->
       <div class="what-we-do" id="what-we-do">
         <div class="container">
           <div class="title">
-            <h1>我們的&nbsp;</h1>
-            <h2>業務</h2>
+            <h1>我們在做</h1>
+            <h2>什麼？</h2>
           </div>
 
+          <!-- Element Plus 柵格佈局 -->
           <el-row :gutter="20">
-            <el-col :xs="24" :sm="12" :md="8">
+            <el-col :xs="24" :sm="24" :md="24" :lg="8">
               <div class="grid-item bg-img-1">
-                <h1>保險資產數字化</h1>
+                <h1>保險資產數位化</h1>
                 <p>
-                  將有現金價值的儲蓄型保單和年金轉化為數字資產，實現更透明的管理和更靈活的操作。
+                  將具備現金價值的儲蓄型保單與年金轉換為可追蹤的數位資產，不僅提升管理透明度，
+                  也賦予保單更高的流動性與操作彈性，實現跨平台協作與自動化配置能力。
                 </p>
               </div>
             </el-col>
-            <el-col :xs="24" :sm="12" :md="8">
+            <el-col :xs="24" :sm="24" :md="24" :lg="8">
               <div class="grid-item bg-img-2">
                 <h1>賦能個人與機構</h1>
                 <p>
-                  無論是個人理財規劃還是機構投資，您都可以參與到保險金融的低風險、長期穩定增長中。
+                  無論是用於個人財富管理、退休規劃，或機構型資金的長期配置，我們皆提供低風險、
+                  穩定收益的保險金融路徑，助力實現資產保值增值與跨週期穩健成長的目標。
                 </p>
               </div>
             </el-col>
-            <el-col :xs="24" :sm="12" :md="8">
+            <el-col :xs="24" :sm="24" :md="24" :lg="8">
               <div class="grid-item bg-img-3">
                 <h1>鏈上保單價值</h1>
                 <p>
-                  每份保單均在鏈上認證，資產真實可追溯——安全、可靠、價值清晰。
+                  每一張保單資產皆透過區塊鏈技術上鏈確權，確保來源真實、
+                  紀錄可追蹤、資料不可竄改，不僅保障投資安全，也讓價值展現更為清晰透明、無懼查驗。
                 </p>
               </div>
             </el-col>
           </el-row>
         </div>
       </div>
-      <!-- ***** 我們的業務結束 ***** -->
+      <!-- ***** 我們的服務 區塊結束 ***** -->
 
-      <!-- ***** 說明部分 ***** -->
+      <!-- ***** 保單資產說明區塊 ***** -->
       <div class="explaination" id="explaination">
         <div class="container">
           <!-- 1 -->
           <div class="explaination-container">
             <div class="explaination-text">
               <div style="display: flex; align-items: center">
-                <h1 class="one"><a>將您的保單轉化為&nbsp;</a></h1>
+                <h1 class="one"><a>讓保單成為</a></h1>
                 <h1 class="two">現金流</h1>
               </div>
               <p>
-                我們圍繞保單資產的四大核心領域——驗證、增值、流通和繼承，提供一站式服務。從估值、數字登記到分紅提取和流動性管理，我們幫助您將“沉睡的保險”變為可訪問、可配置、可轉讓的財富工具。
+                我們圍繞保單資產的四大核心功能——確權、增值、流通、傳承，提供一站式服務。從估值、數位確權，到紅利提取與流動性管理，協助您將「沉睡保單」轉化為可配置、可轉移、可運用的財富工具。
               </p>
             </div>
             <img src="assets/images/expl1.gif" />
@@ -271,15 +283,15 @@
           <div class="explaination-container">
             <video autoplay loop muted playsinline>
               <source src="assets/images/expl2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              您的瀏覽器不支援影片標籤。
             </video>
 
             <div class="explaination-text">
               <div style="display: flex; align-items: center">
-                <h1 class="two">資產&nbsp;</h1>
-                <h1 class="one">確認</h1>
+                <h1 class="two">資產</h1>
+                <h1 class="one">確權</h1>
               </div>
-              <p>了解保單的真實價值，明確您的資產狀態。</p>
+              <p>清楚掌握保單的真實價值，明確資產狀態。</p>
             </div>
           </div>
 
@@ -287,14 +299,14 @@
           <div class="explaination-container">
             <div class="explaination-text">
               <div style="display: flex; align-items: center">
-                <h1 class="two">權益&nbsp;</h1>
+                <h1 class="two">權利</h1>
                 <h1 class="one">登記</h1>
               </div>
-              <p>將保單轉化為可管理的數字資產，提升價值和流動性。</p>
+              <p>將保單轉化為可管理的數位資產，實現價值提升與流動性增強。</p>
             </div>
             <video autoplay loop muted playsinline>
               <source src="assets/images/expl3.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              您的瀏覽器不支援影片標籤。
             </video>
           </div>
 
@@ -302,14 +314,14 @@
           <div class="explaination-container">
             <video autoplay loop muted playsinline>
               <source src="assets/images/expl4.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              您的瀏覽器不支援影片標籤。
             </video>
             <div class="explaination-text">
               <div style="display: flex; align-items: center">
-                <h1 class="one">收入&nbsp;</h1>
+                <h1 class="one">收益</h1>
                 <h1 class="two">計劃</h1>
               </div>
-              <p>靈活的收入計劃，支持按月或按季分紅提取。</p>
+              <p>靈活收益方案，可按月或按季提取紅利。</p>
             </div>
           </div>
 
@@ -317,14 +329,14 @@
           <div class="explaination-container">
             <div class="explaination-text">
               <div style="display: flex; align-items: center">
-                <h1 class="two">流動性&nbsp;</h1>
+                <h1 class="two">流動性</h1>
                 <h1 class="one">管理</h1>
               </div>
-              <p>支持資產提取、轉讓和抵押，靈活掌控。</p>
+              <p>支援資產提取、轉讓與質押，實現靈活掌控。</p>
             </div>
             <video autoplay loop muted playsinline>
               <source src="assets/images/expl5.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              您的瀏覽器不支援影片標籤。
             </video>
           </div>
 
@@ -332,63 +344,66 @@
           <div class="explaination-container">
             <video autoplay loop muted playsinline>
               <source src="assets/images/expl6.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              您的瀏覽器不支援影片標籤。
             </video>
             <div class="explaination-text">
               <div style="display: flex; align-items: center">
-                <h1 class="two">定制化&nbsp;</h1>
-                <h1 class="one">解決方案</h1>
+                <h1 class="two">客製化</h1>
+                <h1 class="one">方案</h1>
               </div>
-              <p>為機構和高淨值客戶提供多幣種、跨境及信托計劃。</p>
+              <p>為機構與高資產客戶提供多幣種、跨境與信託等多元解決方案。</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- ***** 說明部分結束 ***** -->
+      <!-- ***** 保单资产说明区块结束 ***** -->
 
-      <!-- ***** 資產引擎數據 ***** -->
+      <!-- ***** 您資產背後的引擎 ***** -->
       <div class="data" id="data">
         <div class="container">
           <div class="header">
-            <h1 class="one">Avia Asia</h1>
+            <h1 class="one">LVNEOASIA</h1>
             <h1 class="two">您資產背後的引擎</h1>
             <p>
-              您的保單不僅僅是一份合同——它是一種潛在的資產。我們幫助用戶確認資產所有權、釋放收益並管理流動性，將靜態的保險產品轉變為可控、可訪問的戰略性財富引擎。
+              保單不只是合約，更是潛在資產。我們協助用戶確認資產歸屬、釋放收益並管理流動性，將靜態的保險產品轉化為可控、可提取、可部署的財富引擎。
             </p>
           </div>
           <div class="data-container">
             <img src="assets/images/22.jpg" />
             <div class="data-container-text">
-              <h3>每月現金流增加22%</h3>
+              <h3>22% 每月更多可用現金</h3>
               <p>
-                通過分紅再投資和分配策略，保單資產相比傳統方法每月可提取收入增加22%——穩定、可持續，是家庭現金流的理想支持。
+                透過紅利再投資與配置策略，保單資產相較傳統方式提供 22%
+                更高的每月可提領收入 —— 穩定、可持續，是家庭現金流的好幫手。
               </p>
             </div>
           </div>
           <div class="data-container">
             <img src="assets/images/72.jpg" />
             <div class="data-container-text">
-              <h3>72%的長期保單持有人</h3>
+              <h3>72% 的長年期保戶</h3>
               <p>
-                從未主動評估持有超過5年的保單當前現金價值——我們的資產驗證服務幫助他們發現了平均38%的可用流動性。
+                從未主動評估持有超過 5 年以上保單的現有現金價值 ——
+                透過我們的資產檢核服務，平均可發現 38% 可動用流動性。
               </p>
             </div>
           </div>
           <div class="data-container">
             <img src="assets/images/80.jpg" />
             <div class="data-container-text">
-              <h3>80%的高淨值家庭</h3>
+              <h3>80% 高資產家庭</h3>
               <p>
-                在配置第二份保單時，主動包含“數字登記+資產流動性”模塊，實現更好的跨境繼承和融資，從而釋放保單的更大價值。
+                在配置第二張保單時，主動加入「數位登記 +
+                資產流動」模組，強化跨境傳承與融資能力，釋放保單更大價值。
               </p>
             </div>
           </div>
         </div>
       </div>
-      <!-- ***** 資產引擎數據結束 ***** -->
+      <!-- ***** 您資產背後的引擎 End ***** -->
 
       <!-- ***** 核心價值與未來願景 ***** -->
-      <div class="core values" id="core values">
+      <div class="values" id="values">
         <div class="container">
           <div class="header">
             <div class="title">
@@ -396,15 +411,20 @@
               <h1 class="two">與未來願景</h1>
             </div>
             <p>
-              以誠信為基礎，以創新為驅動，我們致力於為每位客戶提供透明、安全、高效的保險資產管理體驗。我們相信保險不僅僅是保障——它是財富增長與傳承的橋梁。
+              以誠信為本、創新為驅動，我們致力於為每一位客戶提供透明、安全、高效的保險資產管理體驗。我們相信，保險不僅是保障，更是通往財富成長與傳承的橋樑。
             </p>
           </div>
           <!-- 1 -->
           <div class="values-container">
-            <img
-              src="assets/images/values1.png"
+            <video
+              src="assets/images/values1.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
               style="margin-right: 70px; padding-right: 40px"
-            />
+            ></video>
+
             <div class="values-container-small">
               <div class="short-line"></div>
               <div class="values-container-text">
@@ -413,7 +433,8 @@
                   <h3 class="h3two">理念</h3>
                 </div>
                 <p>
-                  通過分紅再投資和分配策略，保單資產相比傳統方法每月可提取收入增加22%——穩定、可持續，是家庭現金流的理想支持。
+                  透過紅利再投資與配置策略，保單資產相較傳統方式提供 22%
+                  更高的每月可提領收入 —— 穩定、可持續，是家庭現金流的好幫手。
                 </p>
               </div>
             </div>
@@ -431,21 +452,30 @@
                   <h3 class="h3two">願景</h3>
                 </div>
                 <p>
-                  成為亞洲領先的數字保險資產管理平台——引領傳統保險向智能、流動性資產的轉型，釋放每份保單的更大金融價值。
+                  成為亞洲領先的數位保險資產管理平台 ——
+                  引領傳統保險轉型為智慧、可流動資產，讓每一張保單釋放更大金融價值。
                 </p>
               </div>
             </div>
-            <img
-              src="assets/images/values2.png"
+            <video
+              src="assets/images/values2.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
               style="margin-left: 70px; padding-left: 40px"
-            />
+            ></video>
           </div>
           <!-- 3 -->
           <div class="values-container">
-            <img
-              src="assets/images/values3.png"
+            <video
+              src="assets/images/values3.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
               style="margin-right: 70px; padding-right: 40px"
-            />
+            ></video>
             <div class="values-container-small">
               <div class="short-line"></div>
               <div class="values-container-text">
@@ -454,18 +484,18 @@
                   <h3 class="h3two">承諾</h3>
                 </div>
                 <p>
-                  我們致力於保護客戶利益，遵守監管標準，並將尖端技術與專業服務相結合，建立值得信賴的長期財富合作夥伴關係。
+                  我們以保障客戶權益為首要，遵循監管規範，結合前沿科技與專業服務，建立值得信賴的長期財富合作關係。
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- ***** 核心價值與未來願景結束 ***** -->
+      <!-- ***** 核心價值與未來願景 End ***** -->
 
-      <!-- ***** 品牌輪播 ***** -->
+      <!-- ***** 品牌滾動 ***** -->
       <div class="brand-carousel">
-        <h2>私人健康保險提供商包括</h2>
+        <h2>合作私營保險品牌包括</h2>
         <div class="scroll">
           <div class="scroll-track">
             <img src="assets/images/brand1.png" class="logo" />
@@ -475,7 +505,7 @@
             <img src="assets/images/brand5.png" class="logo" />
             <img src="assets/images/brand6.png" class="logo" />
             <img src="assets/images/brand7.png" class="logo" />
-            <!-- 複制一輪以確保滾動平滑 -->
+            <!-- 再複製一輪，確保滾動平滑 -->
             <img src="assets/images/brand1.png" class="logo" />
             <img src="assets/images/brand2.png" class="logo" />
             <img src="assets/images/brand3.png" class="logo" />
@@ -490,7 +520,7 @@
 
     <!-- 頁腳 -->
     <footer>
-      <div>版權所有 © 2025— AVIA ASIA LIMITED</div>
+      <div class="footer">版權所有 © 2025 — LVNEOASIA LIMITED</div>
     </footer>
   </body>
 </html>
