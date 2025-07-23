@@ -1384,11 +1384,11 @@ footer {
     width: 90%;
     margin: 0 auto !important;
     padding: 8px 20px;
-    top: 15px;
+    top: 15px !important;
   }
 
   .custom-nav .logo img {
-    height: 45px;
+    height: 40px;
   }
 
   .hamburger {
@@ -1420,6 +1420,8 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    animation: none !important;
+    transform: none;
   }
 
   .menu-container.open {
@@ -1852,7 +1854,7 @@ footer {
     width: 90%;
     margin: 0 auto !important;
     padding: 3px 20px;
-    top: 15px;
+    top: 20px !important;
     height: 50px;
   }
 
@@ -2327,7 +2329,7 @@ footer {
     width: 90%;
     margin: 0 auto !important;
     padding: 3px 20px;
-    top: 15px;
+    top: 20px !important;
     height: 50px;
   }
 
@@ -2815,7 +2817,7 @@ footer {
     position: fixed;
     margin: 0 auto !important;
     padding: 3px 20px;
-    top: 15px !important;
+    top: 20px !important;
     height: 50px;
   }
 
