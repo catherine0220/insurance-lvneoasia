@@ -98,22 +98,73 @@
 --------------------------------------------- 
 */
 footer {
-  width: 100%;
+  max-width: 100%;
   height: 77px;
   flex-shrink: 0;
   background: #252641;
+  font-family: Poppins;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 10px;
+  padding-left: 15px;
+  transition: color 0.3s;
+  border-left: 1px solid #bebebe;
+}
+
+.footer-links a:first-child {
+  border-left: none;
+  padding-left: 0px;
+}
+
+.footer-links a:last-child {
+  padding-right: 0px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-socials {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  gap: 12px;
 }
 
+.footer-socials .fa {
+  font-size: 23px;
+}
+
+.footer-socials .social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
 /* 
 ---------------------------------------------
 价值观
@@ -1151,8 +1202,36 @@ footer {
     line-height: 1.8;
   }
 
-  .footer {
-    font-size: 13px;
+  footer {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-socials .social-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    border-width: 2px;
+    margin-top: 20px;
+  }
+
+  .footer-socials .fa {
+    font-size: 20px !important;
+  }
+
+  .footer-links a {
+    font-size: 22px !important;
   }
 
   .scroll-track img {
@@ -1355,11 +1434,26 @@ footer {
     line-height: 1.8;
   }
 
-  .footer {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  footer {
+    height: 150px !important;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+  }
+
+  .footer-links a {
+    font-size: 18px !important;
+  }
+
+  .footer-socials .social-icon {
+    width: 36px;
+    height: 36px;
+    margin-top: 20px;
+  }
+
+  .footer-socials .fa {
+    font-size: 18px !important;
   }
 
   .scroll-track img {
@@ -1798,7 +1892,21 @@ footer {
 
   .footer {
     height: 65px;
-    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    font-size: 14px !important;
+  }
+
+  .footer-socials .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-socials .fa {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2271,12 +2379,36 @@ footer {
     line-height: 1.8;
   }
 
-  .footer {
-    height: 65px;
-    font-size: 10px;
+  footer {
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .footer-socials .social-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    border-width: 1.5px;
+    margin-top: 10px;
+  }
+
+  .footer-socials .fa {
+    font-size: 11px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
   }
 
   .scroll-track img {
@@ -2765,11 +2897,35 @@ footer {
   }
 
   footer {
-    height: 30px;
-    font-size: 12px;
+    height: 80px;
     display: flex;
     align-items: center;
-    justify-content: bottom;
+    justify-content: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-socials .social-icon {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    border-width: 1px;
+    margin-top: 10px;
+  }
+
+  .footer-socials .fa {
+    font-size: 12px !important;
+  }
+
+  .footer-links a {
+    font-size: 12px !important;
   }
 
   .scroll-track img {
@@ -3255,11 +3411,54 @@ footer {
   }
 
   footer {
-    height: 30px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #252641;
+  }
+
+  .footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .footer-links a {
     font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    min-height: 40px !important;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .footer-socials .social-icon {
+    width: 24px !important;
+    height: 24px !important;
     display: flex;
     align-items: center;
-    justify-content: bottom;
+    justify-content: center;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    color: white;
+    margin-top: 15px;
+  }
+
+  .footer-socials .fa {
+    font-size: 14px !important;
   }
 
   .scroll-track img {
