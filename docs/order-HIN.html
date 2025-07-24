@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="HIN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+
+    <title>LVNEOASIA</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/indexnew.css" />
+    <link rel="stylesheet" href="assets/css/order.css" />
+
+    <!-- Element Plus CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Element Plus JS -->
+    <script src="https://unpkg.com/element-plus"></script>
+
+    <title>LVNEOASIA</title>
+  </head>
+  <body>
+    <!-- ***** Header Navigation ***** -->
+    <nav class="custom-nav">
+      <div class="logo">
+        <a href="indexnew-HIN.html">
+          <img src="assets/images/logo1.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-container" id="menu">
+        <ul>
+          <li>
+            <a href="indexnew-HIN.html#welcome" class="active"
+              ><strong>मुखपृष्ठ</strong></a
+            >
+          </li>
+          <li>
+            <a href="indexnew-HIN.html#about-us"
+              ><strong>हमारे बारे में</strong></a
+            >
+          </li>
+          <li>
+            <a href="order-HIN.html"><strong>हमसे संपर्क करें</strong></a>
+          </li>
+          <li>
+            <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank">
+              <strong>श्वेत पत्र</strong>
+            </a>
+          </li>
+          <li>
+            <a href="indexnew-HIN.html#what-we-do"
+              ><strong>दृष्टिकोण</strong></a
+            >
+          </li>
+
+          <el-dropdown @command="handleLanguageChange">
+            <span
+              class="el-dropdown-link"
+              style="color: white; cursor: pointer; font-weight: bold"
+            >
+              भाषा▿
+            </span>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item command="CN">
+                  <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
+                >
+                <el-dropdown-item command="TW">
+                  <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
+                >
+                <el-dropdown-item command="EN">
+                  <a href="index.html">English</a></el-dropdown-item
+                >
+                <el-dropdown-item command="BM">
+                  <a href="indexnew-BM.html">Bahasa Melayu</a></el-dropdown-item
+                >
+                <el-dropdown-item command="HIN">
+                  <a href="indexnew-HIN.html">हिंदी</a></el-dropdown-item
+                >
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
+
+          <li><a href="order-HIN.html" class="btn-apply">अभी आवेदन करें</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="order-top"></div>
+    <div class="order-container">
+      <div class="sidebar">
+        <h3>LVNEOASIA</h3>
+        <ul>
+          <li id="nav-appointment" class="active">
+            ग्राहक सेवा केंद्र की नियुक्ति
+          </li>
+          <li id="nav-feedback" class="highlight">ग्राहक सेवा या सुझाव दें</li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <!-- 预约客户中心 -->
+        <div id="appointment-page" class="page active">
+          <h1>ग्राहक सेवा केंद्र की नियुक्ति</h1>
+
+          <form id="appointmentForm">
+            <p class="required">
+              <span class="required">*</span> आवश्यक फ़ील्ड
+            </p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName"
+                  >आपका नाम <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="आपका नाम"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName"
+                  >आपका उपनाम <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="आपका उपनाम"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>
+                क्या आप LVNEOASIA शाखा/कर्मचारी द्वारा सेवा प्राप्त कर चुके
+                ग्राहक हैं?
+              </label>
+              <p style="font-size: 13px; color: #666; margin-bottom: 10px">
+                <span class="required">*</span>
+                (समूह बीमा ग्राहक / MPF / सरकारी कर्मचारी / मकाओ ग्राहक /
+                LVNEOASIA Vitality स्वास्थ्य योजना के सदस्य शामिल नहीं हैं)
+              </p>
+
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="existingYes"
+                    name="existingCustomer"
+                    value="yes"
+                    checked
+                  />
+                  <label for="existingYes">हाँ</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="existingNo"
+                    name="existingCustomer"
+                    value="no"
+                  />
+                  <label for="existingNo">नहीं</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>सेवा केंद्र चुनें <span class="required">*</span></label>
+              <div class="service-location">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="hongKong"
+                    name="serviceCenter"
+                    value="hongKong"
+                    checked
+                  />
+                  <label for="hongKong">
+                    LVNEOASIA बीमा सेवा केंद्र - 183, नॉर्थ हार्बर मेडिकल एंड
+                    बिज़नेस रोड, हांगकांग LVNEOASIA बीमा भवन
+                  </label>
+                </div>
+                <div class="radio-item" style="margin-top: 10px">
+                  <input
+                    type="radio"
+                    id="publicOffice"
+                    name="serviceCenter"
+                    value="publicOffice"
+                  />
+                  <label for="publicOffice">
+                    LVNEOASIA शाखा कार्यालय अनुभव - ग्राहक सेवा केंद्र, 183,
+                    नॉर्थ हार्बर मेडिकल एंड बिज़नेस रोड, हांगकांग LVNEOASIA बीमा
+                    भवन
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group mb-0">
+                <label for="appointmentDate">नियुक्ति की तारीख और समय</label>
+                <select id="appointmentDate" name="appointmentDate">
+                  <option value="2025-08-05">2025-08-05</option>
+                  <option value="2025-08-06">2025-08-06</option>
+                  <option value="2025-08-07">2025-08-07</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="appointmentTime">समय&nbsp;</label>
+                <select id="appointmentTime" name="appointmentTime">
+                  <option value="15:30-16:00">15:30-16:00</option>
+                  <option value="16:00-16:30">16:00-16:30</option>
+                  <option value="16:30-17:00">16:30-17:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">
+                  आपका संपर्क नंबर <span class="required">*</span>
+                </label>
+                <div class="phone-input">
+                  <select class="country-code">
+                    <option value="+852">हॉन्ग कॉन्ग</option>
+                    <option value="+86">चीन</option>
+                    <option value="+1">अमेरिका</option>
+                  </select>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="आपका संपर्क नंबर"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  आपका ईमेल <span class="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="david.chan@aia.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="purpose">मुलाकात का विवरण</label>
+              <textarea
+                id="purpose"
+                name="purpose"
+                placeholder="मुलाकात का विवरण"
+              ></textarea>
+              <div class="char-count">0/1200</div>
+            </div>
+
+            <div class="disclaimer">
+              आपकी अपॉइंटमेंट जानकारी प्राप्त होने के बाद, संबंधित जानकारी
+              निम्नलिखित संस्थाओं के साथ साझा की जा सकती है, जिनमें शामिल हैं:
+              आपकी कंपनी (हांगकांग पॉल), LVNEOASIA बीमा (अंतर्राष्ट्रीय) लिमिटेड
+              (मकाऊ शाखा), LVNEOASIA ट्रस्ट लिमिटेड और/या LVNEOASIA (ट्रस्ट)
+              लिमिटेड (संयुक्त रूप से “LVNEOASIA समूह”)।
+              <br /><br />
+              आपके द्वारा प्रस्तुत जानकारी के आधार पर, LVNEOASIA समूह के बीमा
+              पेशेवर (जैसे वित्तीय सलाहकार) आपको उपयुक्त बीमा उत्पाद और सेवा
+              सिफारिशें प्रदान करेंगे। यदि आप बीमा उत्पादों के बारे में अधिक
+              जानना चाहते हैं या विस्तृत परामर्श करना चाहते हैं, तो हम आपके लिए
+              व्यक्तिगत सेवा प्रदान करने हेतु एक पेशेवर की व्यवस्था करेंगे।
+            </div>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreement1"
+                  name="agreement1"
+                  required
+                />
+                <label for="agreement1">
+                  मैं LVNEOASIA द्वारा जारी की गई "व्यक्तिगत जानकारी एकत्र करने
+                  की घोषणा" में वर्णित व्यक्तिगत डेटा उपयोग से संबंधित शर्तों को
+                  पढ़ चुका/चुकी हूँ, समझ चुका/चुकी हूँ और सहमत हूँ।
+                </label>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="submit-btn">जमा करें</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 客户服务或意见反馈页面 -->
+        <div id="feedback-page" class="page">
+          <h1>ग्राहक सेवा या प्रतिक्रिया</h1>
+
+          <form id="feedbackForm">
+            <p class="required">
+              <span class="required">*</span> आवश्यक फ़ील्ड
+            </p>
+
+            <div class="form-group">
+              <label>
+                कृपया बताएं आप किस विभाग से संपर्क करना चाहते हैं?
+                <span class="required">*</span>
+              </label>
+              <div class="checkbox-group-inline">
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="individual"
+                    name="customerType"
+                    value="individual"
+                    checked
+                  />
+                  <label for="individual">व्यक्तिगत बीमा</label>
+                </div>
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="group"
+                    name="customerType"
+                    value="group"
+                  />
+                  <label for="group">समूह बीमा</label>
+                </div>
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="mandatory"
+                    name="customerType"
+                    value="mandatory"
+                  />
+                  <label for="mandatory">MPF/EPF/मकाऊ पेंशन</label>
+                </div>
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="vitality"
+                    name="customerType"
+                    value="vitality"
+                  />
+                  <label for="vitality">LVNEOASIA Vitality</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="feedbackFirstName">
+                  आपका पहला नाम <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="feedbackFirstName"
+                  name="feedbackFirstName"
+                  placeholder="आपका पहला नाम"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="feedbackLastName">
+                  आपका उपनाम <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="feedbackLastName"
+                  name="feedbackLastName"
+                  placeholder="आपका उपनाम"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="feedbackPhone">
+                  आपका संपर्क नंबर <span class="required">*</span></label
+                >
+                <div class="phone-input">
+                  <select class="country-code">
+                    <option value="+852">हांगकांग</option>
+                    <option value="+86">चीन</option>
+                    <option value="+1">संयुक्त राज्य अमेरिका</option>
+                  </select>
+                  <input
+                    type="tel"
+                    id="feedbackPhone"
+                    name="feedbackPhone"
+                    placeholder="आपका संपर्क नंबर"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="feedbackEmail">
+                  आपकी ईमेल <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="feedbackEmail"
+                  name="feedbackEmail"
+                  placeholder="david.chan@aia.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="date-time-row">
+              <div class="form-group mb-0">
+                <label for="feedbackDate"
+                  >आप किस दिन और समय पर संपर्क करना चाहेंगे?</label
+                >
+                <input
+                  type="date"
+                  id="feedbackDate"
+                  name="feedbackDate"
+                  value="2025-07-24"
+                />
+              </div>
+              <div class="form-group">
+                <label for="feedbackTime">चाहेंगे&nbsp;</label>
+                <select id="feedbackTime" name="feedbackTime">
+                  <option value="morning">सुबह</option>
+                  <option value="afternoon">दोपहर</option>
+                  <option value="evening">शाम</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMethod">
+                आपकी पसंदीदा संपर्क विधि <span class="required">*</span></label
+              >
+              <select id="contactMethod" name="contactMethod" required>
+                <option value="">कृपया संपर्क विधि चुनें</option>
+                <option value="phone">फ़ोन</option>
+                <option value="email">ईमेल</option>
+                <option value="sms">एसएमएस</option>
+                <option value="whatsapp">व्हाट्सएप</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label
+                >आपकी पूछताछ की श्रेणी? <span class="required">*</span></label
+              >
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="general"
+                    name="inquiryType"
+                    value="general"
+                    checked
+                  />
+                  <label for="general">सामान्य पूछताछ</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="claim"
+                    name="inquiryType"
+                    value="claim"
+                  />
+                  <label for="claim">बीमा दावा</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="complaint"
+                    name="inquiryType"
+                    value="complaint"
+                  />
+                  <label for="complaint">शिकायत</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="other"
+                    name="inquiryType"
+                    value="other"
+                  />
+                  <label for="other">अन्य पूछताछ</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedbackDetails">अधिक जानकारी (वैकल्पिक)</label>
+              <textarea
+                id="feedbackDetails"
+                name="feedbackDetails"
+                placeholder="जानकारी"
+              ></textarea>
+              <div class="char-count">0/1200</div>
+            </div>
+
+            <div class="disclaimer">
+              हमारे पास प्राप्त आपकी दी गई जानकारी उन कंपनियों को भेजी जाएगी,
+              जिन्हें आपने चुना है, जिनमें शामिल हैं: LVNEOASIA बीमा लिमिटेड
+              (हांगकांग), LVNEOASIA बीमा (अंतर्राष्ट्रीय) लिमिटेड (मकाओ शाखा),
+              LVNEOASIA ट्रस्ट लिमिटेड और/या LVNEOASIA (ट्रस्ट) लिमिटेड (सामूहिक
+              रूप से "समूह" या "LVNEOASIA समूह")। ये सभी कंपनियाँ बीमाकर्ता या
+              बीमा उद्योग से जुड़ी पेशेवर संस्थाएँ हैं (जैसे कि वित्तीय
+              सलाहकार)।
+
+              <br /><br />
+              हम आपके द्वारा प्रस्तुत की गई पूछताछ की जानकारी आपके चुने हुए बीमा
+              प्रदाता तक पहुँचाएंगे, ताकि वे आपको उपयुक्त बीमा उत्पाद और पेशेवर
+              सलाह प्रदान कर सकें। इस प्रक्रिया में, हम सभी संबंधित कानूनी
+              नियमों का पालन करेंगे और आपकी व्यक्तिगत जानकारी की सुरक्षा
+              सुनिश्चित करेंगे। यदि आपके कोई भी प्रश्न हों, तो कृपया बेझिझक हमसे
+              संपर्क करें।
+            </div>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreement2"
+                  name="agreement2"
+                  required
+                />
+                <label for="agreement2">
+                  मैंने LVNEOASIA द्वारा दी गई व्यक्तिगत डेटा संग्रहण नीति को
+                  पढ़ लिया है, उसे समझ लिया है और उससे संबंधित उपरोक्त उपयोग
+                  शर्तों से सहमत हूँ।
+                </label>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="submit-btn">प्रस्तुत करें</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 汉堡菜单功能
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        if (hamburger && menu) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            hamburger.classList.toggle("active");
+            menu.classList.toggle("open");
+          });
+
+          // 点击菜单外区域关闭菜单
+          document.addEventListener("click", function (e) {
+            if (!menu.contains(e.target)) {
+              menu.classList.remove("open");
+              hamburger.classList.remove("active");
+            }
+          });
+
+          // 阻止菜单内的点击事件冒泡
+          menu.addEventListener("click", function (e) {
+            e.stopPropagation();
+          });
+        }
+
+        // 页面导航功能
+        function showPage(pageId, navItem) {
+          // 隐藏所有页面
+          document.querySelectorAll(".page").forEach((page) => {
+            page.classList.remove("active");
+          });
+
+          // 显示选中的页面
+          const page = document.getElementById(pageId);
+          if (page) {
+            page.classList.add("active");
+          }
+
+          // 更新导航状态
+          document.querySelectorAll(".sidebar li").forEach((nav) => {
+            nav.classList.remove("active");
+            nav.classList.remove("highlight");
+          });
+
+          // 激活当前导航项
+          if (navItem) {
+            navItem.classList.add("active");
+          }
+        }
+
+        // 导航点击事件 - 预约
+        const appointmentNav = document.getElementById("nav-appointment");
+        if (appointmentNav) {
+          appointmentNav.addEventListener("click", function (e) {
+            e.preventDefault();
+            showPage("appointment-page", this);
+          });
+        }
+
+        // 导航点击事件 - 反馈
+        const feedbackNav = document.getElementById("nav-feedback");
+        if (feedbackNav) {
+          feedbackNav.addEventListener("click", function (e) {
+            e.preventDefault();
+            showPage("feedback-page", this);
+          });
+        }
+
+        // 字符计数功能
+        function setupCharCounter(textareaId) {
+          const textarea = document.getElementById(textareaId);
+          if (!textarea) return;
+
+          const charCount = textarea.parentElement.querySelector(".char-count");
+          if (!charCount) return;
+
+          textarea.addEventListener("input", function () {
+            const count = this.value.length;
+            charCount.textContent = count + "/1200";
+            charCount.style.color = count > 1200 ? "#d2691e" : "#666";
+          });
+        }
+
+        setupCharCounter("purpose");
+        setupCharCounter("feedbackDetails");
+
+        // 表单提交处理
+        function setupFormSubmission(formId, formType) {
+          const form = document.getElementById(formId);
+          if (!form) return;
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // 检查必填字段
+            let isValid = true;
+            const requiredFields = this.querySelectorAll("[required]");
+
+            requiredFields.forEach((field) => {
+              if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = "#d2691e";
+              } else {
+                field.style.borderColor = "#e8ddd1";
+              }
+            });
+
+            // 检查协议checkbox
+            const agreement = this.querySelector(
+              'input[type="checkbox"][required]'
+            );
+            if (agreement && !agreement.checked) {
+              isValid = false;
+              alert("请同意个人资料收集声明");
+              return;
+            }
+
+            if (isValid) {
+              alert(`${formType}提交成功！我们将尽快与您联系。`);
+            } else {
+              alert("请填写所有必填字段");
+            }
+          });
+        }
+
+        setupFormSubmission("appointmentForm", "预约");
+        setupFormSubmission("feedbackForm", "查询");
+
+        // 表单元素互动效果
+        document
+          .querySelectorAll("input, select, textarea")
+          .forEach((element) => {
+            element.addEventListener("focus", function () {
+              this.parentElement.style.transform = "translateY(0)";
+            });
+
+            element.addEventListener("blur", function () {
+              this.parentElement.style.transform = "translateY(0)";
+            });
+          });
+
+        // 初始化显示预约页面
+        showPage("appointment-page", appointmentNav);
+      });
+
+      // Vue.js 语言下拉菜单功能
+      const { createApp } = Vue;
+      createApp({
+        methods: {
+          handleLanguageChange(command) {
+            console.log("Language selected:", command);
+            // 实际语言切换逻辑可以在这里实现
+            // 例如：window.location.href = getLanguageUrl(command);
+          },
+        },
+      })
+        .use(ElementPlus)
+        .mount("body");
+    </script>
+  </body>
+</html>

@@ -748,7 +748,6 @@ footer {
   padding: 8px 30px;
   box-sizing: border-box;
   width: 95%;
-  max-width: 1780px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 40px;
@@ -873,7 +872,6 @@ footer {
 
 /* 大屏幕调整 (1440px-1600px) */
 @media (max-width: 1600px) {
-
   .about-us .el-button.el-button--primary.enquire-btn,
   .welcome-area .main-button-slider {
     font-size: 20px !important;
@@ -1488,10 +1486,12 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
     transition: left 0.5s;
   }
 
@@ -1514,7 +1514,7 @@ footer {
     padding: 15px 20px;
     display: block;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
   }
 
   /* 动画关键帧 */
@@ -1890,7 +1890,7 @@ footer {
   /* 菜单容器 */
   .menu-container {
     position: fixed !important;
-    top: 50px;
+    top: 55px;
     left: 5%;
     width: 90%;
     background: #f48c06;
@@ -2365,7 +2365,7 @@ footer {
   /* 菜单容器 */
   .menu-container {
     position: fixed !important;
-    top: 60px;
+    top: 55px;
     left: 5%;
     width: 90%;
     background: #f48c06;
@@ -2686,7 +2686,7 @@ footer {
     padding: 0px !important;
   }
 
-  .values .values-container-small{
+  .values .values-container-small {
     order: 2;
   }
 
@@ -2857,7 +2857,7 @@ footer {
   /* 菜单容器 */
   .menu-container {
     position: fixed !important;
-    top: 60px;
+    top: 55px;
     left: 5%;
     width: 90%;
     background: #f48c06;
@@ -2870,11 +2870,10 @@ footer {
   }
 
   .menu-container.open {
-    max-height: 300px;
+    max-height: 350px !important;
     padding: 10px 0;
     transition: max-height 0.5s ease-out;
   }
-
 
   .custom-nav ul {
     flex-direction: column;
@@ -3177,7 +3176,7 @@ footer {
     margin-bottom: 30px !important;
   }
 
-  .values .values-container-small{
+  .values .values-container-small {
     order: 2;
   }
 
