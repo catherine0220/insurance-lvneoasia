@@ -41,7 +41,7 @@
       <!-- ***** Header Navigation ***** -->
       <nav class="custom-nav">
         <div class="logo">
-          <a href="#">
+          <a href="index.html">
             <img src="assets/images/logo1.png" alt="Logo" />
           </a>
         </div>
@@ -59,6 +59,9 @@
             </li>
             <li>
               <a href="#about-us"><strong>About Us</strong></a>
+            </li>
+            <li>
+              <a href="order-EN.html"><strong>Contact Us</strong></a>
             </li>
             <li>
               <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"
@@ -118,7 +121,7 @@
               finance system where everyone can participate and share in the
               returns.
             </p>
-            <a href="#features" class="main-button-slider"
+            <a href="order-EN.html" class="main-button-slider"
               ><strong>Apply Now</strong></a
             >
           </div>
@@ -135,7 +138,7 @@
                 <div class="one">From&nbsp;</div>
                 <div class="two">Insurance&nbsp;</div>
                 <div class="one">to&nbsp;</div>
-                <hr/>
+                <hr />
                 <div class="three">Asset Freedom</div>
               </div>
               <p>
@@ -170,11 +173,11 @@
                     valuable assets into digital certificates using technology
                     for more transparent management and flexible operations.
                   </p>
-                  <div class="btn">
+                  <a href="order-EN.html" class="btn">
                     <el-button type="primary" class="enquire-btn"
                       >ENQUIRE NOW</el-button
                     >
-                  </div>
+                  </a>
                 </div>
               </el-col>
 
@@ -195,11 +198,11 @@
                     investment is backed by real assets—safe, reliable, and
                     clearly valued.
                   </p>
-                  <div class="btn">
+                  <a href="order-EN.html" class="btn">
                     <el-button type="primary" class="enquire-btn"
                       >ENQUIRE NOW</el-button
                     >
-                  </div>
+                  </a>
                 </div>
               </el-col>
 
@@ -220,11 +223,11 @@
                     needs of institutions, we enable participation in the
                     long-term value growth of insurance finance.
                   </p>
-                  <div class="btn">
+                  <a href="order-EN.html" class="btn">
                     <el-button type="primary" class="enquire-btn"
                       >ENQUIRE NOW</el-button
                     >
-                  </div>
+                  </a>
                 </div>
               </el-col>
             </el-row>
@@ -606,6 +609,92 @@
     });
   });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
+
+          if (entry.isIntersecting) {
+            if (el.classList.contains("service-card")) {
+              el.classList.add("fade-up");
+            } else if (el.classList.contains("grid-item")) {
+              el.classList.add("slide-left");
+            } else if (el.classList.contains("values-container")) {
+              el.classList.add("zoom-in");
+            } else if (el.classList.contains("data-container")) {
+              el.classList.add("slide-left");
+            } else if (el.classList.contains("explaination-container")) {
+              el.classList.add("fade-in-right");
+            }
+          } else {
+            // 移除动画 class，重新触发下一轮
+            el.classList.remove(
+              "fade-up",
+              "slide-left",
+              "zoom-in",
+              "fade-in-right"
+            );
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const animatedClasses = [
+      ".service-card",
+      ".grid-item",
+      ".values-container",
+      ".data-container",
+      ".explaination-container",
+    ];
+
+    animatedClasses.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "all 0.8s ease-out";
+        observer.observe(el);
+      });
+    });
+  });
+</script>
+
+<style>
+  .fade-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  .slide-left {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+
+  .zoom-in {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+
+  .fade-in-right {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+
+  /* 初始 transform 设定 */
+  .grid-item,
+  .data-container {
+    transform: translateX(-40px);
+  }
+  .values-container {
+    transform: scale(0.95);
+  }
+  .explaination-container {
+    transform: translateX(40px);
+  }
+</style>
 
 <!-- Vue + Element Plus -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>

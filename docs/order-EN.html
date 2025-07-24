@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+
+    <title>LVNEOASIA</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/indexnew.css" />
+    <link rel="stylesheet" href="assets/css/order.css" />
+
+    <!-- Element Plus CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Element Plus JS -->
+    <script src="https://unpkg.com/element-plus"></script>
+
+    <title>LVNEOASIA</title>
+  </head>
+  <body>
+    <!-- ***** Header Navigation ***** -->
+    <nav class="custom-nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo1.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-container" id="menu">
+        <ul>
+          <li>
+            <a href="index.html#welcome" class="active"
+              ><strong>Home</strong></a
+            >
+          </li>
+          <li>
+            <a href="index.html#about-us"><strong>About Us</strong></a>
+          </li>
+          <li>
+            <a href="order-EN.html"><strong>Contact Us</strong></a>
+          </li>
+          <li>
+            <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"
+              ><strong>Whitepaper</strong></a
+            >
+          </li>
+          <li>
+            <a href="index.html#what-we-do"><strong>Vision</strong></a>
+          </li>
+
+          <el-dropdown @command="handleLanguageChange">
+            <span
+              class="el-dropdown-link"
+              style="color: white; cursor: pointer; font-weight: bold"
+            >
+              Language▿
+            </span>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item command="CN">
+                  <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
+                >
+                <el-dropdown-item command="TW">
+                  <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
+                >
+                <el-dropdown-item command="EN">
+                  <a href="index.html">English</a></el-dropdown-item
+                >
+                <el-dropdown-item command="BM">
+                  <a href="indexnew-BM.html">Bahasa Melayu</a></el-dropdown-item
+                >
+                <el-dropdown-item command="HIN">
+                  <a href="indexnew-HIN.html">हिंदी</a></el-dropdown-item
+                >
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
+
+          <li><a href="order-EN.html" class="btn-apply">Apply Now</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="order-top"></div>
+    <div class="order-container">
+      <div class="sidebar">
+        <h3>LVNEOASIA</h3>
+        <ul>
+          <li id="nav-appointment" class="active">
+            Book Customer Service Center
+          </li>
+          <li id="nav-feedback" class="highlight">
+            Customer Service / Feedback
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <!-- Book Customer Service Center Page -->
+        <div id="appointment-page" class="page active">
+          <h1>Book Customer Service Center</h1>
+
+          <form id="appointmentForm">
+            <p class="required">
+              <span class="required">*</span> Required Fields
+            </p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName"
+                  >Your First Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Your First Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName"
+                  >Your Last Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Your Last Name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Are you an existing customer served by this LVNEOASIA
+                branch/staff?</label
+              >
+              <p style="font-size: 13px; color: #666; margin-bottom: 10px">
+                <span class="required">*</span>
+                (Excludes Group Insurance / MPF / Government Staff / Macau
+                Clients / LVNEOASIA Vitality Program Members)
+              </p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="existingYes"
+                    name="existingCustomer"
+                    value="yes"
+                    checked
+                  />
+                  <label for="existingYes">Yes</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="existingNo"
+                    name="existingCustomer"
+                    value="no"
+                  />
+                  <label for="existingNo">No</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Select Service Center <span class="required">*</span></label
+              >
+              <div class="service-location">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="hongKong"
+                    name="serviceCenter"
+                    value="hongKong"
+                    checked
+                  />
+                  <label for="hongKong">
+                    LVNEOASIA Insurance Service Center – 183 Beigang Medical &
+                    Business Road, LVNEOASIA Insurance Building, Hong Kong
+                  </label>
+                </div>
+                <div class="radio-item" style="margin-top: 10px">
+                  <input
+                    type="radio"
+                    id="publicOffice"
+                    name="serviceCenter"
+                    value="publicOffice"
+                  />
+                  <label for="publicOffice">
+                    LVNEOASIA Branch Office Experience – Customer Service
+                    Center, 183 Beigang Medical & Business Road, LVNEOASIA
+                    Insurance Building, Hong Kong
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group mb-0">
+                <label for="appointmentDate"
+                  >Select Appointment Date and Time</label
+                >
+                <select id="appointmentDate" name="appointmentDate">
+                  <option value="2025-08-05">2025-08-05</option>
+                  <option value="2025-08-06">2025-08-06</option>
+                  <option value="2025-08-07">2025-08-07</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="appointmentTime">Time&nbsp;</label>
+                <select id="appointmentTime" name="appointmentTime">
+                  <option value="15:30-16:00">15:30-16:00</option>
+                  <option value="16:00-16:30">16:00-16:30</option>
+                  <option value="16:30-17:00">16:30-17:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone"
+                  >Your Contact Number <span class="required">*</span></label
+                >
+                <div class="phone-input">
+                  <select class="country-code">
+                    <option value="+852">Hong Kong</option>
+                    <option value="+86">China</option>
+                    <option value="+1">USA</option>
+                  </select>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your Contact Number"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email"
+                  >Your Email <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="david.chan@aia.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="purpose">Appointment Details</label>
+              <textarea
+                id="purpose"
+                name="purpose"
+                placeholder="Appointment Details"
+              ></textarea>
+              <div class="char-count">0/1200</div>
+            </div>
+
+            <div class="disclaimer">
+              We hereby receive from you (the Client), along with your
+              appointment request, on behalf of LVNEOASIA Insurance Limited
+              (Hong Kong branch), LVNEOASIA Insurance (International) Limited
+              (Macau branch), LVNEOASIA Trust Limited and/or LVNEOASIA (Trust)
+              Limited (collectively referred to as the "Group" or "LVNEOASIA
+              Group"). This includes insurance personnel (consultants/advisors).
+
+              <br /><br />
+
+              The information you submit will be used by LVNEOASIA and may be
+              shared internally for the purpose of providing you with
+              insurance-related services and product recommendations. Such usage
+              will always comply with relevant privacy and data protection
+              regulations to safeguard your interests.
+            </div>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreement1"
+                  name="agreement1"
+                  required
+                />
+                <label for="agreement1">
+                  I have read, understood, and agree to accept the above
+                  relevant terms regarding the use of personal data as stated in
+                  the LVNEOASIA Privacy and Personal Data Collection Statement.
+                </label>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 顾客服务或提供意见页面 -->
+        <div id="feedback-page" class="page">
+          <h1>Customer Service or Feedback</h1>
+
+          <form id="feedbackForm">
+            <p class="required">
+              <span class="required">*</span> Required fields
+            </p>
+
+            <div class="form-group">
+              <label
+                >Which department would you like to contact?
+                <span class="required">*</span></label
+              >
+              <div class="checkbox-group-inline">
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="individual"
+                    name="customerType"
+                    value="individual"
+                    checked
+                  />
+                  <label for="individual">Individual Insurance</label>
+                </div>
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="group"
+                    name="customerType"
+                    value="group"
+                  />
+                  <label for="group">Group Insurance</label>
+                </div>
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="mandatory"
+                    name="customerType"
+                    value="mandatory"
+                  />
+                  <label for="mandatory">MPF/ORSO/Macau Retirement</label>
+                </div>
+                <div class="checkbox-item-inline">
+                  <input
+                    type="radio"
+                    id="vitality"
+                    name="customerType"
+                    value="vitality"
+                  />
+                  <label for="vitality">LVNEOASIA Vitality</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="feedbackFirstName"
+                  >First Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="feedbackFirstName"
+                  name="feedbackFirstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="feedbackLastName"
+                  >Last Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="feedbackLastName"
+                  name="feedbackLastName"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="feedbackPhone"
+                  >Phone Number <span class="required">*</span></label
+                >
+                <div class="phone-input">
+                  <select class="country-code">
+                    <option value="+852">Hong Kong</option>
+                    <option value="+86">China</option>
+                    <option value="+1">USA</option>
+                  </select>
+                  <input
+                    type="tel"
+                    id="feedbackPhone"
+                    name="feedbackPhone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="feedbackEmail"
+                  >Email <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="feedbackEmail"
+                  name="feedbackEmail"
+                  placeholder="david.chan@aia.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="date-time-row">
+              <div class="form-group mb-0">
+                <label for="feedbackDate">Preferred Contact Date & Time</label>
+                <input
+                  type="date"
+                  id="feedbackDate"
+                  name="feedbackDate"
+                  value="2025-07-24"
+                />
+              </div>
+              <div class="form-group">
+                <label for="feedbackTime">Time&nbsp;</label>
+                <select id="feedbackTime" name="feedbackTime">
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                  <option value="evening">Evening</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMethod"
+                >Preferred Contact Method <span class="required">*</span></label
+              >
+              <select id="contactMethod" name="contactMethod" required>
+                <option value="">Please select a contact method</option>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+                <option value="whatsapp">WhatsApp</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your Inquiry Type? <span class="required">*</span></label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="general"
+                    name="inquiryType"
+                    value="general"
+                    checked
+                  />
+                  <label for="general">General Inquiry</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="claim"
+                    name="inquiryType"
+                    value="claim"
+                  />
+                  <label for="claim">Premium</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="complaint"
+                    name="inquiryType"
+                    value="complaint"
+                  />
+                  <label for="complaint">Complaint</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="other"
+                    name="inquiryType"
+                    value="other"
+                  />
+                  <label for="other">Other Inquiry</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedbackDetails">Additional Details (Optional)</label>
+              <textarea
+                id="feedbackDetails"
+                name="feedbackDetails"
+                placeholder="Details"
+              ></textarea>
+              <div class="char-count">0/1200</div>
+            </div>
+
+            <div class="disclaimer">
+              We hereby receive your information, including those related to
+              LVNEOASIA Life Insurance (Hong Kong Branch), LVNEOASIA Life
+              Insurance (Macau Branch), LVNEOASIA Trust Limited and/or LVNEOASIA
+              (Trust) Limited (collectively the “Group” or “LVNEOASIA Group”),
+              insurance personnel, or life planners.
+              <br /><br />
+              We may use the information you submit for purposes related to your
+              inquiry, including providing you with information about relevant
+              products or services offered by LVNEOASIA. We will handle your
+              personal data in accordance with the Group’s privacy policy and
+              relevant data protection laws.
+            </div>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreement2"
+                  name="agreement2"
+                  required
+                />
+                <label for="agreement2">
+                  I have read, understood, and agree to the LVNEOASIA Privacy
+                  Policy and the use of my personal data as described above.
+                </label>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 汉堡菜单功能
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        if (hamburger && menu) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            hamburger.classList.toggle("active");
+            menu.classList.toggle("open");
+          });
+
+          // 点击菜单外区域关闭菜单
+          document.addEventListener("click", function (e) {
+            if (!menu.contains(e.target)) {
+              menu.classList.remove("open");
+              hamburger.classList.remove("active");
+            }
+          });
+
+          // 阻止菜单内的点击事件冒泡
+          menu.addEventListener("click", function (e) {
+            e.stopPropagation();
+          });
+        }
+
+        // 页面导航功能
+        function showPage(pageId, navItem) {
+          // 隐藏所有页面
+          document.querySelectorAll(".page").forEach((page) => {
+            page.classList.remove("active");
+          });
+
+          // 显示选中的页面
+          const page = document.getElementById(pageId);
+          if (page) {
+            page.classList.add("active");
+          }
+
+          // 更新导航状态
+          document.querySelectorAll(".sidebar li").forEach((nav) => {
+            nav.classList.remove("active");
+            nav.classList.remove("highlight");
+          });
+
+          // 激活当前导航项
+          if (navItem) {
+            navItem.classList.add("active");
+          }
+        }
+
+        // 导航点击事件 - 预约
+        const appointmentNav = document.getElementById("nav-appointment");
+        if (appointmentNav) {
+          appointmentNav.addEventListener("click", function (e) {
+            e.preventDefault();
+            showPage("appointment-page", this);
+          });
+        }
+
+        // 导航点击事件 - 反馈
+        const feedbackNav = document.getElementById("nav-feedback");
+        if (feedbackNav) {
+          feedbackNav.addEventListener("click", function (e) {
+            e.preventDefault();
+            showPage("feedback-page", this);
+          });
+        }
+
+        // 字符计数功能
+        function setupCharCounter(textareaId) {
+          const textarea = document.getElementById(textareaId);
+          if (!textarea) return;
+
+          const charCount = textarea.parentElement.querySelector(".char-count");
+          if (!charCount) return;
+
+          textarea.addEventListener("input", function () {
+            const count = this.value.length;
+            charCount.textContent = count + "/1200";
+            charCount.style.color = count > 1200 ? "#d2691e" : "#666";
+          });
+        }
+
+        setupCharCounter("purpose");
+        setupCharCounter("feedbackDetails");
+
+        // 表单提交处理
+        function setupFormSubmission(formId, formType) {
+          const form = document.getElementById(formId);
+          if (!form) return;
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // 检查必填字段
+            let isValid = true;
+            const requiredFields = this.querySelectorAll("[required]");
+
+            requiredFields.forEach((field) => {
+              if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = "#d2691e";
+              } else {
+                field.style.borderColor = "#e8ddd1";
+              }
+            });
+
+            // 检查协议checkbox
+            const agreement = this.querySelector(
+              'input[type="checkbox"][required]'
+            );
+            if (agreement && !agreement.checked) {
+              isValid = false;
+              alert("请同意个人资料收集声明");
+              return;
+            }
+
+            if (isValid) {
+              alert(`${formType}提交成功！我们将尽快与您联系。`);
+            } else {
+              alert("请填写所有必填字段");
+            }
+          });
+        }
+
+        setupFormSubmission("appointmentForm", "预约");
+        setupFormSubmission("feedbackForm", "查询");
+
+        // 表单元素互动效果
+        document
+          .querySelectorAll("input, select, textarea")
+          .forEach((element) => {
+            element.addEventListener("focus", function () {
+              this.parentElement.style.transform = "translateY(0)";
+            });
+
+            element.addEventListener("blur", function () {
+              this.parentElement.style.transform = "translateY(0)";
+            });
+          });
+
+        // 初始化显示预约页面
+        showPage("appointment-page", appointmentNav);
+      });
+
+      // Vue.js 语言下拉菜单功能
+      const { createApp } = Vue;
+      createApp({
+        methods: {
+          handleLanguageChange(command) {
+            console.log("Language selected:", command);
+            // 实际语言切换逻辑可以在这里实现
+            // 例如：window.location.href = getLanguageUrl(command);
+          },
+        },
+      })
+        .use(ElementPlus)
+        .mount("body");
+    </script>
+  </body>
+</html>
