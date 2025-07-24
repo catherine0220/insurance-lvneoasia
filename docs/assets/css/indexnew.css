@@ -3433,10 +3433,10 @@ footer {
   }
 
   .footer-links a {
-    font-size: 12px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
-    min-height: 40px !important;
+    min-height: 45px !important;
   }
 
   .footer-socials {
@@ -3454,7 +3454,7 @@ footer {
     border: 1.5px solid #fff;
     border-radius: 50%;
     color: white;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .footer-socials .fa {
