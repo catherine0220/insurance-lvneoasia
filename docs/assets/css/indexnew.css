@@ -3411,7 +3411,7 @@ footer {
   }
 
   footer {
-    height: 110px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3454,7 +3454,7 @@ footer {
     border: 1.5px solid #fff;
     border-radius: 50%;
     color: white;
-    margin-top: 20px;
+    margin-top: 20px !important;
   }
 
   .footer-socials .fa {
