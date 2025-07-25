@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+
+    <title>LVNEOASIA</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/indexnew.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
+
+    <!-- Element Plus CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ***** Header Navigation ***** -->
+      <nav class="custom-nav">
+        <div class="logo">
+          <a href="indexnew-zh-CN.html">
+            <img src="assets/images/logo1.png" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-container" id="menu">
+          <ul>
+            <li>
+              <a href="indexnew-zh-CN.html#welcome" class="active"
+                ><strong>首页</strong></a
+              >
+            </li>
+            <li>
+              <a href="indexnew-zh-CN.html#about-us"
+                ><strong>关于我们</strong></a
+              >
+            </li>
+            <li>
+              <a href="order-zh-CN.html"><strong>联系我们</strong></a>
+            </li>
+            <li>
+              <a href="product-intro-CN.html"><strong>产品介绍</strong></a>
+            </li>
+            <li>
+              <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank"
+                ><strong>白皮书</strong></a
+              >
+            </li>
+            <li>
+              <a href="indexnew-zh-CN.html#what-we-do"><strong>愿景</strong></a>
+            </li>
+
+            <el-dropdown @command="handleLanguageChange">
+              <span
+                class="el-dropdown-link"
+                style="color: white; cursor: pointer; font-weight: bold"
+              >
+                语言▿
+              </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item command="CN">
+                    <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="TW">
+                    <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="EN">
+                    <a href="index.html">English</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="BM">
+                    <a href="indexnew-BM.html"
+                      >Bahasa Melayu</a
+                    ></el-dropdown-item
+                  >
+                  <el-dropdown-item command="HIN">
+                    <a href="indexnew-HIN.html">हिंदी</a></el-dropdown-item
+                  >
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+
+            <li><a href="order-zh-CN.html" class="btn-apply">立即申请</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="products-top"></div>
+
+      <div class="header">
+        <div class="title">
+          <h1 class="one">我们的</h1>
+          <h1 class="two">产品</h1>
+        </div>
+        <p>我们提供了保险增资资产包，更全面为投保客户做更多服务的需求</p>
+      </div>
+
+      <el-row :gutter="24" class="product-container">
+        <!-- 卡片1 -->
+        <el-col :xs="24" :sm="12" :md="8" :lg="8">
+          <div class="product-card-wrapper">
+            <div class="product-card video-1">
+              <video autoplay muted loop playsinline class="bg-video">
+                <source src="assets/images/product-1.mp4" type="video/mp4" />
+              </video>
+              <div class="product-text">
+                <h1>分红保险资产包</h1>
+                <p class="product-description">
+                  投保即可领取分红 + 免费医疗保障资产
+                </p>
+              </div>
+            </div>
+          </div>
+        </el-col>
+
+        <!-- 卡片2 -->
+        <el-col :xs="24" :sm="12" :md="8" :lg="8">
+          <div class="product-card-wrapper">
+            <div class="product-card video-2">
+              <video autoplay muted loop playsinline class="bg-video">
+                <source src="assets/images/product-2.mp4" type="video/mp4" />
+              </video>
+              <div class="product-text">
+                <h1>增资基金资产包</h1>
+                <p class="product-description">
+                  让投资更灵活的代销基金，更服务于所有客户
+                </p>
+              </div>
+            </div>
+          </div>
+        </el-col>
+
+        <!-- 卡片3 -->
+        <el-col :xs="24" :sm="12" :md="8" :lg="8">
+          <div class="product-card-wrapper">
+            <div class="product-card video-3">
+              <video autoplay muted loop playsinline class="bg-video">
+                <source src="assets/images/product-3.mp4" type="video/mp4" />
+              </video>
+              <div class="product-text">
+                <h1>增资养老服务基金</h1>
+                <p class="product-description">
+                  无忧担保老龄化，更敏捷，更方便，全球养老服务
+                </p>
+              </div>
+            </div>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">网站使用说明</a>
+          <a href="#">私隐权保护政策</a>
+          <a href="#">行为准则</a>
+          <a href="#">网站指南</a>
+          <a href="#">Cookie政策</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" style="color: #1877f2">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #e140e4">
+            <i class="fa fa-instagram"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #0077b5">
+            <i class="fa fa-linkedin"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #ff0000">
+            <i class="fa fa-youtube"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #7bb32e">
+            <i class="fa fa-weixin"></i>
+          </a>
+
+          <!-- WeChat -->
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", function (e) {
+          e.stopPropagation(); // 阻止事件冒泡
+          hamburger.classList.toggle("active");
+          menu.classList.toggle("open");
+          console.log("Menu open state:", menu.classList.contains("open"));
+        });
+
+        // 点击菜单外区域关闭菜单
+        document.addEventListener("click", function (e) {
+          if (!menu.contains(e.target)) {
+            menu.classList.remove("open");
+            hamburger.classList.remove("active");
+          }
+        });
+
+        // 阻止菜单内的点击事件冒泡
+        menu.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
+
+    <script>
+      window.onload = function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const el = entry.target;
+              if (entry.isIntersecting) {
+                el.classList.add("fade-up");
+              } else {
+                el.classList.remove("fade-up");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document.querySelectorAll(".el-col").forEach((el) => {
+          observer.observe(el);
+        });
+      };
+    </script>
+
+    <style>
+      .el-col {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease;
+      }
+
+      .el-col.fade-up {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
+    <!-- Vue + Element Plus -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/element-plus"></script>
+    <script>
+      const { createApp } = Vue;
+      const app = createApp({});
+      app.use(ElementPlus);
+      app.mount("#app");
+    </script>
+  </body>
+</html>

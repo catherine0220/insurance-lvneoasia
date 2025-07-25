@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+
+    <title>LVNEOASIA</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/indexnew.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
+
+    <!-- Element Plus CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ***** Header Navigation ***** -->
+      <nav class="custom-nav">
+        <div class="logo">
+          <a href="indexnew-HIN.html">
+            <img src="assets/images/logo1.png" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-container" id="menu">
+          <ul>
+            <li>
+              <a href="indexnew-HIN.html#welcome" class="active"
+                ><strong>मुखपृष्ठ</strong></a
+              >
+            </li>
+            <li>
+              <a href="indexnew-HIN.html#about-us"
+                ><strong>संपर्क करें</strong></a
+              >
+            </li>
+            <li>
+              <a href="order-HIN.html"><strong>संपर्क करें</strong></a>
+            </li>
+            <li>
+              <a href="product-intro-HIN.html"><strong>उत्पाद</strong></a>
+            </li>
+            <li>
+              <a href="assets/images/avia-whitepaper-zh.pdf" target="_blank">
+                <strong>श्वेत पत्र</strong>
+              </a>
+            </li>
+            <li>
+              <a href="indexnew-HIN.html#what-we-do"
+                ><strong>दृष्टिकोण</strong></a
+              >
+            </li>
+
+            <el-dropdown @command="handleLanguageChange">
+              <span
+                class="el-dropdown-link"
+                style="color: white; cursor: pointer; font-weight: bold"
+              >
+                भाषा▿
+              </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item command="CN">
+                    <a href="indexnew-zh-CN.html">简体</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="TW">
+                    <a href="indexnew-zh-TW.html">繁體</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="EN">
+                    <a href="index.html">English</a></el-dropdown-item
+                  >
+                  <el-dropdown-item command="BM">
+                    <a href="indexnew-BM.html"
+                      >Bahasa Melayu</a
+                    ></el-dropdown-item
+                  >
+                  <el-dropdown-item command="HIN">
+                    <a href="indexnew-HIN.html">हिंदी</a></el-dropdown-item
+                  >
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+
+            <li>
+              <a href="order-zh-CN.html" class="btn-apply">अभी आवेदन करें</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="products-top"></div>
+
+      <div class="header">
+        <div class="title">
+          <h1 class="one">हमारे</h1>
+          <h1 class="two">उत्पाद</h1>
+        </div>
+        <p>
+          हम बीमा पूंजी वृद्धि पैकेज प्रदान करते हैं, ताकि ग्राहकों को अधिक
+          व्यापक सेवाएं मिल सकें।
+        </p>
+      </div>
+
+      <el-row :gutter="24" class="product-container">
+        <!-- 卡片1 -->
+        <el-col :xs="24" :sm="12" :md="8" :lg="8">
+          <div class="product-card-wrapper">
+            <div class="product-card video-1">
+              <video autoplay muted loop playsinline class="bg-video">
+                <source src="assets/images/product-1.mp4" type="video/mp4" />
+              </video>
+              <div class="product-text">
+                <h1>लाभांश बीमा संपत्ति पैकेज</h1>
+                <p class="product-description">
+                  बीमा खरीदते ही लाभांश + मुफ्त चिकित्सा सुरक्षा संपत्ति प्राप्त
+                  करें
+                </p>
+              </div>
+            </div>
+          </div>
+        </el-col>
+
+        <!-- 卡片2 -->
+        <el-col :xs="24" :sm="12" :md="8" :lg="8">
+          <div class="product-card-wrapper">
+            <div class="product-card video-2">
+              <video autoplay muted loop playsinline class="bg-video">
+                <source src="assets/images/product-2.mp4" type="video/mp4" />
+              </video>
+              <div class="product-text">
+                <h1>कैपिटल ग्रोथ फंड पैकेज</h1>
+                <p class="product-description">
+                  अधिक लचीले निवेश के लिए वितरित म्यूचुअल फंड, सभी ग्राहकों के
+                  लिए बेहतर सेवा
+                </p>
+              </div>
+            </div>
+          </div>
+        </el-col>
+
+        <!-- 卡片3 -->
+        <el-col :xs="24" :sm="12" :md="8" :lg="8">
+          <div class="product-card-wrapper">
+            <div class="product-card video-3">
+              <video autoplay muted loop playsinline class="bg-video">
+                <source src="assets/images/product-3.mp4" type="video/mp4" />
+              </video>
+              <div class="product-text">
+                <h1>सेवानिवृत्ति सेवा फंड पैकेज</h1>
+                <p class="product-description">
+                  वृद्धावस्था की चिंता मुक्त गारंटी, अधिक चुस्त, अधिक सुविधाजनक,
+                  वैश्विक सेवानिवृत्ति सेवाएँ
+                </p>
+              </div>
+            </div>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">उपयोग निर्देश</a>
+          <a href="#">गोपनीयता नीति</a>
+          <a href="#">आचार संहिता</a>
+          <a href="#">साइट गाइड</a>
+          <a href="#">कुकी नीति</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" style="color: #1877f2">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #e140e4">
+            <i class="fa fa-instagram"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #0077b5">
+            <i class="fa fa-linkedin"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #ff0000">
+            <i class="fa fa-youtube"></i>
+          </a>
+
+          <a href="#" class="social-icon" style="color: #7bb32e">
+            <i class="fa fa-weixin"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", function (e) {
+          e.stopPropagation(); // 阻止事件冒泡
+          hamburger.classList.toggle("active");
+          menu.classList.toggle("open");
+          console.log("Menu open state:", menu.classList.contains("open"));
+        });
+
+        // 点击菜单外区域关闭菜单
+        document.addEventListener("click", function (e) {
+          if (!menu.contains(e.target)) {
+            menu.classList.remove("open");
+            hamburger.classList.remove("active");
+          }
+        });
+
+        // 阻止菜单内的点击事件冒泡
+        menu.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
+
+    <!-- Vue + Element Plus -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/element-plus"></script>
+    <script>
+      const { createApp } = Vue;
+      const app = createApp({});
+      app.use(ElementPlus);
+      app.mount("#app");
+    </script>
+  </body>
+</html>
